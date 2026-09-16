@@ -1,0 +1,50 @@
+/* Phone-sized screens: drop the presentation page (caption, iPhone bezel, swatches)
+   and let the 430×932 app fill the viewport, scaled to the device width (fit.ts).
+   Wider screens get the design exactly as drawn. Structural selectors keep the
+   generated design markup untouched. */
+@media (max-width: 560px) {
+  html,
+  body {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  body {
+    background: #050a10;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* page wrapper → frame column → [caption, frame] */
+  #dc-root > .sc-host > div {
+    position: static !important;
+    padding: 0 !important;
+  }
+
+  #dc-root > .sc-host > div > div:first-child > div:first-child,
+  #dc-root > .sc-host > div > div:last-child {
+    display: none !important;
+  }
+
+  /* bezel buttons and the drawn dynamic island */
+  #dc-root > .sc-host > div > div:first-child > div:last-child > div:not([data-icash-phone]) {
+    display: none !important;
+  }
+
+  /* the mock 9:41 status bar and home indicator — the real phone draws its own */
+  [data-icash-phone] > div:first-child,
+  [data-icash-phone] > div:last-child {
+    display: none !important;
+  }
+
+  [data-icash-phone] {
+    position: fixed !important;
+    left: 0;
+    top: 0;
+    width: 430px !important;
+    height: calc(100vh / var(--fit, 1)) !important;
+    height: calc(100dvh / var(--fit, 1)) !important;
+    border-radius: 0 !important;
+    zoom: var(--fit, 1);
+    touch-action: manipulation;
+  }
+}
