@@ -3,6 +3,56 @@
 import { DCLogic } from './runtime';
 
 const AR = {
+  'Linked cards': 'البطاقات المرتبطة', 'PAYING FROM': 'الدفع من', 'SOURCES': 'المصادر',
+  'Top up wallet': 'تعبئة المحفظة', 'Add a card': 'إضافة بطاقة', 'iCASH balance': 'رصيد آي كاش',
+  'Which card do you want to link?': 'أي بطاقة تريد ربطها؟',
+  'Top-up fees are set by the provider and shown before every top-up.': 'رسوم التعبئة يحددها المزوّد وتظهر قبل كل عملية.',
+  'Enter the 16 digits on the front, then the expiry date.': 'أدخل الأرقام الـ16 على الوجه، ثم تاريخ الانتهاء.',
+  'Enter the code': 'أدخل الرمز', 'Resend the code': 'إعادة إرسال الرمز', 'Verifying your card': 'جارٍ التحقق من بطاقتك',
+  'Card details': 'تفاصيل البطاقة', 'Confirm it is you': 'أكّد هويتك', 'Verifying': 'جارٍ التحقق',
+  'Card linked': 'تم ربط البطاقة', 'Continue': 'متابعة', 'Confirm': 'تأكيد',
+  'Make it my paying card': 'اجعلها بطاقة الدفع', 'Keep paying from my wallet': 'الاستمرار بالدفع من محفظتي',
+  'Top-up fee': 'رسوم التعبئة', 'Top-up limit': 'حد التعبئة', 'EXPIRES': 'تنتهي', 'CARDHOLDER': 'حامل البطاقة',
+  'A new code is on its way': 'تم إرسال رمز جديد',
+  'You can top up your wallet from it, or make it the source your iCASH card pays from.': 'يمكنك تعبئة محفظتك منها، أو جعلها المصدر الذي تدفع منه بطاقة آي كاش.',
+  'Linked cards stay with their own provider. iCASH only moves money when you top up or pay with your iCASH card.': 'تبقى البطاقات المرتبطة عند مزوّديها. لا ينقل آي كاش الأموال إلا عند التعبئة أو الدفع ببطاقة آي كاش.',
+  'Qi Card': 'كي كارد', 'Zain Cash': 'زين كاش', 'Asiacell Pay': 'آسياسيل باي', 'FastPay': 'فاست باي',
+  'Bank Visa': 'فيزا مصرفية', 'Nass Wallet': 'محفظة ناس', 'No top-up fee': 'بدون رسوم تعبئة',
+  'Link Qi Card, Zain Cash and more': 'اربط كي كارد وزين كاش وغيرها',
+  'The whole app changes, including the layout direction.': 'يتغيّر التطبيق بالكامل، بما في ذلك اتجاه التخطيط.',
+  'Left to right': 'من اليسار إلى اليمين', 'From another iCASH wallet': 'من محفظة آي كاش أخرى',
+  'Ask anyone to send to your phone number or @tag': 'اطلب من أي شخص الإرسال إلى رقم هاتفك أو معرّفك',
+  'To a wallet number': 'إلى رقم محفظة', 'iCASH account number · instant': 'رقم حساب آي كاش · فوري',
+  'Debit or credit card, cash at any iCASH agent, or a transfer from another iCASH wallet. All of them arrive instantly.': 'بطاقة خصم أو ائتمان، أو نقداً عند أي وكيل آي كاش، أو تحويل من محفظة آي كاش أخرى. جميعها تصل فوراً.',
+  'Instantly to any iCASH wallet, day or night, whether you send to a phone number or a wallet number.': 'فوراً إلى أي محفظة آي كاش في أي وقت، سواء أرسلت إلى رقم هاتف أو رقم محفظة.',
+  'Iraq Mall': 'عراق مول', 'From Saad Kareem': 'من سعد كريم', 'From Hayder': 'من حيدر',
+  'Latest transactions': 'أحدث الحركات', 'Pending': 'قيد المعالجة', 'Completed': 'مكتملة',
+  'Daylight': 'النهار', 'Help and support': 'المساعدة والدعم',
+  'Set a target for card and wallet spending. iCASH warns you before you reach it.': 'حدّد هدفاً لإنفاق البطاقة والمحفظة. ينبّهك آي كاش قبل الوصول إليه.',
+  'Target': 'الهدف', 'IQD a month': 'دينار شهرياً', 'Warn me at': 'نبّهني عند', 'Save budget': 'حفظ الميزانية',
+  'Set this budget': 'تعيين هذه الميزانية', 'Remove budget': 'إزالة الميزانية', 'Your budget': 'ميزانيتك',
+  'Target, alerts and pace': 'الهدف والتنبيهات ووتيرة الإنفاق', 'YOUR MONEY': 'أموالك', 'BUDGET': 'الميزانية',
+  'FROM 360': 'من 360', 'No budget yet · tap to set one': 'لا توجد ميزانية · اضغط لتعيينها',
+  'No budget is active. Save to switch it on.': 'لا توجد ميزانية مفعّلة. اضغط حفظ لتشغيلها.',
+  'Off': 'معطّلة', 'Tap to set a target': 'اضغط لتحديد هدف', 'No budget set': 'لا توجد ميزانية',
+  'Global data in minutes': 'بيانات عالمية في دقائق', 'included this month': 'مشمولة هذا الشهر',
+  'cashback on stays': 'استرداد على الإقامات', 'of 4 this month': 'من 4 هذا الشهر',
+  'Stays in Iraq and abroad': 'إقامات في العراق وخارجه', 'Ready to use': 'جاهزة للاستخدام',
+  'Help and support': 'المساعدة والدعم', 'FAQ': 'الأسئلة الشائعة', 'CONTACT US': 'اتصل بنا',
+  'Common questions first. If you still need us, we answer 24 hours a day.': 'الأسئلة الشائعة أولاً. وإن احتجت إلينا، نجيب على مدار 24 ساعة.',
+  'Call us': 'اتصل بنا', 'Chat on WhatsApp': 'محادثة على واتساب',
+  '+964 780 000 1234 · free from Iraq': '+964 780 000 1234 · مجاناً من داخل العراق',
+  '+964 780 000 1234 · replies in minutes': '+964 780 000 1234 · نرد خلال دقائق',
+  'How do I add money?': 'كيف أضيف رصيداً؟',
+  'Bank transfer, debit card, or cash at any iCASH agent. Card and agent top-ups arrive instantly; bank transfers land the same day.': 'حوالة مصرفية أو بطاقة خصم أو نقداً عند أي وكيل آي كاش. تصل تعبئة البطاقة والوكيل فوراً، والحوالات المصرفية في نفس اليوم.',
+  'How long does a transfer take?': 'كم يستغرق التحويل؟',
+  'Instantly to another iCASH user, day or night. A local bank transfer arrives the same working day.': 'فوراً إلى مستخدم آي كاش آخر في أي وقت. والحوالة المصرفية المحلية تصل في نفس يوم العمل.',
+  'What does a stock order cost?': 'كم تكلفة أمر الأسهم؟',
+  'A 0,85% service fee with a 2.500 IQD minimum, plus the 0,15% ISX levy. The full total is shown before you confirm.': 'رسوم خدمة 0,85% بحد أدنى 2.500 دينار، مع رسم سوق العراق 0,15%. يظهر المبلغ الإجمالي قبل التأكيد.',
+  'I lost my phone. Is my card safe?': 'فقدت هاتفي، هل بطاقتي آمنة؟',
+  'Freeze the card from Cards straight away, then order a replacement. Your balance stays in your account.': 'جمّد البطاقة من صفحة البطاقات فوراً، ثم اطلب بديلة. يبقى رصيدك في حسابك.',
+  'How do I switch the app to Arabic?': 'كيف أحوّل التطبيق إلى العربية؟',
+  'Profile, then Language. The whole app changes, including the right-to-left layout.': 'الملف الشخصي ثم اللغة. يتغيّر التطبيق بالكامل، بما في ذلك التخطيط من اليمين إلى اليسار.',
   'Recent': 'الأخيرة', 'Arriving': 'الوصول', 'Ultra': 'ألترا', '✦ Get more from': '✦ احصل على المزيد من',
   '0 / 2.000.000 IQD withdrawn': '0 / 2.000.000 دينار مسحوبة', 'Careem Plus': 'كريم بلس', 'TCL Care': 'TCL كير',
   'Ticket discounts, upgrades and lounge access with iCASH points': 'خصومات تذاكر وترقيات ودخول صالات بنقاط آي كاش',
@@ -189,7 +239,7 @@ const AR = {
   'Pass added to your wallet': 'أُضيفت التذكرة إلى محفظتك', 'Asiacell, Zain, Korek': 'آسياسيل، زين، كورك',
   '·· 9169 · IQD · arrives instantly': '·· 9169 · دينار · يصل فوراً',
   'Prices are delayed by 15 minutes; your capital is at risk.': 'الأسعار متأخرة 15 دقيقة، ورأس المال معرض للمخاطرة.',
-  'Home': 'الرئيسية', 'Cards': 'البطاقات', 'Invest': 'الاستثمار', 'Transfers': 'التحويلات', 'Lifestyle': 'المزايا',
+  'Home': 'الرئيسية', 'Cards': 'البطاقات', 'Invest': 'الاستثمار', 'Transfers': 'التحويلات',
   'Rewards': 'المكافآت', 'Search': 'بحث', 'Search airlines': 'بحث عن الطيران', 'Search sales': 'بحث في المبيعات',
   'Personal · IQD': 'شخصي · دينار عراقي', 'Accounts': 'الحسابات', 'Add money': 'إضافة رصيد', 'Move': 'تحويل',
   'Details': 'التفاصيل', 'More': 'المزيد', 'See all': 'عرض الكل', 'See all benefits': 'عرض كل المزايا',
@@ -334,7 +384,141 @@ const AR_RX = [
   [/^ISX levy · ([\d,]+)%$/, (m, p) => 'رسم سوق العراق · ' + p + '%'],
 ];
 
+
+const L_BG = {
+  '#050a10': '#FFFFFF', '#0a1420': '#FFFFFF', '#0b1119': '#FFFFFF', '#050b12': '#FFFFFF',
+  '#15191e': '#FFFFFF', '#111f31': '#FFFFFF', '#161b22': '#FFFFFF', '#0f1620': '#FFFFFF',
+  '#0e1218': '#FFFFFF', '#1d242c': '#F2F5F9', '#171d25': '#FAFBFD', '#12181f': '#F6F8FB',
+};
+// cards lose their contrast once everything is white, so they get a hairline instead
+const L_CARD = { '#15191e': 1, '#111f31': 1, '#161b22': 1, '#0f1620': 1, '#0e1218': 1 };
+const L_INK = {
+  '#ffffff': '#0B1119', '#8a95a2': '#5C6673', '#6e7986': '#697280',
+  '#c9cfd6': '#48515C', '#4b5563': '#98A2B0', '#d8dce2': '#B9C1CB',
+};
+
+// inline styles come back from the DOM as rgb()/rgba(), so every lookup goes through here
+function parseColor(v) {
+  const s = (v || '').trim().toLowerCase();
+  let m = s.match(/^#([0-9a-f]{6})$/);
+  if (m) return { hex: '#' + m[1], a: 1 };
+  m = s.match(/^#([0-9a-f]{3})$/);
+  if (m) return { hex: '#' + m[1].split('').map(c => c + c).join(''), a: 1 };
+  m = s.match(/^rgba?\(\s*(\d+)[,\s]+(\d+)[,\s]+(\d+)(?:[,\s\/]+([\d.]+))?\s*\)$/);
+  if (!m) return null;
+  const hex = '#' + [1, 2, 3].map(i => ('0' + parseInt(m[i], 10).toString(16)).slice(-2)).join('');
+  return { hex: hex, a: m[4] === undefined ? 1 : parseFloat(m[4]) };
+}
+
+// a wash gradient sits on the app's dark base; card art is its own opaque surface
+function gradientSurface(v) {
+  const stops = v.match(/#[0-9a-f]{3,8}|rgba?\([^)]*\)/gi) || [];
+  if (stops.some(c => { const p = parseColor(c); return p && p.a >= 0.9 && L_BG[p.hex]; })) return 'inv';
+  return stops.some(c => { const p = parseColor(c); return p && p.a >= 0.9; }) ? 'keep' : null;
+}
+
+// keep the wash as a hint of colour over white
+function lightGradient(v) {
+  return v
+    .replace(/#([0-9a-f]{6})\b/gi, (m) => L_BG[m.toLowerCase()] || m)
+    .replace(/rgba?\(\s*(\d+)[,\s]+(\d+)[,\s]+(\d+)[,\s\/]+([\d.]+)\s*\)/gi,
+      (m, r, g, b, a) => 'rgba(' + r + ',' + g + ',' + b + ',' + Math.min(0.2, parseFloat(a) * 0.38).toFixed(3) + ')');
+}
+
+function lightCss(el, css) {
+  const parent = el.parentElement && el.parentElement.dataset ? (el.parentElement.dataset.surf || '') : '';
+  const masked = css.indexOf('mask-image') >= 0;
+  const decls = css.split(';').map(d => {
+    const i = d.indexOf(':');
+    return i < 0 ? [null, d] : [d.slice(0, i).trim().toLowerCase(), d.slice(i + 1)];
+  });
+
+  let surf = parent;
+  decls.forEach(([p, v]) => {
+    if (p !== 'background' && p !== 'background-color' && p !== 'background-image') return;
+    const val = (v || '').trim();
+    if (masked || !val || val === 'none' || val === 'transparent') return;
+    if (/gradient/i.test(val)) { const g = gradientSurface(val); if (g) surf = g; return; }
+    const c = parseColor(val);
+    if (!c) { surf = 'keep'; return; }
+    if (c.a <= 0.3) return;                       // translucent tint: sits on whatever is behind
+    if (L_BG[c.hex]) { surf = 'inv'; return; }
+    surf = 'keep';
+  });
+  el.dataset.surf = surf;
+
+  const ink = (val) => {
+    if (surf !== 'inv') return null;
+    const c = parseColor(val);
+    if (!c) return null;
+    if (c.a >= 0.9) return L_INK[c.hex] || null;
+    return c.hex === '#ffffff' ? 'rgba(11,17,25,' + Math.max(0.62, Math.min(0.92, c.a)).toFixed(2) + ')' : null;
+  };
+
+  let hair = false;
+  const outDecls = decls.map(([p, v]) => {
+    if (!p) return v;
+    const head = p + ':';
+    const val = (v || '').trim();
+    if (p === 'background' || p === 'background-color' || p === 'background-image') {
+      if (/gradient/i.test(val)) return surf === 'inv' ? head + lightGradient(val) : p + ':' + v;
+      const c = parseColor(val);
+      if (!c) return p + ':' + v;
+      if (masked) { const k = c.a >= 0.9 ? L_INK[c.hex] : null; return k ? head + k : p + ':' + v; }
+      if (c.a >= 0.9 && L_BG[c.hex]) {
+        if (L_CARD[c.hex] && css.indexOf('border-radius') >= 0 && !/(^|;)\s*border/.test(css)) hair = true;
+        return head + L_BG[c.hex];
+      }
+      if (c.a <= 0.3 && c.hex === '#ffffff' && (surf === 'inv' || parent === 'inv')) {
+        return head + 'rgba(11,17,25,' + Math.min(0.09, c.a * 0.7 + 0.02).toFixed(3) + ')';
+      }
+      return p + ':' + v;
+    }
+    if (p === 'color' || p === 'fill' || p === 'stroke' || p === 'caret-color') {
+      const k = ink(val);
+      return k ? head + k : p + ':' + v;
+    }
+    if (p.indexOf('border') === 0 || p === 'outline') {
+      if (surf !== 'inv' && parent !== 'inv') return p + ':' + v;
+      return head + val.replace(/rgba?\(\s*255[,\s]+255[,\s]+255(?:[,\s\/]+([\d.]+))?\s*\)/gi,
+        (m, a) => a === undefined ? '#0B1119' : 'rgba(11,17,25,' + Math.min(0.16, parseFloat(a) + 0.03).toFixed(2) + ')');
+    }
+    if (p === 'box-shadow') {
+      return head + val.replace(/rgba\(\s*0[,\s]+0[,\s]+0[,\s]+[\d.]+\s*\)/gi, 'rgba(15,23,42,.12)');
+    }
+    return p + ':' + v;
+  });
+  return outDecls.join(';') + (hair ? ';border:1px solid #E8ECF2' : '');
+}
+
+// physical CSS (left/right paddings, offsets, chevrons) has to be mirrored by hand
+function mirrorCss(css) {
+  let s = css
+    .replace(/\b(padding|margin)\s*:\s*([^;]+)/g, (m, p, v) => {
+      const parts = v.trim().split(/\s+/);
+      return parts.length === 4 ? p + ':' + [parts[0], parts[3], parts[2], parts[1]].join(' ') : m;
+    })
+    .replace(/\b(padding|margin|border)-(left|right)\b/g, (m, p, d) => p + '-' + (d === 'left' ? 'right' : 'left'))
+    .replace(/(^|;)(\s*)left:/g, '$1$2__SWAP:')
+    .replace(/(^|;)(\s*)right:/g, '$1$2left:')
+    .replace(/__SWAP:/g, 'right:')
+    .replace(/text-align:\s*left/g, 'text-align:__SWAP')
+    .replace(/text-align:\s*right/g, 'text-align:left')
+    .replace(/text-align:__SWAP/g, 'text-align:right');
+  if (/rotate\(45deg\)/.test(s)) s = s.replace(/transform:\s*/g, 'transform:scaleX(-1) ');
+  return s;
+}
+const LK_PROVIDERS = [
+  { key: 'qi', name: 'Qi Card', art: 'linear-gradient(135deg,#E8453C,#7A1712)', fee: 'No top-up fee', limit: '5.000.000 IQD a day' },
+  { key: 'zain', name: 'Zain Cash', art: 'linear-gradient(135deg,#7C3AED,#2A1160)', fee: '0,5% top-up fee', limit: '2.000.000 IQD a day' },
+  { key: 'asia', name: 'Asiacell Pay', art: 'linear-gradient(135deg,#EC7E00,#7A3E00)', fee: '0,5% top-up fee', limit: '2.000.000 IQD a day' },
+  { key: 'fast', name: 'FastPay', art: 'linear-gradient(135deg,#2563EB,#10225C)', fee: 'No top-up fee', limit: '3.000.000 IQD a day' },
+  { key: 'visa', name: 'Bank Visa', art: 'linear-gradient(135deg,#1A1F71,#080B33)', fee: '1% top-up fee', limit: '4.000.000 IQD a day' },
+  { key: 'nass', name: 'Nass Wallet', art: 'linear-gradient(135deg,#00A78F,#0A3F38)', fee: '0,75% top-up fee', limit: '1.500.000 IQD a day' },
+];
 const PIN = '1234';
+const SPENT = 486200;
+const iqd = (n) => n.toLocaleString('de-DE');
 const DESIGNS = [
   { name: 'Midnight', title: 'Midnight, 2026', tag: 'STANDARD', sub: 'The everyday iCASH card, in deep navy.', art: 'linear-gradient(150deg,#1B2B3F,#070E18)' },
   { name: 'Signal', title: 'Signal blue, 2026', tag: 'PREMIUM', sub: 'Brand blue, front and centre.', art: 'linear-gradient(150deg,#2563EB,#10225C)' },
@@ -421,23 +605,27 @@ const CARDS = [
     ] },
 ];
 const WIDGETS = [
-  { id: 'spend', ini: 'SP', name: 'Spend this month', sub: 'Card and wallet spending', value: '486.200', meta: '+8% vs August', metaInk: '#D6455D', bg: '#2563EB' },
-  { id: 'wealth', ini: 'TW', name: 'Total wealth', sub: 'Accounts, invest and vaults', value: '3.632.400', meta: '+2,4% this month', metaInk: '#00A78F', bg: '#0D1B2A' },
-  { id: 'topups', ini: 'TU', name: 'Top-ups', sub: 'Zain Cash, Asiacell, Korek', value: '25.000', meta: 'Asiacell due in 4 days', metaInk: '#8A95A2', bg: '#00C2A8' },
-  { id: 'week', ini: 'WK', name: 'Spent this week', sub: 'Card spending by day', value: '248.000', meta: '−12% vs last week', metaInk: '#00A78F', bg: '#2563EB',
+  { id: 'spend', group: 'YOUR MONEY', ini: 'SP', name: 'Spend this month', sub: 'Card and wallet spending', value: '486.200', meta: '+8% vs August', metaInk: '#D6455D', bg: '#2563EB' },
+  { id: 'wealth', group: 'YOUR MONEY', ini: 'TW', name: 'Total wealth', sub: 'Accounts, invest and vaults', value: '3.632.400', meta: '+2,4% this month', metaInk: '#00A78F', bg: '#0D1B2A' },
+  { id: 'week', group: 'YOUR MONEY', ini: 'WK', name: 'Spent this week', sub: 'Card spending by day', value: '248.000', meta: '−12% vs last week', metaInk: '#00A78F', bg: '#2563EB',
     bars: [38, 62, 30, 84, 46, 70, 96] },
-  { id: 'left', ini: 'LF', name: 'Left to spend', sub: 'Against your monthly budget', value: '1.276.000', meta: '9 days left', metaInk: '#8A95A2', bg: '#0D1B2A', progress: '68%' },
-  { id: 'miles', ini: 'MI', name: 'iCASH Miles', sub: 'Earned on every payment', value: '18.420', meta: '1.240 added this month', metaInk: '#00A78F', bg: '#7C3AED' },
-  { id: 'bnpl', ini: 'BN', name: 'Pay later', sub: 'Instalments in progress', value: '360.500', meta: '3 payments left', metaInk: '#8A95A2', bg: '#EC7E00' },
-  { id: 'vault', ini: 'SV', name: 'Savings vault', sub: '4,2% a year', value: '85.000', meta: 'Round-ups on', metaInk: '#00A78F', bg: '#6B7280' },
-  { id: 'card', ini: 'CD', name: 'Card', sub: 'Standard · 9169', value: '9169', meta: 'Active', metaInk: '#00A78F', bg: '#1B3FA8' },
-  { id: 'gaming', ini: 'GM', name: 'Gaming credit', sub: 'PS, Xbox, Steam', value: '2 codes', meta: 'Ready to use', metaInk: '#8A95A2', bg: '#FFFFFF' },
+  { id: 'vault', group: 'YOUR MONEY', ini: 'SV', name: 'Savings vault', sub: '4,2% a year', value: '85.000', meta: 'Round-ups on', metaInk: '#00A78F', bg: '#6B7280' },
+  { id: 'card', group: 'YOUR MONEY', ini: 'CD', name: 'Card', sub: 'Standard · 9169', value: '9169', meta: 'Active', metaInk: '#00A78F', bg: '#1B3FA8' },
+  { id: 'budget', group: 'BUDGET', ini: 'BG', name: 'Your budget', sub: 'Target, alerts and pace', value: '1.800.000', meta: '27% used', metaInk: '#8A95A2', bg: '#00A78F', progress: '27%', opens: 'budget' },
+  { id: 'left', group: 'BUDGET', ini: 'LF', name: 'Left to spend', sub: 'Against your monthly budget', value: '1.313.800', meta: '9 days left', metaInk: '#8A95A2', bg: '#0D1B2A', progress: '27%', opens: 'budget' },
+  { id: 'miles', group: 'FROM 360', ini: 'MI', name: 'iCASH Miles', sub: 'Earned on every payment', value: '18.420', meta: '1.240 added this month', metaInk: '#00A78F', bg: '#7C3AED', go: 'Miles' },
+  { id: 'topups', group: 'FROM 360', ini: 'TU', name: 'Top-ups', sub: 'Zain Cash, Asiacell, Korek', value: '25.000', meta: 'Asiacell due in 4 days', metaInk: '#8A95A2', bg: '#00C2A8', go: 'Top-ups' },
+  { id: 'bnpl', group: 'FROM 360', ini: 'BN', name: 'Pay later', sub: 'Instalments in progress', value: '360.500', meta: '3 payments left', metaInk: '#8A95A2', bg: '#EC7E00', go: 'BNPL' },
+  { id: 'gaming', group: 'FROM 360', ini: 'GM', name: 'Gaming credit', sub: 'PS, Xbox, Steam', value: '2 codes', meta: 'Ready to use', metaInk: '#8A95A2', bg: '#1B3FA8', go: 'Gaming' },
+  { id: 'hotels', group: 'FROM 360', ini: 'HT', name: 'Hotels', sub: 'Stays in Iraq and abroad', value: '10%', meta: 'cashback on stays', metaInk: '#00A78F', bg: '#7C3AED', go: 'Hotels' },
+  { id: 'esim', group: 'FROM 360', ini: 'ES', name: 'eSIM', sub: 'Global data in minutes', value: '3 GB', meta: 'included this month', metaInk: '#8A95A2', bg: '#2563EB', go: 'Discover' },
+  { id: 'lounges', group: 'FROM 360', ini: 'LO', name: 'Lounges', sub: 'Airport lounge passes', value: '2 left', meta: 'of 4 this month', metaInk: '#8A95A2', bg: '#00C2A8', go: 'Discover' },
 ];
 const NAV = [
   ['home', 'Home'],
   ['invest', 'Invest'],
   ['transfers', 'Transfers'],
-  ['lifestyle', 'Lifestyle'],
+  ['lifestyle', '360'],
 ];
 const ICON = {
   // iCASH mark: dot over stem
@@ -445,9 +633,9 @@ const ICON = {
   cards: "M 0 2.5 C 0 1.119 1.119 0 2.5 0 L 17.5 0 C 18.881 0 20 1.119 20 2.5 L 20 3 L 0 3 L 0 2.5 Z M 0 5 L 20 5 L 20 11.5 C 20 12.881 18.881 14 17.5 14 L 2.5 14 C 1.119 14 0 12.881 0 11.5 L 0 5 Z M 3 10 C 2.448 10 2 10.448 2 11 C 2 11.552 2.448 12 3 12 L 11 12 C 11.552 12 12 11.552 12 11 C 12 10.448 11.552 10 11 10 L 3 10 Z",
   invest: "M2.4 2.4a1.2 1.2 0 0 0-2.4 0v11.6a3 3 0 0 0 3 3h15.3a1.2 1.2 0 0 0 0-2.4H3a.6.6 0 0 1-.6-.6zM17.6 5.3a1.2 1.2 0 1 1 1.7 1.7l-4.5 4.5a1.2 1.2 0 0 1-1.7 0l-2.4-2.4-3.3 3.3a1.2 1.2 0 1 1-1.7-1.7l4.2-4.1a1.2 1.2 0 0 1 1.7 0l2.4 2.4z",
   transfers: "M7.5 2.8h6.4V1.5c0-1.4 1-1.9 2.1-1L19.5 3.2c.7.6.7 1.6 0 2.2L16 8c-1 .8-2.1.4-2.1-1V5.8H7.5a1.2 1.2 0 0 1 0-3zM12.9 13.5H6.2v-1.3c0-1.4-.9-1.9-1.9-1L.5 14c-.7.5-.7 1.5 0 2.1l3.8 2.7c1 .8 1.9.3 1.9-1v-1.3h6.7a1.2 1.2 0 0 0 0-3z",
-  lifestyle: "M11.2 1.8c.9-.9 1.4-1.4 1.9-1.6a2.6 2.6 0 0 1 1.8 0c.5.2 1 .7 1.9 1.6.9.9 1.4 1.4 1.6 1.9a2.6 2.6 0 0 1 0 1.8c-.2.5-.7 1-1.6 1.9-.9.9-1.4 1.4-1.9 1.6a2.6 2.6 0 0 1-1.8 0c-.5-.2-1-.7-1.9-1.6-.9-.9-1.4-1.4-1.6-1.9a2.6 2.6 0 0 1 0-1.8c.2-.5.7-1 1.6-1.9zM1.8 11.2c.9-.9 1.4-1.4 1.9-1.6a2.6 2.6 0 0 1 1.8 0c.5.2 1 .7 1.9 1.6.9.9 1.4 1.4 1.6 1.9a2.6 2.6 0 0 1 0 1.8c-.2.5-.7 1-1.6 1.9-.9.9-1.4 1.4-1.9 1.6a2.6 2.6 0 0 1-1.8 0c-.5-.2-1-.7-1.9-1.6C.9 15.9.4 15.4.2 14.9a2.6 2.6 0 0 1 0-1.8c.2-.5.7-1 1.6-1.9zM1.8 1.8C2.7.9 3.2.4 3.7.2a2.6 2.6 0 0 1 1.8 0c.5.2 1 .7 1.9 1.6.9.9 1.4 1.4 1.6 1.9a2.6 2.6 0 0 1 0 1.8c-.2.5-.7 1-1.6 1.9-.9.9-1.4 1.4-1.9 1.6a2.6 2.6 0 0 1-1.8 0c-.5-.2-1-.7-1.9-1.6C.9 6.5.4 6 .2 5.5a2.6 2.6 0 0 1 0-1.8C.4 3.2.9 2.7 1.8 1.8zM11.2 11.2c.9-.9 1.4-1.4 1.9-1.6a2.6 2.6 0 0 1 1.8 0c.5.2 1 .7 1.9 1.6.9.9 1.4 1.4 1.6 1.9a2.6 2.6 0 0 1 0 1.8c-.2.5-.7 1-1.6 1.9-.9.9-1.4 1.4-1.9 1.6a2.6 2.6 0 0 1-1.8 0c-.5-.2-1-.7-1.9-1.6-.9-.9-1.4-1.4-1.6-1.9a2.6 2.6 0 0 1 0-1.8c.2-.5.7-1 1.6-1.9z",
+  lifestyle: "M22.34,12.09 A11,5.6 0 1 0 22.34,15.91 L19.52,15.03 A8,3 0 1 1 19.52,12.97 Z M19.0,12.4 L23.6,12.4 L21.0,8.0 Z",
 };
-const VB = { home: '0 0 24 24', cards: '0 0 20 14', invest: '0 0 19.5 17.1', transfers: '0 0 20 19.4', lifestyle: '0 0 18.6 18.6' };
+const VB = { home: '0 0 24 24', cards: '0 0 20 14', invest: '0 0 19.5 17.1', transfers: '0 0 20 19.4', lifestyle: '0 0 24 24' };
 
 const STK_META = {
   BBOB: ['Bank of Baghdad', 'Commercial bank', '0,650'],
@@ -499,11 +687,200 @@ class Component extends DCLogic {
   state = { splash: true, locked: true, pin: '', wrong: false, tab: 'home', life: 'Discover', scroll: 0, frozen: false,
     editor: false, picks: ['spend', 'wealth', 'topups'], cardView: 'list', card: 0, toggles: {}, design: 0, promo: false,
     profile: false, plan: false, upgrade: false, tier: 'Gold', pick: 'Gold',
-    onboard: true, step: 0, entry: '', uses: ['Transfers', 'Cards'] };
+    onboard: true, step: 0, entry: '', uses: ['Transfers', 'Cards'],
+    support: false, supOpen: null, budget: 1800000, budgetOn: true, budgetAlert: 80, budgetSheet: false, light: false,
+    linked: false, lkAdd: false, lkStep: 0, lkProv: null, lkDigits: '', lkCode: '', payFrom: 'wallet',
+    lkCards: [{ key: 'qi', last4: '4417' }] };
 
   // how far the tab's coloured header reaches; below it the status bar sits on light chrome
   openStock(p) {
     this.setState({ stock: { ticker: p.ticker, mark: p.mark, bg: p.bg, chg: p.chg, chgInk: p.chgInk }, stkRange: '1D', stkTab: 'Overview' });
+  }
+
+  linkedVals() {
+    const s = this.state;
+    const cards = s.lkCards || [];
+    const prov = (k) => LK_PROVIDERS.filter(p => p.key === k)[0] || LK_PROVIDERS[0];
+    const active = s.payFrom === 'wallet' ? null : cards.filter(c => c.key + c.last4 === s.payFrom)[0];
+    const walletArt = 'linear-gradient(135deg,#2563EB,#0B1430)';
+    const digits = s.lkDigits || '';
+    const card16 = digits.slice(0, 16);
+    const exp = digits.slice(16, 20);
+    const step = s.lkStep || 0;
+    const p = s.lkProv ? prov(s.lkProv) : LK_PROVIDERS[0];
+    const last4 = card16.length === 16 ? card16.slice(12) : '••••';
+
+    const grouped = (() => {
+      const out = [];
+      for (let i = 0; i < 16; i++) out.push(i < card16.length ? card16.charAt(i) : '•');
+      return out.slice(0, 4).join('') + ' ' + out.slice(4, 8).join('') + ' ' + out.slice(8, 12).join('') + ' ' + out.slice(12).join('');
+    })();
+
+    const goStep = (n) => this.setState({ lkStep: n });
+    const finish = () => {
+      const entry = { key: p.key, last4: last4 };
+      this.setState({ lkCards: cards.concat([entry]), lkStep: 4 });
+    };
+
+    return {
+      lkDisplay: s.linked ? 'flex' : 'none',
+      lkOpen: () => this.setState({ accounts: false, linked: true }),
+      lkClose: () => this.setState({ linked: false }),
+      lkEntrySub: cards.length
+        ? cards.length + (cards.length === 1 ? ' card · paying from ' : ' cards · paying from ') + (active ? prov(active.key).name : 'iCASH balance')
+        : 'Link Qi Card, Zain Cash and more',
+
+      lkActiveArt: active ? prov(active.key).art : walletArt,
+      lkActiveName: active ? prov(active.key).name : 'iCASH balance',
+      lkActiveNumber: active ? '•••• •••• •••• ' + active.last4 : '•••• •••• •••• 9169',
+      lkActiveKind: active ? 'LINKED' : 'ICASH WALLET',
+      lkActiveMetaLabel: active ? 'EXPIRES' : 'BALANCE',
+      lkActiveMeta: active ? '09/29' : '2.450.000',
+      lkActiveNote: active
+        ? 'Your iCASH card charges this source at the till. ' + prov(active.key).fee + '.'
+        : 'Your iCASH card spends your wallet balance. Pick a linked card to route payments to it instead.',
+      lkTopUpDisplay: active ? 'block' : 'none',
+      lkTopUp: () => this.setState({
+        linked: false, add: true,
+        addMethod: prov(active.key).name + ' ·· ' + active.last4 + ' · IQD',
+        addMethodArt: prov(active.key).art,
+      }),
+
+      lkSources: [{ name: 'iCASH balance', sub: 'Wallet · 2.450.000 IQD', art: walletArt, id: 'wallet' }]
+        .concat(cards.map(c => ({
+          name: prov(c.key).name, sub: '·· ' + c.last4 + ' · ' + prov(c.key).fee, art: prov(c.key).art, id: c.key + c.last4,
+        })))
+        .map(src => {
+          const on = (s.payFrom || 'wallet') === src.id;
+          return Object.assign({}, src, {
+            mark: on ? '✓' : '',
+            ringBg: on ? this.accent : 'transparent',
+            ringBorder: on ? this.accent : 'rgba(255,255,255,.28)',
+            pick: () => { this.setState({ payFrom: src.id }); this.toast('Paying from ' + src.name); },
+          });
+        }),
+
+      lkRemoveDisplay: active ? 'block' : 'none',
+      lkRemoveLabel: active ? 'Unlink ' + prov(active.key).name + ' ·· ' + active.last4 : '',
+      lkRemove: () => {
+        this.setState({ lkCards: cards.filter(c => c.key + c.last4 !== s.payFrom), payFrom: 'wallet' });
+        this.toast(prov(active.key).name + ' unlinked');
+      },
+
+      lkAddDisplay: s.lkAdd ? 'flex' : 'none',
+      lkAddOpen: () => this.setState({ lkAdd: true, lkStep: 0, lkProv: null, lkDigits: '', lkCode: '' }),
+      lkAddBack: () => step === 0 || step === 4
+        ? this.setState({ lkAdd: false })
+        : this.setState({ lkStep: step === 3 ? 2 : step - 1 }),
+      lkStepTitle: ['Add a card', 'Card details', 'Confirm it is you', 'Verifying', 'Card linked'][step],
+      lkStepCount: step >= 3 ? '' : 'Step ' + (step + 1) + ' of 3',
+      lkS0Display: step === 0 ? 'block' : 'none',
+      lkS1Display: step === 1 ? 'block' : 'none',
+      lkS2Display: step === 2 ? 'block' : 'none',
+      lkS3Display: step === 3 ? 'flex' : 'none',
+      lkS4Display: step === 4 ? 'flex' : 'none',
+
+      lkProviders: LK_PROVIDERS.map(x => Object.assign({}, x, {
+        pick: () => this.setState({ lkProv: x.key, lkStep: 1, lkDigits: '' }),
+      })),
+      lkProviderName: p.name,
+      lkProviderArt: p.art,
+      lkNumDisplay: grouped,
+      lkExpDisplay: exp.length ? exp.slice(0, 2) + (exp.length > 2 ? '/' + exp.slice(2) : '') : 'MM/YY',
+
+      lkCodeNote: 'We sent a four-digit code to +964 770 ··· 4567, registered with ' + p.name + '.',
+      lkCodeBoxes: [0, 1, 2, 3].map(i => ({
+        ch: (s.lkCode || '').charAt(i) || '',
+        border: (s.lkCode || '').length === i ? this.accent : 'rgba(255,255,255,.1)',
+      })),
+      lkResend: () => this.toast('A new code is on its way'),
+
+      lkPadDisplay: (step === 1 || step === 2) ? 'block' : 'none',
+      lkKeys: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '', '0', '⌫'].map(k => ({
+        label: k,
+        tap: () => {
+          if (!k) return;
+          if (step === 1) {
+            const d = k === '⌫' ? digits.slice(0, -1) : (digits.length < 20 ? digits + k : digits);
+            this.setState({ lkDigits: d });
+          } else {
+            const c = k === '⌫' ? (s.lkCode || '').slice(0, -1) : ((s.lkCode || '').length < 4 ? (s.lkCode || '') + k : s.lkCode);
+            this.setState({ lkCode: c });
+            if (c.length === 4) { goStep(3); setTimeout(finish, 1800); }
+          }
+        },
+      })),
+
+      lkPrimaryDisplay: (step === 1 || step === 2 || step === 4) ? 'block' : 'none',
+      lkPrimaryLabel: step === 4 ? 'Make it my paying card' : (step === 2 ? 'Confirm' : 'Continue'),
+      lkPrimaryBg: step === 1 && digits.length < 20 ? 'rgba(255,255,255,.1)' : (step === 2 && (s.lkCode || '').length < 4 ? 'rgba(255,255,255,.1)' : '#2563EB'),
+      lkPrimaryInk: step === 1 && digits.length < 20 ? '#6E7986' : (step === 2 && (s.lkCode || '').length < 4 ? '#6E7986' : '#FFFFFF'),
+      lkPrimary: () => {
+        if (step === 1) { if (digits.length >= 20) goStep(2); return; }
+        if (step === 2) { if ((s.lkCode || '').length === 4) { goStep(3); setTimeout(finish, 1800); } return; }
+        const fresh = (this.state.lkCards || []).slice(-1)[0];
+        if (fresh) this.setState({ payFrom: fresh.key + fresh.last4 });
+        this.setState({ lkAdd: false });
+        this.toast('Your iCASH card now pays from ' + p.name);
+      },
+      lkSecondaryDisplay: step === 4 ? 'block' : 'none',
+      lkSecondaryLabel: 'Keep paying from my wallet',
+      lkSecondary: () => this.setState({ lkAdd: false }),
+
+      lkDoneTitle: p.name + ' ·· ' + ((this.state.lkCards || []).slice(-1)[0] || { last4: last4 }).last4 + ' linked',
+      lkDoneFee: p.fee,
+      lkDoneLimit: p.limit,
+    };
+  }
+
+  budgetWidget(w) {
+    const s = this.state;
+    if (w.id !== 'budget' && w.id !== 'left') return {};
+    if (!s.budgetOn) return w.id === 'budget'
+      ? { value: 'Off', meta: 'Tap to set a target', progress: '0%' }
+      : { value: '—', meta: 'No budget set', progress: '0%' };
+    const pct = Math.min(100, Math.round((SPENT / s.budget) * 100));
+    return w.id === 'budget'
+      ? { value: iqd(s.budget), meta: pct + '% used', progress: pct + '%' }
+      : { value: iqd(Math.max(0, s.budget - SPENT)), meta: '9 days left', progress: pct + '%' };
+  }
+
+  budgetVals() {
+    const s = this.state;
+    const pct = Math.min(100, Math.round((SPENT / s.budget) * 100));
+    const over = pct >= s.budgetAlert;
+    const step = (d) => () => this.setState(p => ({ budget: Math.min(12000000, Math.max(200000, p.budget + d)) }));
+    return {
+      bgtDisplay: s.budgetSheet ? 'block' : 'none',
+      bgtClose: () => this.setState({ budgetSheet: false }),
+      bgtAmount: iqd(s.budget),
+      bgtDec: step(-100000),
+      bgtInc: step(100000),
+      bgtPresets: [1200000, 1500000, 1800000, 2400000].map(v => ({
+        label: iqd(v),
+        bg: s.budget === v ? '#FFFFFF' : 'rgba(255,255,255,.1)',
+        ink: s.budget === v ? '#0D1B2A' : '#FFFFFF',
+        pick: () => this.setState({ budget: v }),
+      })),
+      bgtSpentLabel: 'Spent ' + iqd(SPENT) + ' of ' + iqd(s.budget),
+      bgtPctLabel: pct + '% used',
+      bgtPctInk: over ? '#E8453C' : '#00A78F',
+      bgtBarW: pct + '%',
+      bgtLeftLabel: s.budgetOn
+        ? iqd(Math.max(0, s.budget - SPENT)) + ' IQD left for the next 9 days · about ' + iqd(Math.round(Math.max(0, s.budget - SPENT) / 9 / 1000) * 1000) + ' a day'
+        : 'No budget is active. Save to switch it on.',
+      bgtAlertNote: 'A notification at ' + s.budgetAlert + '% of ' + iqd(s.budget) + ' IQD, and again when you pass the target.',
+      bgtAlerts: [70, 80, 90].map(v => ({
+        label: v + '%',
+        bg: s.budgetAlert === v ? '#FFFFFF' : 'rgba(255,255,255,.1)',
+        ink: s.budgetAlert === v ? '#0D1B2A' : '#FFFFFF',
+        pick: () => this.setState({ budgetAlert: v }),
+      })),
+      bgtSaveLabel: s.budgetOn ? 'Save budget' : 'Set this budget',
+      bgtSave: () => { this.setState({ budgetSheet: false, budgetOn: true }); this.toast('Budget set to ' + iqd(this.state.budget) + ' IQD a month'); },
+      bgtRemoveDisplay: s.budgetOn ? 'block' : 'none',
+      bgtRemove: () => { this.setState({ budgetSheet: false, budgetOn: false }); this.toast('Monthly budget removed'); },
+    };
   }
 
   headerDepth() { return { home: 500, invest: 300, cards: 230, transfers: 0, lifestyle: 0 }[this.state.tab] || 0; }
@@ -627,23 +1004,54 @@ class Component extends DCLogic {
     this.setState({ lang: l });
     this.toast(l === 'ar' ? 'تم تغيير اللغة إلى العربية' : 'Language set to English');
     clearInterval(this._langT);
-    if (l === 'ar') this._langT = setInterval(() => this.syncLang(), 400);
+    if (l === 'ar' || this.state.light) this._langT = setInterval(() => this.syncSkin(), 400);
+    else setTimeout(() => this.syncSkin(), 30);
   }
 
-  syncLang() {
+  syncLang() { this.syncSkin(); }
+
+  setTheme(key) { this.setState({ theme: key }); }
+
+  setLight(on) {
+    this.setState({ light: on });
+    this.toast(on ? 'Light appearance on' : 'Dark appearance on');
+    clearInterval(this._langT);
+    if (on || this.state.lang === 'ar') this._langT = setInterval(() => this.syncSkin(), 400);
+    else setTimeout(() => this.syncSkin(), 30);
+  }
+
+  // language and theme both rewrite authored inline styles, so they run as one pass
+  syncSkin() {
     const root = document.querySelector('[data-icash-phone]');
     if (!root) return;
     const ar = this.state.lang === 'ar';
-    if (ar) {
-      root.setAttribute('dir', 'rtl');
-      this.mirror(root, true);
-      this.translate(root);
-    } else if (this._arOn) {
-      root.removeAttribute('dir');
-      this.untranslate();
-      this.mirror(root, false);
+    const lt = !!this.state.light;
+    if (ar) root.setAttribute('dir', 'rtl'); else root.removeAttribute('dir');
+    const els = [root].concat([].slice.call(root.querySelectorAll('*')));
+    if (!ar && !lt) {
+      if (this._skinOn) els.forEach(el => {
+        if (el.dataset && el.dataset.skinCss !== undefined) { el.setAttribute('style', el.dataset.skinCss); delete el.dataset.skinCss; delete el.dataset.skinOut; delete el.dataset.surf; }
+      });
+      if (this._arOn) this.untranslate();
+      this._skinOn = false; this._arOn = false;
+      return;
     }
-    this._arOn = ar;
+    els.forEach(el => {
+      if (!el.dataset) return;
+      const live = el.getAttribute('style') || '';
+      if (live !== el.dataset.skinOut) el.dataset.skinCss = live;     // a re-render wrote new authored CSS
+      let s = el.dataset.skinCss || '';
+      if (s) {
+        if (lt) s = lightCss(el, s);
+        if (ar) s = mirrorCss(s);
+        if (s !== live) el.setAttribute('style', s);
+        el.dataset.skinOut = s;
+      } else if (lt) {
+        el.dataset.surf = el.parentElement && el.parentElement.dataset ? (el.parentElement.dataset.surf || '') : '';
+      }
+    });
+    if (ar) this.translate(root); else if (this._arOn) this.untranslate();
+    this._skinOn = true; this._arOn = ar;
   }
 
   translate(root) {
@@ -684,33 +1092,9 @@ class Component extends DCLogic {
     }
   }
 
-  // physical CSS (left/right paddings, offsets, chevrons) has to be mirrored by hand
-  mirror(root, on) {
-    [root, ...root.querySelectorAll('*')].forEach(el => {
-      if (!el.getAttribute) return;
-      if (on) {
-        if (el.dataset.ltrCss !== undefined) return;
-        const css = el.getAttribute('style') || '';
-        if (!css) return;
-        el.dataset.ltrCss = css;
-        let s = css
-          .replace(/\b(padding|margin|border)-(left|right)\b/g, (m, p, d) => p + '-' + (d === 'left' ? 'right' : 'left'))
-          .replace(/(^|;)(\s*)left:/g, '$1$2__SWAP:')
-          .replace(/(^|;)(\s*)right:/g, '$1$2left:')
-          .replace(/__SWAP:/g, 'right:')
-          .replace(/text-align:\s*left/g, 'text-align:__SWAP')
-          .replace(/text-align:\s*right/g, 'text-align:left')
-          .replace(/text-align:__SWAP/g, 'text-align:right');
-        if (/rotate\(45deg\)/.test(s)) s = s.replace(/transform:\s*/g, 'transform:scaleX(-1) ');
-        el.setAttribute('style', s);
-      } else if (el.dataset.ltrCss !== undefined) {
-        el.setAttribute('style', el.dataset.ltrCss);
-        delete el.dataset.ltrCss;
-      }
-    });
-  }
+  spaceBalanceNoop() {}
 
-  componentDidUpdate() { if (this.state.lang === 'ar' || this._arOn) this.syncLang(); }
+  componentDidUpdate() { if (this.state.lang === 'ar' || this.state.light || this._skinOn) this.syncSkin(); }
 
   spaceBalance() {
     const root = document.querySelector('[data-icash-home]');
@@ -784,8 +1168,9 @@ class Component extends DCLogic {
       souk: [[236, 126, 0, .44], [244, 63, 94, .18], [251, 146, 60, .38], [236, 126, 0, .22], [217, 119, 6, .38], [245, 158, 11, .22], [236, 126, 0, .34], [190, 24, 93, .18]],
       dusk: [[124, 58, 237, .48], [236, 72, 153, .20], [139, 92, 246, .40], [124, 58, 237, .24], [167, 139, 250, .34], [236, 72, 153, .22], [124, 58, 237, .36], [59, 130, 246, .20]],
       grove: [[16, 122, 87, .46], [132, 204, 22, .18], [5, 150, 105, .40], [16, 122, 87, .22], [52, 211, 153, .30], [161, 98, 7, .20], [16, 122, 87, .34], [132, 204, 22, .16]],
+      light: [[37, 99, 235, .14], [0, 194, 168, .07], [0, 194, 168, .12], [37, 99, 235, .07], [124, 58, 237, .11], [37, 99, 235, .07], [236, 126, 0, .10], [124, 58, 237, .08]],
     };
-    const pal = THEMES[s.theme || 'midnight'];
+    const pal = THEMES[s.light ? 'light' : (s.theme || 'midnight')];
     const rgba = (c) => 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',' + c[3] + ')';
     const wash = (i) => 'radial-gradient(115% 62% at 80% -6%,' + rgba(pal[i * 2]) + ' 0%,rgba(5,10,16,0) 58%),'
       + 'radial-gradient(88% 46% at 11% 2%,' + rgba(pal[i * 2 + 1]) + ' 0%,rgba(5,10,16,0) 62%),#050A10';
@@ -899,15 +1284,19 @@ class Component extends DCLogic {
       transfersDisplay: show(s.tab === 'transfers'),
       lifestyleDisplay: show(s.tab === 'lifestyle'),
 
-      widgets: s.picks.map(id => WIDGETS.find(w => w.id === id)).filter(Boolean).map(w => Object.assign({}, w, {
+      widgets: s.picks.map(id => WIDGETS.find(w => w.id === id)).filter(Boolean).map(w => Object.assign({}, w, this.budgetWidget(w), {
         barsDisplay: w.bars ? 'flex' : 'none',
         progressDisplay: w.progress ? 'block' : 'none',
         bars: (w.bars || []).map((h, i) => ({ h: h + '%', bg: i === (w.bars || []).length - 1 ? '#2563EB' : '#D6DDE8' })),
-        remove: () => this.setState(p => ({ picks: p.picks.filter(x => x !== w.id) })),
+        remove: (ev) => { if (ev && ev.stopPropagation) ev.stopPropagation(); this.setState(p => ({ picks: p.picks.filter(x => x !== w.id) })); },
+        tap: w.opens === 'budget' ? () => this.setState({ budgetSheet: true })
+          : w.go ? () => this.setState({ tab: 'lifestyle', life: w.go, scroll: 0 })
+          : () => this.toast(w.name + ' · ' + w.value),
       })),
-      widgetChoices: WIDGETS.map(w => {
+      widgetChoices: WIDGETS.map((w, i) => {
         const on = s.picks.indexOf(w.id) >= 0;
         return Object.assign({}, w, {
+          headDisplay: (i === 0 || WIDGETS[i - 1].group !== w.group) ? 'block' : 'none',
           mark: on ? '✓' : '+',
           markBg: on ? this.accent : '#FFFFFF',
           markInk: on ? '#FFFFFF' : '#8A95A2',
@@ -1006,6 +1395,7 @@ class Component extends DCLogic {
         this._qr = on;
         return on;
       })(),
+      qrPath: QR_D,
       qrDisplay: s.qr ? 'block' : 'none',
       qrClose: () => this.setState({ qr: false }),
       moreDisplay: s.more ? 'block' : 'none',
@@ -1036,7 +1426,7 @@ class Component extends DCLogic {
         bg: (s.theme || 'midnight') === t.key ? 'rgba(255,255,255,.08)' : 'transparent',
         border: (s.theme || 'midnight') === t.key ? '#FFFFFF' : 'rgba(255,255,255,.12)',
         ink: '#FFFFFF',
-        pick: () => this.setState({ theme: t.key }),
+        pick: () => this.setTheme(t.key),
       })),
       cdDisplay: s.cardDetails ? 'flex' : 'none',
       cdClose: () => this.setState({ cardDetails: false }),
@@ -1124,13 +1514,14 @@ class Component extends DCLogic {
       }),
       addMethods: [
         { icon: '▤', name: 'Debit or credit card', sub: 'Usually arrives instantly', art: 'linear-gradient(135deg,#4A4A4A,#1E1E1E)' },
-        { icon: '🏛', name: 'Easy bank transfer', sub: 'Transfer from your bank without entering your details', art: 'linear-gradient(135deg,#2563EB,#10225C)' },
-        { icon: '→', name: 'Regular bank transfer', sub: 'Send from any Iraqi bank using your iCASH account details', art: 'linear-gradient(135deg,#00A78F,#0A3F38)' },
+        { icon: '→', name: 'From another iCASH wallet', sub: 'Ask anyone to send to your phone number or @tag', art: 'linear-gradient(135deg,#2563EB,#10225C)' },
         { icon: '◈', name: 'Cash at an iCASH agent', sub: 'Deposit cash at any partner agent across Iraq', art: 'linear-gradient(135deg,#EC7E00,#7A3E00)' },
         { icon: '▦', name: 'QR top-up', sub: 'Show your QR at an agent, kiosk or exchange office', art: 'linear-gradient(135deg,#7C3AED,#2A1160)' },
       ].map(m => {
         const label = m.name + ' · ' + (s.addCurrency || 'IQD');
         return Object.assign({}, m, {
+          iconQrDisplay: m.name === 'QR top-up' ? 'block' : 'none',
+          iconCharDisplay: m.name === 'QR top-up' ? 'none' : 'block',
           rowBg: (s.addMethod || '') === label ? 'rgba(37,99,235,.14)' : 'transparent',
           pick: () => this.setState(m.name === 'QR top-up'
             ? { addSheet: false, qr: true }
@@ -1258,7 +1649,7 @@ class Component extends DCLogic {
       openProfile: () => this.setState({ profile: true }),
       closeProfile: () => this.setState({ profile: false }),
       profileMenu: [
-        { icon: '⇄', name: 'Language', sub: (s.lang === 'ar' ? 'العربية' : 'English'), badge: '', lang: 1 },
+        { icon: '⇄', name: 'Language', sub: (s.lang === 'ar' ? 'العربية' : 'English'), badge: '', lang: 1, chev: 1 },
         { icon: '✦', name: 'Invite friends', sub: 'Earn 50.000 IQD or more', badge: '' },
         { icon: '◗', name: 'Chats', sub: '', badge: '20' },
         { icon: '◍', name: 'Personal info', sub: '', badge: '' },
@@ -1270,7 +1661,8 @@ class Component extends DCLogic {
       ].map(m => Object.assign({}, m, {
         subDisplay: m.sub ? 'block' : 'none',
         badgeDisplay: m.badge ? 'flex' : 'none',
-        tap: m.lang ? () => this.setLang(s.lang === 'ar' ? 'en' : 'ar') : () => this.toast(m.name),
+        chevDisplay: m.chev ? 'block' : 'none',
+        tap: m.lang ? () => this.setState({ langPick: true }) : () => this.toast(m.name),
       })),
       pointActions: [
         { icon: '+', label: 'Earn', tap: () => this.toast('Earn points on every payment') },
@@ -1323,16 +1715,19 @@ class Component extends DCLogic {
         { name: 'Split a bill in seconds', sub: 'Send a request to anyone in your contacts', art: 'radial-gradient(circle at 35% 45%,#1F6F6A,#06231F 70%)', dot: 'rgba(255,255,255,.3)', tap: () => {} },
       ],
       payHistory: [
-        { ini: 'HA', bg: '#6E8BF5', ink: '#FFFFFF', badge: 'i', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Hayder Aboshanna', sub: 'You sent 600.000 IQD', date: '30 Aug' },
-        { ini: 'MM', bg: '#F45D9B', ink: '#FFFFFF', badge: '▪', badgeBg: '#FFFFFF', badgeInk: '#E8453C', name: 'Mohammed Mahmood', sub: 'You sent 198.000 IQD', date: '27 Aug' },
-        { ini: 'MA', bg: '#39C46E', ink: '#FFFFFF', badge: 'i', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Mustafa Albofaisal', sub: 'Sent you 1.000 IQD', date: '19 Aug' },
-        { ini: 'ZA', bg: '#2CC7C7', ink: '#FFFFFF', badge: '▪', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Zainab Al Saadi', sub: 'You sent 75.000 IQD', date: '11 Aug' },
-        { ini: 'SK', bg: '#F59E42', ink: '#FFFFFF', badge: '▪', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Saad Kareem', sub: 'Sent you 240.000 IQD', date: '2 Aug' },
-        { ini: 'AH', bg: '#2CBFB0', ink: '#FFFFFF', badge: 'i', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Ahmed Al Janahi', sub: 'You sent 27.190 IQD', date: '4 Jul' },
-        { ini: 'NK', bg: '#3BA5F0', ink: '#FFFFFF', badge: '▪', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Noor Kadhim', sub: 'You sent 36.720 IQD', date: '23 Jun' },
-        { ini: 'YH', bg: '#3B9BF0', ink: '#FFFFFF', badge: 'i', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Yousif Hassan', sub: 'You sent 8.280 IQD', date: '6 Jun' },
-        { ini: 'RA', bg: '#8B87F5', ink: '#FFFFFF', badge: '▪', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Rania Abbas', sub: 'Sent you 120.000 IQD', date: '28 May' },
-      ],
+        { ini: 'HA', bg: '#6E8BF5', ink: '#FFFFFF', badge: 'i', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Hayder Aboshanna', dir: 'You sent', amt: '−600.000', date: '30 Aug', status: 'done' },
+        { ini: 'MM', bg: '#F45D9B', ink: '#FFFFFF', badge: '▪', badgeBg: '#FFFFFF', badgeInk: '#E8453C', name: 'Mohammed Mahmood', dir: 'You sent', amt: '−198.000', date: '27 Aug', status: 'pending' },
+        { ini: 'MA', bg: '#39C46E', ink: '#FFFFFF', badge: 'i', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Mustafa Albofaisal', dir: 'Sent you', amt: '+1.000', date: '19 Aug', status: 'done' },
+        { ini: 'ZA', bg: '#2CC7C7', ink: '#FFFFFF', badge: '▪', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Zainab Al Saadi', dir: 'You sent', amt: '−75.000', date: '11 Aug', status: 'done' },
+        { ini: 'SK', bg: '#F59E42', ink: '#FFFFFF', badge: '▪', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Saad Kareem', dir: 'Sent you', amt: '+240.000', date: '2 Aug', status: 'pending' },
+        { ini: 'AH', bg: '#2CBFB0', ink: '#FFFFFF', badge: 'i', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Ahmed Al Janahi', dir: 'You sent', amt: '−27.190', date: '4 Jul', status: 'done' },
+        { ini: 'NK', bg: '#3BA5F0', ink: '#FFFFFF', badge: '▪', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Noor Kadhim', dir: 'You sent', amt: '−36.720', date: '23 Jun', status: 'done' },
+        { ini: 'YH', bg: '#3B9BF0', ink: '#FFFFFF', badge: 'i', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Yousif Hassan', dir: 'You sent', amt: '−8.280', date: '6 Jun', status: 'done' },
+        { ini: 'RA', bg: '#8B87F5', ink: '#FFFFFF', badge: '▪', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Rania Abbas', dir: 'Sent you', amt: '+120.000', date: '28 May', status: 'done' },
+      ].map(h => Object.assign({}, h, {
+        sub: h.status === 'pending' ? h.dir + ' · Pending' : h.dir + ' · Completed',
+        amtInk: h.status === 'pending' ? '#FFCE7A' : (h.amt.charAt(0) === '+' ? '#3FD39F' : '#FFFFFF'),
+      })),
       investBenefits: [
         { icon: 'ISX', name: 'Own a piece of Iraqi business', sub: 'Banks, telecoms and industry listed on the Iraq Stock Exchange' },
         { icon: '%', name: 'Save on trading fees', sub: '0% commission within your plan limits. Other fees, e.g. FX, may apply' },
@@ -1764,6 +2159,41 @@ class Component extends DCLogic {
       staysDates: () => this.toast('Change dates'),
       staysGuestsTap: () => this.toast('Change guests and rooms'),
       openSearch: () => this.toast('Search across payments, people and services'),
+      lightToggle: () => this.setLight(!s.light),
+      lightTrack: s.light ? this.accent : 'rgba(255,255,255,.18)',
+      lightKnob: s.light ? '21px' : '3px',
+      langPickDisplay: s.langPick ? 'block' : 'none',
+      langClose: () => this.setState({ langPick: false, langDraft: null }),
+      langOptions: [['English', 'Left to right', 'en'], ['العربية', 'من اليمين إلى اليسار', 'ar']].map(([name, note, key]) => {
+        const on = (s.langDraft || s.lang || 'en') === key;
+        return {
+          name: name, note: note, mark: on ? '✓' : '',
+          ringBg: on ? this.accent : 'transparent',
+          ringBorder: on ? this.accent : 'rgba(255,255,255,.28)',
+          pick: () => this.setState({ langDraft: key }),
+        };
+      }),
+      langApplyLabel: (s.langDraft || s.lang || 'en') === 'ar' ? 'تغيير اللغة' : 'Change language',
+      langApply: () => { const k = s.langDraft || s.lang || 'en'; this.setState({ langPick: false, langDraft: null }); this.setLang(k); },
+      ...this.linkedVals(),
+      openSupport: () => this.setState({ support: true }),
+      helpFabDisplay: (s.splash || s.locked || s.onboard) ? 'none' : 'flex',
+      supClose: () => this.setState({ support: false }),
+      supDisplay: s.support ? 'block' : 'none',
+      supFaq: [
+        ['How do I add money?', 'Debit or credit card, cash at any iCASH agent, or a transfer from another iCASH wallet. All of them arrive instantly.'],
+        ['How long does a transfer take?', 'Instantly to any iCASH wallet, day or night, whether you send to a phone number or a wallet number.'],
+        ['What does a stock order cost?', 'A 0,85% service fee with a 2.500 IQD minimum, plus the 0,15% ISX levy. The full total is shown before you confirm.'],
+        ['I lost my phone. Is my card safe?', 'Freeze the card from Cards straight away, then order a replacement. Your balance stays in your account.'],
+        ['How do I switch the app to Arabic?', 'Profile, then Language. The whole app changes, including the right-to-left layout.'],
+      ].map(([q, a], i) => ({
+        q: q, a: a,
+        answerDisplay: s.supOpen === i ? 'block' : 'none',
+        rotate: s.supOpen === i ? 'rotate(-45deg)' : 'rotate(135deg)',
+        tap: () => this.setState(p => ({ supOpen: p.supOpen === i ? null : i })),
+      })),
+      supCall: () => this.toast('Calling +964 780 000 1234'),
+      supWhats: () => this.toast('Opening WhatsApp chat with iCASH'),
       seeAll: () => this.toast('Showing the full list'),
       forgotPin: () => this.toast('PIN reset link sent to your phone'),
       reactivateCard: () => this.toast('Contact support to reactivate a card'),
@@ -1783,7 +2213,8 @@ class Component extends DCLogic {
         ink: (s.anRange || 'Month') === l ? '#FFFFFF' : '#8A95A2',
         pick: () => this.setState({ anRange: l }),
       })),
-      anBudget: () => this.toast('Budget is set to 1.800.000 IQD a month'),
+      anBudget: () => this.setState({ budgetSheet: true }),
+      ...this.budgetVals(),
       ...(() => {
         const AN = {
           Day: { period: 'today', total: '86.500', delta: '+12% vs yesterday', deltaInk: '#FF8A8A',
@@ -1838,7 +2269,7 @@ class Component extends DCLogic {
             ini: m[0], name: m[1], sub: m[2], amt: m[3], bg: m[4],
             tap: () => this.toast(m[1] + ' · ' + m[3] + ' IQD'),
           })),
-          anBudgetNote: 'Spent ' + a.total + ' of 1.800.000 IQD',
+          anBudgetNote: s.budgetOn ? 'Spent ' + a.total + ' of ' + iqd(s.budget) + ' IQD' : 'No budget yet · tap to set one',
         };
       })(),
       ...(() => {
@@ -2110,8 +2541,10 @@ class Component extends DCLogic {
       goInvest: () => this.setState({ tab: 'invest', scroll: 0 }),
       homeTx: [
         { ini: 'CF', name: 'Ciao Cafe', sub: 'Today, 16:30 · Standard', amt: '−12.000', ink: '#FFFFFF', meta: 'Card', bg: '#2563EB' },
+        { ini: 'IM', name: 'Iraq Mall', sub: 'Today, 15:48 · Pending', amt: '−64.000', ink: '#FFCE7A', meta: 'Card', bg: '#1B3FA8' },
         { ini: 'AS', name: 'Asiacell', sub: 'Today, 11:10 · Top-up', amt: '−25.000', ink: '#FFFFFF', meta: 'Mobile', bg: '#EC7E00' },
-        { ini: 'HY', name: 'From Hayder', sub: 'Yesterday, 21:04', amt: '+145.000', ink: '#6FE3D2', meta: 'Transfer', bg: '#7C3AED' },
+        { ini: 'SK', name: 'From Saad Kareem', sub: 'Today, 09:12 · Pending', amt: '+240.000', ink: '#FFCE7A', meta: 'Transfer', bg: '#F59E42' },
+        { ini: 'HY', name: 'From Hayder', sub: 'Yesterday, 21:04', amt: '+145.000', ink: '#3FD39F', meta: 'Transfer', bg: '#7C3AED' },
         { ini: 'MK', name: 'Al Rashid Market', sub: 'Yesterday, 18:22 · Work', amt: '−38.500', ink: '#FFFFFF', meta: 'Card', bg: '#00A78F' },
       ],
       homeUpcoming: [
@@ -2202,7 +2635,7 @@ class Component extends DCLogic {
       ],
       transferTypes: [
         { ini: 'iC', name: 'To an iCASH user', sub: 'Instant, free · phone or @tag', bg: '#2563EB' },
-        { ini: 'IB', name: 'Local bank transfer', sub: 'IBAN · arrives same day', bg: '#0D1B2A' },
+        { ini: 'WA', name: 'To a wallet number', sub: 'iCASH account number · instant', bg: '#0D1B2A' },
         { ini: 'IN', name: 'International', sub: '38 currencies · from 0,4%', bg: '#7C3AED' },
         { ini: 'RQ', name: 'Request money', sub: 'Send a payment link', bg: '#00C2A8' },
         { ini: 'FX', name: 'Between my accounts', sub: 'IQD ↔ USD at live rate', bg: '#6B7280' },
@@ -2218,11 +2651,10 @@ class Component extends DCLogic {
         { kind: 'acct', name: 'Account number', bg: 'linear-gradient(160deg,#2563EB,#10225C)', tap: () => this.setState({ entry: 'acct', entryVal: '' }) },
         { kind: 'phone', name: 'Phone number', bg: 'linear-gradient(160deg,#00C2A8,#0A3F38)', tap: () => this.setState({ entry: 'phone', entryVal: '' }) },
         { kind: 'qr', name: 'Show my QR', bg: 'linear-gradient(160deg,#7C3AED,#2A1160)', tap: () => this.setState({ send: false, qr: true }) },
-        { kind: 'scan', name: 'Scan a QR', bg: 'linear-gradient(160deg,#EC7E00,#7A3E00)', tap: () => this.setState({ sendScan: true }) },
       ].map(m => Object.assign({}, m, {
         iconAcct: m.kind === 'acct' ? 'block' : 'none',
         iconPhone: m.kind === 'phone' ? 'block' : 'none',
-        iconQr: m.kind === 'qr' ? 'grid' : 'none',
+        iconQr: m.kind === 'qr' ? 'block' : 'none',
         iconScan: m.kind === 'scan' ? 'block' : 'none',
       })),
       entryDisplay: s.entry === 'acct' || s.entry === 'phone' ? 'block' : 'none',

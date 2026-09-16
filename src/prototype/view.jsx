@@ -39,11 +39,11 @@ export default function renderView(vals) {
               <div style={{ position: "absolute", inset: "0", background: "#FFFFFF", pointerEvents: "none", animation: "icFlash 1.05s ease-in 2.1s both" }} />
             </div>
             <div style={{ position: "absolute", inset: "0", display: $s(vals.lockDisplay), background: "#0D1B2A", flexDirection: "column", alignItems: "center", padding: "92px 30px 34px", boxSizing: "border-box" }}>
-              <div style={{ position: "relative", width: "186px", marginTop: "34px" }}>
+              <div style={{ position: "relative", width: "276px", marginTop: "24px" }}>
                 <img src="brand/icash-word.png" alt="iCASH" style={{ display: "block", width: "100%", filter: "invert(1) saturate(0) brightness(1.18) contrast(1.05)", mixBlendMode: "screen" }} />
                 <div style={{ position: "absolute", left: ".48%", top: "1.66%", width: "5.82%", aspectRatio: "1", borderRadius: "50%", background: "#2563EB" }} />
               </div>
-              <div style={{ fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif", fontSize: "9px", fontWeight: "600", letterSpacing: ".3em", color: "#5A6A7C", marginTop: "8px" }}>BOLD · SIMPLE · IMPACTFUL</div>
+              <div style={{ fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif", fontSize: "7.5px", fontWeight: "600", letterSpacing: ".34em", color: "#5A6A7C", marginTop: "6px" }}>BOLD · SIMPLE · IMPACTFUL</div>
               <div style={{ fontSize: "14px", fontWeight: "500", color: $s(vals.pinInk), marginTop: "40px" }}>{$t(vals.pinPrompt)}</div>
               <div style={{ display: "flex", gap: "18px", marginTop: "20px", animation: $s(vals.shake) }}>
                 {$each(vals.pinDots, (d) => (
@@ -72,16 +72,16 @@ export default function renderView(vals) {
                       <path d="M0 100 C 70 150, 130 30, 200 100 C 270 170, 330 40, 400 100 L400 180 L0 180 Z" fill={vals.auroraWave2} />
                     </svg>
                   </div>
-                  <div style={{ display: "flex", alignItems: "center", gap: "10px", padding: "58px 14px 0" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "9px", padding: "58px 66px 0 14px" }}>
                     <div onClick={vals.openProfile} style={{ position: "relative", width: "46px", height: "46px", flex: "none", cursor: "pointer" }}>
                       <div style={{ width: "46px", height: "46px", borderRadius: "50%", background: "#8C7A5E", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif", fontSize: "15px", fontWeight: "600", color: "#fff" }}>AA</div>
                       <div style={{ position: "absolute", right: "0", top: "0", width: "10px", height: "10px", borderRadius: "50%", background: "#E8453C", border: "2px solid #050A10", boxSizing: "border-box" }} />
                     </div>
-                    <div style={{ flex: "1", display: "flex", alignItems: "center", gap: "11px", height: "46px", borderRadius: "9999px", background: "#15191E", padding: "0 16px", boxSizing: "border-box", cursor: "pointer" }} onClick={vals.openSearch}>
+                    <div style={{ flex: "1", minWidth: "0", display: "flex", alignItems: "center", gap: "8px", height: "38px", borderRadius: "9999px", background: "#15191E", padding: "0 13px", boxSizing: "border-box", cursor: "pointer" }} onClick={vals.openSearch}>
                       <div style={{ width: "15px", height: "15px", borderRadius: "50%", border: "2px solid #8A95A2", position: "relative" }}>
                         <div style={{ position: "absolute", right: "-4px", bottom: "-3px", width: "6px", height: "2px", borderRadius: "1px", background: "#8A95A2", transform: "rotate(45deg)" }} />
                       </div>
-                      <div style={{ fontSize: "14px", fontWeight: "500", color: "#8A95A2" }}>Search</div>
+                      <div style={{ fontSize: "13px", fontWeight: "500", color: "#8A95A2" }}>Search</div>
                     </div>
                     <div onClick={vals.openAnalytics} style={{ width: "46px", height: "46px", flex: "none", borderRadius: "50%", background: "#15191E", display: "flex", alignItems: "flex-end", justifyContent: "center", gap: "2.5px", paddingBottom: "16px", boxSizing: "border-box", cursor: "pointer" }}>
                       <div style={{ width: "3px", height: "8px", borderRadius: "1.5px", background: "#fff" }} />
@@ -96,7 +96,7 @@ export default function renderView(vals) {
                   </div>
                   <div style={{ textAlign: "center", padding: "64px 20px 0" }}>
                     <div style={{ fontSize: "13.5px", fontWeight: "500", color: "#FFFFFF" }}>Personal · IQD</div>
-                    <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "center", gap: "2px", marginTop: "8px" }}>
+                    <div style={{ display: "flex", direction: "ltr", alignItems: "flex-start", justifyContent: "center", gap: "2px", marginTop: "8px" }}>
                       <div style={{ fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif", fontVariantNumeric: "tabular-nums", fontSize: "42px", fontWeight: "700", color: "#FFFFFF", letterSpacing: "-.02em", lineHeight: "1" }}>2.450.000</div>
                       <div style={{ fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif", fontSize: "19px", fontWeight: "700", color: "#FFFFFF", marginTop: "4px" }}>,00</div>
                     </div>
@@ -195,7 +195,7 @@ export default function renderView(vals) {
                     </div>
                     <div style={{ display: "flex", gap: "12px", overflow: "auto", paddingBottom: "8px" }}>
                       {$each(vals.widgets, (w) => (
-                          <div style={{ flex: "none", width: "190px", height: "190px", borderRadius: "20px", background: "#15191E", padding: "16px", boxSizing: "border-box", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+                          <div onClick={w.tap} style={{ flex: "none", width: "190px", height: "190px", borderRadius: "20px", background: "#15191E", padding: "16px", boxSizing: "border-box", display: "flex", flexDirection: "column", justifyContent: "space-between", cursor: "pointer" }}>
                             <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between" }}>
                               <div style={{ width: "38px", height: "38px", borderRadius: "12px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12.5px", fontWeight: "700", color: "#fff", background: $s(w.bg) }}>{$t(w.ini)}</div>
                               <div onClick={w.remove} style={{ width: "22px", height: "22px", borderRadius: "50%", background: "rgba(255,255,255,.1)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "13px", color: "#8A95A2", cursor: "pointer" }}>×</div>
@@ -400,14 +400,14 @@ export default function renderView(vals) {
                       <path d="M0 100 C 70 150, 130 30, 200 100 C 270 170, 330 40, 400 100 L400 180 L0 180 Z" fill={vals.auroraWave2} />
                     </svg>
                   </div>
-                  <div style={{ display: "flex", alignItems: "center", gap: "10px", padding: "58px 14px 0" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "9px", padding: "58px 66px 0 14px" }}>
                     <div onClick={vals.openProfile} style={{ position: "relative", width: "46px", height: "46px", flex: "none", cursor: "pointer" }}>
                       <div style={{ width: "46px", height: "46px", borderRadius: "50%", background: "#8C7A5E", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif", fontSize: "15px", fontWeight: "600", color: "#fff" }}>AA</div>
                       <div style={{ position: "absolute", right: "0", top: "0", width: "10px", height: "10px", borderRadius: "50%", background: "#E8453C", border: "2px solid #050A10", boxSizing: "border-box" }} />
                     </div>
-                    <div style={{ flex: "1", display: "flex", alignItems: "center", gap: "11px", height: "46px", borderRadius: "9999px", background: "#15191E", padding: "0 16px", boxSizing: "border-box", cursor: "pointer" }} onClick={vals.openSearch}>
+                    <div style={{ flex: "1", minWidth: "0", display: "flex", alignItems: "center", gap: "8px", height: "38px", borderRadius: "9999px", background: "#15191E", padding: "0 13px", boxSizing: "border-box", cursor: "pointer" }} onClick={vals.openSearch}>
                       <div style={{ width: "15px", height: "15px", borderRadius: "50%", border: "2px solid #8A95A2" }} />
-                      <div style={{ fontSize: "14px", fontWeight: "500", color: "#8A95A2" }}>Search</div>
+                      <div style={{ fontSize: "13px", fontWeight: "500", color: "#8A95A2" }}>Search</div>
                     </div>
                     <div onClick={vals.openAnalytics} style={{ width: "46px", height: "46px", flex: "none", borderRadius: "50%", background: "#15191E", display: "flex", alignItems: "flex-end", justifyContent: "center", gap: "2.5px", paddingBottom: "16px", boxSizing: "border-box", cursor: "pointer" }}>
                       <div style={{ width: "3px", height: "8px", borderRadius: "1.5px", background: "#fff" }} />
@@ -418,6 +418,11 @@ export default function renderView(vals) {
                       <div style={{ width: "19px", height: "19px", borderRadius: "50%", border: "1.6px solid #fff", position: "relative" }}>
                         <div style={{ position: "absolute", left: "0", right: "0", top: "7.5px", height: "1.6px", background: "#fff" }} />
                         <div style={{ position: "absolute", top: "0", bottom: "0", left: "7.5px", width: "1.6px", background: "#fff" }} />
+                      </div>
+                    </div>
+                    <div onClick={vals.goCards} style={{ width: "46px", height: "46px", flex: "none", borderRadius: "50%", background: "#15191E", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" }}>
+                      <div style={{ width: "20px", height: "14px", borderRadius: "3px", border: "1.6px solid #fff", position: "relative" }}>
+                        <div style={{ position: "absolute", left: "0", right: "0", top: "3px", height: "2px", background: "#fff" }} />
                       </div>
                     </div>
                   </div>
@@ -575,14 +580,14 @@ export default function renderView(vals) {
                       <path d="M0 100 C 70 150, 130 30, 200 100 C 270 170, 330 40, 400 100 L400 180 L0 180 Z" fill={vals.auroraWave2} />
                     </svg>
                   </div>
-                  <div style={{ display: "flex", alignItems: "center", gap: "10px", padding: "58px 14px 0" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "9px", padding: "58px 66px 0 14px" }}>
                     <div onClick={vals.openProfile} style={{ position: "relative", width: "46px", height: "46px", flex: "none", cursor: "pointer" }}>
                       <div style={{ width: "46px", height: "46px", borderRadius: "50%", background: "#8C7A5E", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif", fontSize: "15px", fontWeight: "600", color: "#fff" }}>AA</div>
                       <div style={{ position: "absolute", right: "0", top: "0", width: "10px", height: "10px", borderRadius: "50%", background: "#E8453C", border: "2px solid #050A10", boxSizing: "border-box" }} />
                     </div>
-                    <div style={{ flex: "1", display: "flex", alignItems: "center", gap: "11px", height: "46px", borderRadius: "9999px", background: "#15191E", padding: "0 16px", boxSizing: "border-box", cursor: "pointer" }} onClick={vals.openSearch}>
+                    <div style={{ flex: "1", minWidth: "0", display: "flex", alignItems: "center", gap: "8px", height: "38px", borderRadius: "9999px", background: "#15191E", padding: "0 13px", boxSizing: "border-box", cursor: "pointer" }} onClick={vals.openSearch}>
                       <div style={{ width: "15px", height: "15px", borderRadius: "50%", border: "2px solid #8A95A2" }} />
-                      <div style={{ fontSize: "14px", fontWeight: "500", color: "#8A95A2" }}>Search</div>
+                      <div style={{ fontSize: "13px", fontWeight: "500", color: "#8A95A2" }}>Search</div>
                     </div>
                     <div onClick={vals.calOpen} style={{ width: "46px", height: "46px", flex: "none", borderRadius: "50%", background: "#15191E", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" }}>
                       <div style={{ width: "18px", height: "17px", borderRadius: "4px", border: "1.7px solid #fff", position: "relative" }}>
@@ -592,6 +597,11 @@ export default function renderView(vals) {
                       </div>
                     </div>
                     <div onClick={vals.openSend} style={{ width: "46px", height: "46px", flex: "none", borderRadius: "50%", background: "#15191E", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "24px", fontWeight: "400", color: "#fff", cursor: "pointer" }}>+</div>
+                    <div onClick={vals.goCards} style={{ width: "46px", height: "46px", flex: "none", borderRadius: "50%", background: "#15191E", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" }}>
+                      <div style={{ width: "20px", height: "14px", borderRadius: "3px", border: "1.6px solid #fff", position: "relative" }}>
+                        <div style={{ position: "absolute", left: "0", right: "0", top: "3px", height: "2px", background: "#fff" }} />
+                      </div>
+                    </div>
                   </div>
                   <div style={{ display: "flex", gap: "12px", overflow: "auto", padding: "20px 14px 0", scrollSnapType: "x mandatory" }}>
                     {$each(vals.payPromos, (p) => (
@@ -606,6 +616,10 @@ export default function renderView(vals) {
                     <div style={{ flex: "none", width: "2px" }} />
                   </div>
                   <div style={{ padding: "18px 14px 0" }}>
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", paddingBottom: "12px" }}>
+                      <div style={{ fontSize: "14.5px", fontWeight: "600", color: "#FFFFFF" }}>Latest transactions</div>
+                      <div onClick={vals.seeAll} style={{ fontSize: "13px", fontWeight: "500", color: "#8A95A2", cursor: "pointer" }}>See all</div>
+                    </div>
                     <div style={{ borderRadius: "20px", background: "#15191E", overflow: "hidden" }}>
                       {$each(vals.payHistory, (h) => (
                           <div onClick={vals.openSend} style={{ display: "flex", alignItems: "center", gap: "14px", padding: "14px 16px", cursor: "pointer" }}>
@@ -619,7 +633,10 @@ export default function renderView(vals) {
                               <div style={{ fontSize: "15px", fontWeight: "500", color: "#FFFFFF", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{$t(h.name)}</div>
                               <div style={{ fontSize: "12.5px", fontWeight: "400", color: "#8A95A2", marginTop: "4px" }}>{$t(h.sub)}</div>
                             </div>
-                            <div style={{ fontSize: "12.5px", fontWeight: "400", color: "#8A95A2", flex: "none" }}>{$t(h.date)}</div>
+                            <div style={{ flex: "none", textAlign: "right" }}>
+                              <div style={{ fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif", fontVariantNumeric: "tabular-nums", fontSize: "15px", fontWeight: "600", color: $s(h.amtInk) }}>{$t(h.amt)}</div>
+                              <div style={{ fontSize: "12px", fontWeight: "400", color: "#8A95A2", marginTop: "4px" }}>{$t(h.date)}</div>
+                            </div>
                           </div>
                       ))}
                     </div>
@@ -638,14 +655,14 @@ export default function renderView(vals) {
                       <path d="M0 100 C 70 150, 130 30, 200 100 C 270 170, 330 40, 400 100 L400 180 L0 180 Z" fill={vals.auroraWave2} />
                     </svg>
                   </div>
-                  <div style={{ display: "flex", alignItems: "center", gap: "10px", padding: "58px 14px 0" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "9px", padding: "58px 66px 0 14px" }}>
                     <div onClick={vals.openProfile} style={{ position: "relative", width: "46px", height: "46px", flex: "none", cursor: "pointer" }}>
                       <div style={{ width: "46px", height: "46px", borderRadius: "50%", background: "#8C7A5E", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif", fontSize: "15px", fontWeight: "600", color: "#fff" }}>AA</div>
                       <div style={{ position: "absolute", right: "0", top: "0", width: "10px", height: "10px", borderRadius: "50%", background: "#E8453C", border: "2px solid #050A10", boxSizing: "border-box" }} />
                     </div>
-                    <div style={{ flex: "1", display: "flex", alignItems: "center", gap: "11px", height: "46px", borderRadius: "9999px", background: "#15191E", padding: "0 16px", boxSizing: "border-box", cursor: "pointer" }} onClick={vals.openSearch}>
+                    <div style={{ flex: "1", minWidth: "0", display: "flex", alignItems: "center", gap: "8px", height: "38px", borderRadius: "9999px", background: "#15191E", padding: "0 13px", boxSizing: "border-box", cursor: "pointer" }} onClick={vals.openSearch}>
                       <div style={{ width: "15px", height: "15px", borderRadius: "50%", border: "2px solid #8A95A2" }} />
-                      <div style={{ fontSize: "14px", fontWeight: "500", color: "#8A95A2" }}>Search</div>
+                      <div style={{ fontSize: "13px", fontWeight: "500", color: "#8A95A2" }}>Search</div>
                     </div>
                     <div onClick={vals.openPlan} style={{ width: "46px", height: "46px", flex: "none", borderRadius: "50%", background: "#15191E", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "17px", color: "#fff", cursor: "pointer" }}>✦</div>
                     <div onClick={vals.goCards} style={{ width: "46px", height: "46px", flex: "none", borderRadius: "50%", background: "#15191E", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" }}>
@@ -799,7 +816,7 @@ export default function renderView(vals) {
                     <div style={{ position: "absolute", right: "0", bottom: "0", width: "7px", height: "7px", borderRight: "1.8px solid #fff", borderBottom: "1.8px solid #fff" }} />
                   </div>
                 </div>
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "18px 10px", padding: "24px 4px 0" }}>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "18px 10px", padding: "24px 4px 0" }}>
                   {$each(vals.sendMethods, (sm) => (
                       <div onClick={sm.tap} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "9px", cursor: "pointer" }}>
                         <div style={{ width: "62px", height: "62px", borderRadius: "18px", display: "flex", alignItems: "center", justifyContent: "center", background: $s(sm.bg), position: "relative" }}>
@@ -810,17 +827,9 @@ export default function renderView(vals) {
                           <div style={{ display: $s(sm.iconPhone), width: "17px", height: "27px", borderRadius: "5px", border: "1.8px solid #fff", position: "relative" }}>
                             <div style={{ position: "absolute", left: "50%", bottom: "2px", transform: "translateX(-50%)", width: "5px", height: "1.6px", borderRadius: "1px", background: "#fff" }} />
                           </div>
-                          <div style={{ display: $s(sm.iconQr), width: "26px", height: "26px", gridTemplateColumns: "repeat(3,1fr)", gridTemplateRows: "repeat(3,1fr)", gap: "3px" }}>
-                            <div style={{ border: "1.8px solid #fff", borderRadius: "2px" }} />
-                            <div />
-                            <div style={{ border: "1.8px solid #fff", borderRadius: "2px" }} />
-                            <div />
-                            <div style={{ background: "#fff", borderRadius: "1px" }} />
-                            <div />
-                            <div style={{ border: "1.8px solid #fff", borderRadius: "2px" }} />
-                            <div />
-                            <div style={{ background: "#fff", borderRadius: "1px" }} />
-                          </div>
+                          <svg viewBox="0 0 24 24" style={{ display: $s(sm.iconQr), width: "27px", height: "27px", fill: "#fff" }}>
+                            <path d={vals.qrPath} />
+                          </svg>
                           <div style={{ display: $s(sm.iconScan), width: "28px", height: "28px", position: "relative" }}>
                             <div style={{ position: "absolute", left: "0", top: "0", width: "9px", height: "9px", borderLeft: "2px solid #fff", borderTop: "2px solid #fff", borderRadius: "3px 0 0 0" }} />
                             <div style={{ position: "absolute", right: "0", top: "0", width: "9px", height: "9px", borderRight: "2px solid #fff", borderTop: "2px solid #fff", borderRadius: "0 3px 0 0" }} />
@@ -945,6 +954,17 @@ export default function renderView(vals) {
                         <div style={{ width: "8px", height: "8px", borderTop: "1.8px solid #8A95A2", borderRight: "1.8px solid #8A95A2", transform: "rotate(45deg)", flex: "none" }} />
                       </div>
                   ))}
+                </div>
+                <div style={{ borderRadius: "18px", background: "#15191E", padding: "2px 16px", marginTop: "14px" }}>
+                  <div onClick={vals.lightToggle} style={{ display: "flex", alignItems: "center", gap: "14px", padding: "15px 0", cursor: "pointer" }}>
+                    <div style={{ flex: "1", minWidth: "0" }}>
+                      <div style={{ fontSize: "14.5px", fontWeight: "500", color: "#FFFFFF" }}>Light appearance</div>
+                      <div style={{ fontSize: "12.5px", fontWeight: "400", color: "#8A95A2", marginTop: "3px", lineHeight: "1.45" }}>White screens with dark text</div>
+                    </div>
+                    <div style={{ width: "46px", height: "28px", borderRadius: "9999px", flex: "none", position: "relative", background: $s(vals.lightTrack) }}>
+                      <div style={{ position: "absolute", top: "3px", left: $s(vals.lightKnob), width: "22px", height: "22px", borderRadius: "50%", background: "#FFFFFF" }} />
+                    </div>
+                  </div>
                 </div>
                 <div style={{ borderRadius: "18px", background: "#15191E", padding: "16px", marginTop: "14px" }}>
                   <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between" }}>
@@ -1075,6 +1095,19 @@ export default function renderView(vals) {
                     <div style={{ width: "8px", height: "8px", borderTop: "1.8px solid #C6A058", borderRight: "1.8px solid #C6A058", transform: "rotate(45deg)", flex: "none" }} />
                   </div>
                 </div>
+                <div onClick={vals.lkOpen} style={{ borderRadius: "22px", background: "#15191E", overflow: "hidden", marginTop: "14px", cursor: "pointer" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "14px", padding: "18px 16px" }}>
+                    <div style={{ width: "46px", height: "46px", flex: "none", borderRadius: "14px", background: $s(vals.lkActiveArt), display: "flex", alignItems: "center", justifyContent: "center", position: "relative", overflow: "hidden" }}>
+                      <div style={{ position: "absolute", left: "8px", top: "9px", width: "13px", height: "9px", borderRadius: "2px", background: "rgba(255,255,255,.75)" }} />
+                      <div style={{ position: "absolute", right: "7px", bottom: "8px", width: "16px", height: "3px", borderRadius: "2px", background: "rgba(255,255,255,.55)" }} />
+                    </div>
+                    <div style={{ flex: "1", minWidth: "0" }}>
+                      <div style={{ fontSize: "15px", fontWeight: "600", color: "#fff" }}>Linked cards</div>
+                      <div style={{ fontSize: "12.5px", fontWeight: "400", color: "#8A95A2", marginTop: "4px", lineHeight: "1.45" }}>{$t(vals.lkEntrySub)}</div>
+                    </div>
+                    <div style={{ width: "8px", height: "8px", borderTop: "1.8px solid #4B5563", borderRight: "1.8px solid #4B5563", transform: "rotate(45deg)", flex: "none" }} />
+                  </div>
+                </div>
                 <div onClick={vals.agentOpen} style={{ borderRadius: "22px", background: "linear-gradient(135deg,#10323A 0%,#15191E 68%)", overflow: "hidden", marginTop: "14px", cursor: "pointer" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: "14px", padding: "18px 16px" }}>
                     <div style={{ width: "46px", height: "46px", flex: "none", borderRadius: "14px", background: "rgba(0,194,168,.2)", display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -1166,7 +1199,12 @@ export default function renderView(vals) {
                     <div style={{ borderRadius: "20px", background: "#15191E", overflow: "hidden", marginTop: "14px" }}>
                       {$each(vals.addMethods, (m) => (
                           <div onClick={m.pick} style={{ display: "flex", alignItems: "center", gap: "14px", padding: "16px", cursor: "pointer", background: $s(m.rowBg) }}>
-                            <div style={{ width: "44px", height: "44px", borderRadius: "50%", flex: "none", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "16px", color: "#fff", background: "rgba(255,255,255,.1)" }}>{$t(m.icon)}</div>
+                            <div style={{ width: "44px", height: "44px", borderRadius: "50%", flex: "none", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "16px", color: "#fff", background: "rgba(255,255,255,.1)" }}>
+                              <svg viewBox="0 0 24 24" style={{ display: $s(m.iconQrDisplay), width: "21px", height: "21px", fill: "#fff" }}>
+                                <path d={vals.qrPath} />
+                              </svg>
+                              <div style={{ display: $s(m.iconCharDisplay) }}>{$t(m.icon)}</div>
+                            </div>
                             <div style={{ flex: "1", minWidth: "0" }}>
                               <div style={{ fontSize: "14.5px", fontWeight: "500", color: "#fff" }}>{$t(m.name)}</div>
                               <div style={{ fontSize: "12.5px", fontWeight: "400", color: "#8A95A2", marginTop: "3px", lineHeight: "1.45" }}>{$t(m.sub)}</div>
@@ -1185,11 +1223,11 @@ export default function renderView(vals) {
             <div style={{ position: "absolute", inset: "0", zIndex: "98", display: $s(vals.obDisplay), flexDirection: "column", overflow: "hidden", background: "radial-gradient(115% 55% at 78% -6%,rgba(37,99,235,.34) 0%,rgba(5,10,16,0) 56%),#050A10" }}>
               <div style={{ display: $s(vals.obWelcomeDisplay), flex: "1", flexDirection: "column", padding: "0 22px 34px", boxSizing: "border-box" }}>
                 <div style={{ flex: "1", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "22px" }}>
-                  <div style={{ width: "104px", height: "104px", borderRadius: "32px", background: "#101F33", display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
-                    <div style={{ width: "13px", height: "13px", borderRadius: "50%", background: "#2563EB", position: "absolute", top: "26px" }} />
-                    <div style={{ width: "10px", height: "30px", borderRadius: "5px", background: "#fff", position: "absolute", bottom: "24px" }} />
+                  <div style={{ position: "relative", width: "268px" }}>
+                    <img src="brand/icash-word.png" alt="iCASH" style={{ display: "block", width: "100%", filter: "invert(1) saturate(0) brightness(1.18) contrast(1.05)", mixBlendMode: "screen" }} />
+                    <div style={{ position: "absolute", left: ".48%", top: "1.66%", width: "5.82%", aspectRatio: "1", borderRadius: "50%", background: "#2563EB" }} />
                   </div>
-                  <div style={{ fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif", fontSize: "30px", fontWeight: "800", letterSpacing: "-.03em", color: "#fff", textAlign: "center", lineHeight: "1.15" }}>Ready to change<br />the way you money?</div>
+                  <div style={{ fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif", fontSize: "22px", fontWeight: "700", letterSpacing: "-.02em", color: "#fff", textAlign: "center", lineHeight: "1.2" }}>Ready to change<br />the way you money?</div>
                   <div style={{ fontSize: "14px", fontWeight: "400", color: "#8A95A2", textAlign: "center", maxWidth: "280px", lineHeight: "1.5" }}>One account for spending, saving and investing in Iraq and abroad.</div>
                 </div>
                 <div onClick={vals.obNext} style={{ textAlign: "center", padding: "17px 0", borderRadius: "9999px", background: "#fff", fontSize: "14.5px", fontWeight: "600", color: "#0D1B2A", cursor: "pointer" }}>Sign up</div>
@@ -1371,7 +1409,7 @@ export default function renderView(vals) {
               </div>
             </div>
             <div style={{ position: "absolute", inset: "0", zIndex: "90", display: $s(vals.profileDisplay), overflow: "auto", background: "radial-gradient(110% 55% at 80% -4%,rgba(140,122,94,.30) 0%,rgba(5,10,16,0) 58%),radial-gradient(85% 45% at 10% 30%,rgba(124,58,237,.14) 0%,rgba(5,10,16,0) 60%),#050A10" }}>
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "56px 16px 0" }}>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "56px 66px 0 16px" }}>
                 <div onClick={vals.closeProfile} style={{ width: "38px", height: "38px", borderRadius: "50%", background: "rgba(255,255,255,.08)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "16px", color: "#fff", cursor: "pointer" }}>×</div>
                 <div onClick={vals.openUpgrade} style={{ display: "flex", alignItems: "center", gap: "8px", padding: "11px 20px", borderRadius: "9999px", background: "rgba(255,255,255,.1)", cursor: "pointer" }}>
                   <div style={{ fontSize: "14px", color: "#fff" }}>✦</div>
@@ -1679,9 +1717,9 @@ export default function renderView(vals) {
             </div>
             <div style={{ position: "absolute", inset: "0", zIndex: "96", display: $s(vals.mpHomeDisplay), flexDirection: "column", animation: "icFade .3s ease-out", background: "radial-gradient(115% 50% at 78% -6%,rgba(198,160,88,.26) 0%,rgba(5,10,16,0) 56%),#050A10" }}>
               <div style={{ flex: "1", minHeight: "0", overflow: "auto", paddingBottom: "20px" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: "10px", padding: "56px 14px 0" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "9px", padding: "56px 66px 0 14px" }}>
                   <div style={{ width: "46px", height: "46px", flex: "none", borderRadius: "50%", background: "linear-gradient(160deg,#C6A058,#8A6B2C)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "14px", fontWeight: "700", color: "#2A1F08" }}>KC</div>
-                  <div style={{ flex: "1", display: "flex", alignItems: "center", gap: "11px", height: "46px", borderRadius: "9999px", background: "#15191E", padding: "0 16px", boxSizing: "border-box", cursor: "pointer" }} onClick={vals.openSearch}>
+                  <div style={{ flex: "1", minWidth: "0", display: "flex", alignItems: "center", gap: "8px", height: "38px", borderRadius: "9999px", background: "#15191E", padding: "0 13px", boxSizing: "border-box", cursor: "pointer" }} onClick={vals.openSearch}>
                     <div style={{ width: "15px", height: "15px", borderRadius: "50%", border: "2px solid #8A95A2" }} />
                     <div style={{ fontSize: "14px", fontWeight: "500", color: "#8A95A2" }}>Search sales</div>
                   </div>
@@ -1689,7 +1727,7 @@ export default function renderView(vals) {
                 </div>
                 <div style={{ textAlign: "center", padding: "52px 22px 0" }}>
                   <div style={{ fontSize: "13.5px", fontWeight: "500", color: "#E6DCC4" }}>{$t(vals.mpBiz)} · IQD</div>
-                  <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "center", gap: "3px", marginTop: "10px" }}>
+                  <div style={{ display: "flex", direction: "ltr", alignItems: "flex-start", justifyContent: "center", gap: "3px", marginTop: "10px" }}>
                     <div style={{ fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif", fontVariantNumeric: "tabular-nums", fontSize: "42px", fontWeight: "700", color: "#FFFFFF", letterSpacing: "-.02em", lineHeight: "1" }}>{$t(vals.mpCollected)}</div>
                     <div style={{ fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif", fontSize: "19px", fontWeight: "700", color: "#FFFFFF", marginTop: "4px" }}>,00</div>
                   </div>
@@ -1827,7 +1865,11 @@ export default function renderView(vals) {
                 </div>
                 <div style={{ display: $s(vals.mpQrDisplay), flexDirection: "column", alignItems: "center", gap: "22px" }}>
                   <div style={{ width: "214px", height: "214px", borderRadius: "22px", background: "#fff", padding: "15px", boxSizing: "border-box" }}>
-                    <div style={{ width: "100%", height: "100%", backgroundImage: "repeating-conic-gradient(#0D1B2A 0% 25%,#ffffff 0% 50%)", backgroundSize: "18px 18px" }} />
+                    <div style={{ width: "100%", height: "100%", display: "grid", gridTemplateColumns: "repeat(25,1fr)", gridTemplateRows: "repeat(25,1fr)", gap: "1px" }}>
+                      {$each(vals.qrCells, (q) => (
+                          <div style={{ borderRadius: "1px", background: $s(q.bg) }} />
+                      ))}
+                    </div>
                   </div>
                   <div style={{ fontSize: "19px", fontWeight: "600", color: "#FFFFFF", textAlign: "center" }}>Customer scans to pay</div>
                 </div>
@@ -1994,13 +2036,16 @@ export default function renderView(vals) {
                 <div style={{ fontSize: "13.5px", fontWeight: "400", color: "#8A95A2", marginTop: "5px", lineHeight: "1.5" }}>Pick the mini apps you want on your Home screen. Tap to add or remove.</div>
                 <div style={{ marginTop: "14px" }}>
                   {$each(vals.widgetChoices, (c) => (
-                      <div onClick={c.toggle} style={{ display: "flex", alignItems: "center", gap: "14px", padding: "12px 0", borderBottom: "1px solid rgba(255,255,255,.07)", cursor: "pointer" }}>
-                        <div style={{ width: "40px", height: "40px", borderRadius: "12px", flex: "none", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12.5px", fontWeight: "700", color: "#fff", background: $s(c.bg) }}>{$t(c.ini)}</div>
-                        <div style={{ flex: "1", minWidth: "0" }}>
-                          <div style={{ fontSize: "15.5px", fontWeight: "600", color: "#FFFFFF" }}>{$t(c.name)}</div>
-                          <div style={{ fontSize: "13.5px", fontWeight: "400", color: "#8A95A2", marginTop: "2px" }}>{$t(c.sub)}</div>
+                      <div>
+                        <div style={{ display: $s(c.headDisplay), fontSize: "11.5px", fontWeight: "700", letterSpacing: ".12em", color: "#6E7986", padding: "16px 0 4px" }}>{$t(c.group)}</div>
+                        <div onClick={c.toggle} style={{ display: "flex", alignItems: "center", gap: "14px", padding: "12px 0", borderBottom: "1px solid rgba(255,255,255,.07)", cursor: "pointer" }}>
+                          <div style={{ width: "40px", height: "40px", borderRadius: "12px", flex: "none", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12.5px", fontWeight: "700", color: "#fff", background: $s(c.bg) }}>{$t(c.ini)}</div>
+                          <div style={{ flex: "1", minWidth: "0" }}>
+                            <div style={{ fontSize: "15.5px", fontWeight: "600", color: "#FFFFFF" }}>{$t(c.name)}</div>
+                            <div style={{ fontSize: "13.5px", fontWeight: "400", color: "#8A95A2", marginTop: "2px" }}>{$t(c.sub)}</div>
+                          </div>
+                          <div style={{ width: "26px", height: "26px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "14px", fontWeight: "700", background: $s(c.markBg), color: $s(c.markInk), border: `1.5px solid ${$s(c.markBorder)}` }}>{$t(c.mark)}</div>
                         </div>
-                        <div style={{ width: "26px", height: "26px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "14px", fontWeight: "700", background: $s(c.markBg), color: $s(c.markInk), border: `1.5px solid ${$s(c.markBorder)}` }}>{$t(c.mark)}</div>
                       </div>
                   ))}
                 </div>
@@ -2422,6 +2467,274 @@ export default function renderView(vals) {
                   </div>
                   <div style={{ width: "8px", height: "8px", borderTop: "2px solid #4B5563", borderRight: "2px solid #4B5563", transform: "rotate(45deg)" }} />
                 </div>
+              </div>
+            </div>
+            <div style={{ position: "absolute", inset: "0", zIndex: "97", display: $s(vals.lkDisplay), flexDirection: "column", animation: "icFade .3s ease-out", background: "radial-gradient(115% 55% at 78% -6%,rgba(37,99,235,.26) 0%,rgba(5,10,16,0) 58%),#050A10" }}>
+              <div style={{ flex: "none", display: "flex", alignItems: "center", gap: "10px", padding: "56px 66px 0 16px" }}>
+                <div onClick={vals.lkClose} style={{ width: "40px", height: "40px", flex: "none", borderRadius: "50%", background: "rgba(255,255,255,.08)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "16px", color: "#fff", cursor: "pointer" }}>×</div>
+                <div style={{ flex: "1", minWidth: "0", fontSize: "14.5px", fontWeight: "600", color: "#fff" }}>Linked cards</div>
+              </div>
+              <div style={{ flex: "1", minHeight: "0", overflow: "auto", padding: "20px 16px 0" }}>
+                <div style={{ fontSize: "11.5px", fontWeight: "700", letterSpacing: ".12em", color: "#6E7986" }}>PAYING FROM</div>
+                <div style={{ marginTop: "10px", position: "relative", width: "100%", aspectRatio: "1.586", borderRadius: "20px", padding: "20px", boxSizing: "border-box", background: $s(vals.lkActiveArt), overflow: "hidden", boxShadow: "0 18px 38px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.18)", display: "flex", flexDirection: "column" }}>
+                  <div style={{ position: "absolute", inset: "0", background: "linear-gradient(118deg,rgba(255,255,255,.22) 0%,rgba(255,255,255,0) 38%,rgba(0,0,0,.16) 100%)", pointerEvents: "none" }} />
+                  <div style={{ position: "absolute", right: "-70px", top: "-70px", width: "230px", height: "230px", borderRadius: "50%", background: "rgba(255,255,255,.07)", pointerEvents: "none" }} />
+                  <div style={{ position: "absolute", right: "-30px", bottom: "-96px", width: "220px", height: "220px", borderRadius: "50%", background: "rgba(0,0,0,.12)", pointerEvents: "none" }} />
+                  <div style={{ position: "relative", display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "12px" }}>
+                    <div style={{ fontSize: "14.5px", fontWeight: "700", letterSpacing: ".02em", color: "#FFFFFF", textShadow: "0 1px 2px rgba(0,0,0,.28)" }}>{$t(vals.lkActiveName)}</div>
+                    <div style={{ fontSize: "9px", fontWeight: "700", letterSpacing: ".14em", color: "rgba(255,255,255,.72)" }}>{$t(vals.lkActiveKind)}</div>
+                  </div>
+                  <div style={{ position: "relative", display: "flex", alignItems: "center", gap: "13px", marginTop: "20px" }}>
+                    <div style={{ width: "44px", height: "33px", flex: "none", borderRadius: "6px", background: "linear-gradient(145deg,#F3DFA8,#C9A44B 52%,#8E6E23)", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gridTemplateRows: "1fr 1fr 1fr", gap: "1.5px", padding: "5px", boxSizing: "border-box" }}>
+                      <div style={{ background: "rgba(120,88,20,.55)", borderRadius: "1px" }} />
+                      <div style={{ background: "rgba(120,88,20,.3)", borderRadius: "1px" }} />
+                      <div style={{ background: "rgba(120,88,20,.55)", borderRadius: "1px" }} />
+                      <div style={{ background: "rgba(120,88,20,.3)", borderRadius: "1px" }} />
+                      <div style={{ background: "rgba(120,88,20,.55)", borderRadius: "1px" }} />
+                      <div style={{ background: "rgba(120,88,20,.3)", borderRadius: "1px" }} />
+                      <div style={{ background: "rgba(120,88,20,.55)", borderRadius: "1px" }} />
+                      <div style={{ background: "rgba(120,88,20,.3)", borderRadius: "1px" }} />
+                      <div style={{ background: "rgba(120,88,20,.55)", borderRadius: "1px" }} />
+                    </div>
+                    <div style={{ position: "relative", width: "26px", height: "26px", flex: "none" }}>
+                      <div style={{ position: "absolute", left: "2px", top: "4px", width: "8px", height: "18px", borderRight: "2.2px solid rgba(255,255,255,.55)", borderRadius: "0 12px 12px 0" }} />
+                      <div style={{ position: "absolute", left: "7px", top: "1px", width: "11px", height: "24px", borderRight: "2.2px solid rgba(255,255,255,.72)", borderRadius: "0 16px 16px 0" }} />
+                      <div style={{ position: "absolute", left: "12px", top: "-2px", width: "14px", height: "30px", borderRight: "2.2px solid rgba(255,255,255,.9)", borderRadius: "0 20px 20px 0" }} />
+                    </div>
+                  </div>
+                  <div style={{ position: "relative", fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif", fontVariantNumeric: "tabular-nums", fontSize: "19px", fontWeight: "600", letterSpacing: ".1em", color: "#FFFFFF", textShadow: "0 1px 2px rgba(0,0,0,.35)", marginTop: "18px", direction: "ltr" }}>{$t(vals.lkActiveNumber)}</div>
+                  <div style={{ position: "relative", marginTop: "auto", display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: "14px" }}>
+                    <div style={{ minWidth: "0" }}>
+                      <div style={{ fontSize: "8px", fontWeight: "700", letterSpacing: ".14em", color: "rgba(255,255,255,.66)" }}>CARDHOLDER</div>
+                      <div style={{ fontSize: "12.5px", fontWeight: "600", letterSpacing: ".04em", color: "#fff", marginTop: "4px", textTransform: "uppercase" }}>Ahmed Al Janahi</div>
+                    </div>
+                    <div style={{ flex: "none", textAlign: "right" }}>
+                      <div style={{ fontSize: "8px", fontWeight: "700", letterSpacing: ".14em", color: "rgba(255,255,255,.66)" }}>{$t(vals.lkActiveMetaLabel)}</div>
+                      <div style={{ fontVariantNumeric: "tabular-nums", fontSize: "12.5px", fontWeight: "600", color: "#fff", marginTop: "4px", direction: "ltr" }}>{$t(vals.lkActiveMeta)}</div>
+                    </div>
+                  </div>
+                </div>
+                <div style={{ fontSize: "12.5px", fontWeight: "400", color: "#8A95A2", marginTop: "12px", lineHeight: "1.5" }}>{$t(vals.lkActiveNote)}</div>
+                <div style={{ display: "flex", gap: "8px", marginTop: "12px" }}>
+                  <div onClick={vals.lkTopUp} style={{ display: $s(vals.lkTopUpDisplay), flex: "1", textAlign: "center", padding: "14px 0", borderRadius: "14px", background: "#2563EB", fontSize: "14px", fontWeight: "600", color: "#fff", cursor: "pointer" }}>Top up wallet</div>
+                  <div onClick={vals.lkAddOpen} style={{ flex: "1", textAlign: "center", padding: "14px 0", borderRadius: "14px", background: "rgba(255,255,255,.1)", fontSize: "14px", fontWeight: "600", color: "#fff", cursor: "pointer" }}>Add a card</div>
+                </div>
+                <div style={{ fontSize: "11.5px", fontWeight: "700", letterSpacing: ".12em", color: "#6E7986", margin: "22px 2px 10px" }}>SOURCES</div>
+                <div style={{ borderRadius: "20px", background: "#15191E", overflow: "hidden" }}>
+                  {$each(vals.lkSources, (src) => (
+                      <div onClick={src.pick} style={{ display: "flex", alignItems: "center", gap: "14px", padding: "15px 16px", borderBottom: "1px solid rgba(255,255,255,.07)", cursor: "pointer" }}>
+                        <div style={{ width: "44px", height: "30px", flex: "none", borderRadius: "8px", background: $s(src.art), position: "relative", overflow: "hidden" }}>
+                          <div style={{ position: "absolute", left: "7px", top: "8px", width: "12px", height: "8px", borderRadius: "2px", background: "rgba(255,255,255,.72)" }} />
+                          <div style={{ position: "absolute", right: "6px", bottom: "7px", width: "14px", height: "3px", borderRadius: "2px", background: "rgba(255,255,255,.5)" }} />
+                        </div>
+                        <div style={{ flex: "1", minWidth: "0" }}>
+                          <div style={{ fontSize: "14.5px", fontWeight: "500", color: "#FFFFFF" }}>{$t(src.name)}</div>
+                          <div style={{ fontSize: "12.5px", fontWeight: "400", fontVariantNumeric: "tabular-nums", color: "#8A95A2", marginTop: "3px" }}>{$t(src.sub)}</div>
+                        </div>
+                        <div style={{ width: "22px", height: "22px", flex: "none", borderRadius: "50%", border: `1.5px solid ${$s(src.ringBorder)}`, background: $s(src.ringBg), display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", fontWeight: "700", color: "#fff" }}>{$t(src.mark)}</div>
+                      </div>
+                  ))}
+                </div>
+                <div style={{ display: $s(vals.lkRemoveDisplay), marginTop: "12px", borderRadius: "20px", background: "#15191E", overflow: "hidden" }}>
+                  <div onClick={vals.lkRemove} style={{ padding: "15px 16px", fontSize: "14px", fontWeight: "500", color: "#E8453C", cursor: "pointer" }}>{$t(vals.lkRemoveLabel)}</div>
+                </div>
+                <div style={{ fontSize: "12.5px", fontWeight: "400", color: "#6E7986", margin: "18px 2px 0", lineHeight: "1.5" }}>Linked cards stay with their own provider. iCASH only moves money when you top up or pay with your iCASH card.</div>
+                <div style={{ height: "120px" }} />
+              </div>
+            </div>
+            <div style={{ position: "absolute", inset: "0", zIndex: "99", display: $s(vals.lkAddDisplay), flexDirection: "column", animation: "icFade .3s ease-out", background: "radial-gradient(115% 55% at 78% -6%,rgba(37,99,235,.3) 0%,rgba(5,10,16,0) 58%),#050A10" }}>
+              <div style={{ flex: "none", display: "flex", alignItems: "center", gap: "10px", padding: "56px 66px 0 16px" }}>
+                <div onClick={vals.lkAddBack} style={{ width: "40px", height: "40px", flex: "none", borderRadius: "50%", background: "rgba(255,255,255,.08)", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" }}>
+                  <div style={{ width: "11px", height: "11px", borderLeft: "2px solid #fff", borderBottom: "2px solid #fff", transform: "rotate(45deg)", marginLeft: "4px" }} />
+                </div>
+                <div style={{ flex: "1", minWidth: "0", fontSize: "14.5px", fontWeight: "600", color: "#fff" }}>{$t(vals.lkStepTitle)}</div>
+                <div style={{ fontSize: "12.5px", fontWeight: "500", color: "#8A95A2", flex: "none" }}>{$t(vals.lkStepCount)}</div>
+              </div>
+              <div style={{ flex: "1", minHeight: "0", overflow: "auto", padding: "22px 16px 0" }}>
+                <div style={{ display: $s(vals.lkS0Display) }}>
+                  <div style={{ fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif", fontSize: "23px", fontWeight: "700", letterSpacing: "-.02em", color: "#fff", lineHeight: "1.2" }}>Which card do you want to link?</div>
+                  <div style={{ fontSize: "13.5px", fontWeight: "400", color: "#8A95A2", marginTop: "8px", lineHeight: "1.5" }}>Top-up fees are set by the provider and shown before every top-up.</div>
+                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", marginTop: "20px" }}>
+                    {$each(vals.lkProviders, (p) => (
+                        <div onClick={p.pick} style={{ borderRadius: "18px", background: "#15191E", padding: "14px", boxSizing: "border-box", cursor: "pointer" }}>
+                          <div style={{ height: "38px", borderRadius: "10px", background: $s(p.art), position: "relative", overflow: "hidden" }}>
+                            <div style={{ position: "absolute", left: "9px", top: "11px", width: "14px", height: "9px", borderRadius: "2px", background: "rgba(255,255,255,.72)" }} />
+                            <div style={{ position: "absolute", right: "8px", bottom: "9px", width: "16px", height: "3px", borderRadius: "2px", background: "rgba(255,255,255,.5)" }} />
+                          </div>
+                          <div style={{ fontSize: "14px", fontWeight: "600", color: "#fff", marginTop: "12px" }}>{$t(p.name)}</div>
+                          <div style={{ fontSize: "12px", fontWeight: "400", color: "#8A95A2", marginTop: "4px" }}>{$t(p.fee)}</div>
+                        </div>
+                    ))}
+                  </div>
+                </div>
+                <div style={{ display: $s(vals.lkS1Display) }}>
+                  <div style={{ fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif", fontSize: "23px", fontWeight: "700", letterSpacing: "-.02em", color: "#fff" }}>{$t(vals.lkProviderName)}</div>
+                  <div style={{ fontSize: "13.5px", fontWeight: "400", color: "#8A95A2", marginTop: "8px", lineHeight: "1.5" }}>Enter the 16 digits on the front, then the expiry date.</div>
+                  <div style={{ marginTop: "20px", borderRadius: "22px", padding: "20px", boxSizing: "border-box", background: $s(vals.lkProviderArt) }}>
+                    <div style={{ fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif", fontVariantNumeric: "tabular-nums", fontSize: "20px", fontWeight: "600", letterSpacing: ".06em", color: "#fff" }}>{$t(vals.lkNumDisplay)}</div>
+                    <div style={{ display: "flex", alignItems: "baseline", gap: "22px", marginTop: "22px" }}>
+                      <div>
+                        <div style={{ fontSize: "9.5px", fontWeight: "700", letterSpacing: ".12em", color: "rgba(255,255,255,.7)" }}>EXPIRES</div>
+                        <div style={{ fontVariantNumeric: "tabular-nums", fontSize: "15px", fontWeight: "600", color: "#fff", marginTop: "5px" }}>{$t(vals.lkExpDisplay)}</div>
+                      </div>
+                      <div>
+                        <div style={{ fontSize: "9.5px", fontWeight: "700", letterSpacing: ".12em", color: "rgba(255,255,255,.7)" }}>CARDHOLDER</div>
+                        <div style={{ fontSize: "15px", fontWeight: "600", color: "#fff", marginTop: "5px" }}>Ahmed Al Janahi</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div style={{ display: $s(vals.lkS2Display) }}>
+                  <div style={{ fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif", fontSize: "23px", fontWeight: "700", letterSpacing: "-.02em", color: "#fff" }}>Enter the code</div>
+                  <div style={{ fontSize: "13.5px", fontWeight: "400", color: "#8A95A2", marginTop: "8px", lineHeight: "1.5" }}>{$t(vals.lkCodeNote)}</div>
+                  <div style={{ display: "flex", gap: "10px", marginTop: "24px" }}>
+                    {$each(vals.lkCodeBoxes, (b) => (
+                        <div style={{ flex: "1", height: "58px", borderRadius: "14px", background: "#15191E", border: `1.5px solid ${$s(b.border)}`, boxSizing: "border-box", display: "flex", alignItems: "center", justifyContent: "center", fontVariantNumeric: "tabular-nums", fontSize: "22px", fontWeight: "600", color: "#fff" }}>{$t(b.ch)}</div>
+                    ))}
+                  </div>
+                  <div onClick={vals.lkResend} style={{ fontSize: "13px", fontWeight: "500", color: "#8A95A2", marginTop: "16px", cursor: "pointer" }}>Resend the code</div>
+                </div>
+                <div style={{ display: $s(vals.lkS3Display), flexDirection: "column", alignItems: "center", textAlign: "center", paddingTop: "40px" }}>
+                  <div style={{ width: "74px", height: "74px", borderRadius: "50%", border: "3px solid rgba(255,255,255,.14)", borderTopColor: "#2563EB", animation: "icSpin 1s linear infinite" }} />
+                  <div style={{ fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif", fontSize: "21px", fontWeight: "700", color: "#fff", marginTop: "28px" }}>Verifying your card</div>
+                  <div style={{ fontSize: "13.5px", fontWeight: "400", color: "#8A95A2", marginTop: "10px", lineHeight: "1.55", maxWidth: "280px" }}>We placed a 250 IQD hold with {$t(vals.lkProviderName)} and released it. Nothing is charged.</div>
+                </div>
+                <div style={{ display: $s(vals.lkS4Display), flexDirection: "column", alignItems: "center", textAlign: "center", paddingTop: "34px" }}>
+                  <div style={{ width: "76px", height: "76px", borderRadius: "50%", background: "#00A78F", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "34px", color: "#fff" }}>✓</div>
+                  <div style={{ fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif", fontSize: "22px", fontWeight: "700", color: "#fff", marginTop: "24px" }}>{$t(vals.lkDoneTitle)}</div>
+                  <div style={{ fontSize: "13.5px", fontWeight: "400", color: "#8A95A2", marginTop: "10px", lineHeight: "1.55", maxWidth: "290px" }}>You can top up your wallet from it, or make it the source your iCASH card pays from.</div>
+                  <div style={{ alignSelf: "stretch", marginTop: "26px", borderRadius: "20px", background: "#15191E", overflow: "hidden", textAlign: "left" }}>
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "15px 16px", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
+                      <div style={{ fontSize: "13.5px", fontWeight: "400", color: "#8A95A2" }}>Top-up fee</div>
+                      <div style={{ fontSize: "13.5px", fontWeight: "600", color: "#fff" }}>{$t(vals.lkDoneFee)}</div>
+                    </div>
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "15px 16px" }}>
+                      <div style={{ fontSize: "13.5px", fontWeight: "400", color: "#8A95A2" }}>Top-up limit</div>
+                      <div style={{ fontSize: "13.5px", fontWeight: "600", fontVariantNumeric: "tabular-nums", color: "#fff" }}>{$t(vals.lkDoneLimit)}</div>
+                    </div>
+                  </div>
+                </div>
+                <div style={{ height: "30px" }} />
+              </div>
+              <div style={{ flex: "none", display: $s(vals.lkPadDisplay), padding: "0 16px" }}>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "8px 6px", width: "100%" }}>
+                  {$each(vals.lkKeys, (k) => (
+                      <div onClick={k.tap} style={{ height: "56px", borderRadius: "14px", background: "rgba(255,255,255,.07)", display: "flex", alignItems: "center", justifyContent: "center", fontVariantNumeric: "tabular-nums", fontSize: "21px", fontWeight: "600", color: "#fff", cursor: "pointer" }}>{$t(k.label)}</div>
+                  ))}
+                </div>
+              </div>
+              <div style={{ flex: "none", padding: "16px 16px 26px" }}>
+                <div onClick={vals.lkPrimary} style={{ display: $s(vals.lkPrimaryDisplay), textAlign: "center", padding: "16px 0", borderRadius: "14px", background: $s(vals.lkPrimaryBg), fontSize: "15px", fontWeight: "600", color: $s(vals.lkPrimaryInk), cursor: "pointer" }}>{$t(vals.lkPrimaryLabel)}</div>
+                <div onClick={vals.lkSecondary} style={{ display: $s(vals.lkSecondaryDisplay), textAlign: "center", padding: "14px 0", marginTop: "8px", fontSize: "14px", fontWeight: "600", color: "#8A95A2", cursor: "pointer" }}>{$t(vals.lkSecondaryLabel)}</div>
+              </div>
+            </div>
+            <div style={{ position: "absolute", inset: "0", zIndex: "105", display: $s(vals.langPickDisplay) }}>
+              <div onClick={vals.langClose} style={{ position: "absolute", inset: "0", background: "rgba(9,16,26,.55)" }} />
+              <div style={{ position: "absolute", left: "0", right: "0", bottom: "0", background: "#111F31", borderRadius: "24px 24px 0 0", padding: "16px 16px 28px", boxSizing: "border-box" }}>
+                <div style={{ width: "40px", height: "4px", borderRadius: "2px", background: "rgba(255,255,255,.25)", margin: "0 auto 14px" }} />
+                <div style={{ fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif", fontSize: "19px", fontWeight: "700", color: "#FFFFFF" }}>Language</div>
+                <div style={{ fontSize: "13.5px", fontWeight: "400", color: "#8A95A2", marginTop: "5px", lineHeight: "1.5" }}>The whole app changes, including the layout direction.</div>
+                <div style={{ borderRadius: "18px", background: "#15191E", overflow: "hidden", marginTop: "16px" }}>
+                  {$each(vals.langOptions, (l) => (
+                      <div onClick={l.pick} style={{ display: "flex", alignItems: "center", gap: "14px", padding: "16px", borderBottom: "1px solid rgba(255,255,255,.07)", cursor: "pointer" }}>
+                        <div style={{ flex: "1", minWidth: "0" }}>
+                          <div style={{ fontSize: "15px", fontWeight: "500", color: "#FFFFFF" }}>{$t(l.name)}</div>
+                          <div style={{ fontSize: "12.5px", fontWeight: "400", color: "#8A95A2", marginTop: "3px" }}>{$t(l.note)}</div>
+                        </div>
+                        <div style={{ width: "22px", height: "22px", flex: "none", borderRadius: "50%", border: `1.5px solid ${$s(l.ringBorder)}`, background: $s(l.ringBg), display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", fontWeight: "700", color: "#fff" }}>{$t(l.mark)}</div>
+                      </div>
+                  ))}
+                </div>
+                <div onClick={vals.langApply} style={{ marginTop: "18px", textAlign: "center", padding: "16px 0", borderRadius: "14px", background: "#2563EB", color: "#fff", fontSize: "15px", fontWeight: "600", cursor: "pointer" }}>{$t(vals.langApplyLabel)}</div>
+              </div>
+            </div>
+            <div onClick={vals.openSupport} style={{ position: "absolute", right: "14px", top: "58px", zIndex: "102", width: "46px", height: "46px", borderRadius: "50%", background: "rgba(21,25,30,.92)", border: "1px solid rgba(255,255,255,.14)", boxSizing: "border-box", display: $s(vals.helpFabDisplay), alignItems: "center", justifyContent: "center", fontSize: "17px", fontWeight: "600", color: "#fff", cursor: "pointer", boxShadow: "0 8px 22px rgba(0,0,0,.35)" }}>?</div>
+            <div style={{ position: "absolute", inset: "0", zIndex: "103", display: $s(vals.bgtDisplay) }}>
+              <div onClick={vals.bgtClose} style={{ position: "absolute", inset: "0", background: "rgba(9,16,26,.55)" }} />
+              <div style={{ position: "absolute", left: "0", right: "0", bottom: "0", background: "#111F31", borderRadius: "24px 24px 0 0", padding: "16px 16px 28px", maxHeight: "88%", overflow: "auto", boxSizing: "border-box" }}>
+                <div style={{ width: "40px", height: "4px", borderRadius: "2px", background: "rgba(255,255,255,.25)", margin: "0 auto 14px" }} />
+                <div style={{ fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif", fontSize: "19px", fontWeight: "700", color: "#FFFFFF" }}>Monthly budget</div>
+                <div style={{ fontSize: "13.5px", fontWeight: "400", color: "#8A95A2", marginTop: "5px", lineHeight: "1.5" }}>Set a target for card and wallet spending. iCASH warns you before you reach it.</div>
+                <div style={{ marginTop: "16px", borderRadius: "18px", background: "#15191E", padding: "18px 16px" }}>
+                  <div style={{ fontSize: "12.5px", fontWeight: "500", color: "#8A95A2" }}>Target</div>
+                  <div style={{ display: "flex", alignItems: "center", gap: "12px", marginTop: "10px" }}>
+                    <div onClick={vals.bgtDec} style={{ width: "44px", height: "44px", flex: "none", borderRadius: "50%", background: "rgba(255,255,255,.1)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "22px", color: "#fff", cursor: "pointer" }}>−</div>
+                    <div style={{ flex: "1", minWidth: "0", textAlign: "center" }}>
+                      <div style={{ fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif", fontVariantNumeric: "tabular-nums", fontSize: "30px", fontWeight: "700", letterSpacing: "-.02em", color: "#FFFFFF", lineHeight: "1.1" }}>{$t(vals.bgtAmount)}</div>
+                      <div style={{ fontSize: "12.5px", fontWeight: "500", color: "#8A95A2", marginTop: "4px" }}>IQD a month</div>
+                    </div>
+                    <div onClick={vals.bgtInc} style={{ width: "44px", height: "44px", flex: "none", borderRadius: "50%", background: "rgba(255,255,255,.1)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "22px", color: "#fff", cursor: "pointer" }}>+</div>
+                  </div>
+                  <div style={{ display: "flex", gap: "8px", marginTop: "16px" }}>
+                    {$each(vals.bgtPresets, (p) => (
+                        <div onClick={p.pick} style={{ flex: "1", textAlign: "center", padding: "10px 0", borderRadius: "9999px", fontSize: "12.5px", fontWeight: "600", fontVariantNumeric: "tabular-nums", cursor: "pointer", background: $s(p.bg), color: $s(p.ink) }}>{$t(p.label)}</div>
+                    ))}
+                  </div>
+                </div>
+                <div style={{ marginTop: "12px", borderRadius: "18px", background: "#15191E", padding: "18px 16px" }}>
+                  <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between" }}>
+                    <div style={{ fontSize: "13px", fontWeight: "500", color: "#8A95A2" }}>{$t(vals.bgtSpentLabel)}</div>
+                    <div style={{ fontSize: "13px", fontWeight: "600", color: $s(vals.bgtPctInk) }}>{$t(vals.bgtPctLabel)}</div>
+                  </div>
+                  <div style={{ height: "8px", borderRadius: "6px", background: "rgba(255,255,255,.12)", overflow: "hidden", marginTop: "12px" }}>
+                    <div style={{ height: "100%", borderRadius: "6px", background: $s(vals.bgtPctInk), width: $s(vals.bgtBarW) }} />
+                  </div>
+                  <div style={{ fontSize: "12.5px", fontWeight: "400", color: "#8A95A2", marginTop: "12px", lineHeight: "1.5" }}>{$t(vals.bgtLeftLabel)}</div>
+                </div>
+                <div style={{ marginTop: "12px", borderRadius: "18px", background: "#15191E", padding: "18px 16px" }}>
+                  <div style={{ fontSize: "13.5px", fontWeight: "500", color: "#FFFFFF" }}>Warn me at</div>
+                  <div style={{ fontSize: "12.5px", fontWeight: "400", color: "#8A95A2", marginTop: "4px", lineHeight: "1.5" }}>{$t(vals.bgtAlertNote)}</div>
+                  <div style={{ display: "flex", gap: "8px", marginTop: "14px" }}>
+                    {$each(vals.bgtAlerts, (a) => (
+                        <div onClick={a.pick} style={{ flex: "1", textAlign: "center", padding: "11px 0", borderRadius: "12px", fontSize: "13px", fontWeight: "600", cursor: "pointer", background: $s(a.bg), color: $s(a.ink) }}>{$t(a.label)}</div>
+                    ))}
+                  </div>
+                </div>
+                <div onClick={vals.bgtSave} style={{ marginTop: "18px", textAlign: "center", padding: "16px 0", borderRadius: "14px", background: "#2563EB", color: "#fff", fontSize: "15px", fontWeight: "600", cursor: "pointer" }}>{$t(vals.bgtSaveLabel)}</div>
+                <div onClick={vals.bgtRemove} style={{ display: $s(vals.bgtRemoveDisplay), marginTop: "10px", textAlign: "center", padding: "14px 0", fontSize: "14px", fontWeight: "600", color: "#E8453C", cursor: "pointer" }}>Remove budget</div>
+              </div>
+            </div>
+            <div style={{ position: "absolute", inset: "0", zIndex: "104", display: $s(vals.supDisplay) }}>
+              <div onClick={vals.supClose} style={{ position: "absolute", inset: "0", background: "rgba(9,16,26,.55)" }} />
+              <div style={{ position: "absolute", left: "0", right: "0", bottom: "0", background: "#111F31", borderRadius: "24px 24px 0 0", padding: "16px 16px 28px", maxHeight: "86%", overflow: "auto", boxSizing: "border-box" }}>
+                <div style={{ width: "40px", height: "4px", borderRadius: "2px", background: "rgba(255,255,255,.25)", margin: "0 auto 14px" }} />
+                <div style={{ fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif", fontSize: "19px", fontWeight: "700", color: "#FFFFFF" }}>Help and support</div>
+                <div style={{ fontSize: "13.5px", fontWeight: "400", color: "#8A95A2", marginTop: "5px", lineHeight: "1.5" }}>Common questions first. If you still need us, we answer 24 hours a day.</div>
+                <div style={{ fontSize: "11.5px", fontWeight: "700", letterSpacing: ".12em", color: "#6E7986", margin: "20px 2px 8px" }}>FAQ</div>
+                <div style={{ borderRadius: "18px", background: "#15191E", overflow: "hidden" }}>
+                  {$each(vals.supFaq, (q) => (
+                      <div style={{ borderBottom: "1px solid rgba(255,255,255,.07)" }}>
+                        <div onClick={q.tap} style={{ display: "flex", alignItems: "center", gap: "12px", padding: "15px 16px", cursor: "pointer" }}>
+                          <div style={{ flex: "1", minWidth: "0", fontSize: "14.5px", fontWeight: "500", color: "#FFFFFF", lineHeight: "1.35" }}>{$t(q.q)}</div>
+                          <div style={{ width: "9px", height: "9px", flex: "none", borderTop: "2px solid #8A95A2", borderRight: "2px solid #8A95A2", transform: $s(q.rotate) }} />
+                        </div>
+                        <div style={{ display: $s(q.answerDisplay), padding: "0 16px 16px", fontSize: "13.5px", fontWeight: "400", color: "#8A95A2", lineHeight: "1.55" }}>{$t(q.a)}</div>
+                      </div>
+                  ))}
+                </div>
+                <div style={{ fontSize: "11.5px", fontWeight: "700", letterSpacing: ".12em", color: "#6E7986", margin: "20px 2px 8px" }}>CONTACT US</div>
+                <div style={{ borderRadius: "18px", background: "#15191E", overflow: "hidden" }}>
+                  <div onClick={vals.supCall} style={{ display: "flex", alignItems: "center", gap: "14px", padding: "15px 16px", borderBottom: "1px solid rgba(255,255,255,.07)", cursor: "pointer" }}>
+                    <div style={{ width: "42px", height: "42px", borderRadius: "50%", flex: "none", background: "#2563EB", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "17px", color: "#fff" }}>✆</div>
+                    <div style={{ flex: "1", minWidth: "0" }}>
+                      <div style={{ fontSize: "14.5px", fontWeight: "500", color: "#FFFFFF" }}>Call us</div>
+                      <div style={{ fontSize: "12.5px", fontWeight: "400", fontVariantNumeric: "tabular-nums", color: "#8A95A2", marginTop: "3px" }}>+964 780 000 1234 · free from Iraq</div>
+                    </div>
+                    <div style={{ width: "8px", height: "8px", flex: "none", borderTop: "2px solid #4B5563", borderRight: "2px solid #4B5563", transform: "rotate(45deg)" }} />
+                  </div>
+                  <div onClick={vals.supWhats} style={{ display: "flex", alignItems: "center", gap: "14px", padding: "15px 16px", cursor: "pointer" }}>
+                    <div style={{ width: "42px", height: "42px", borderRadius: "50%", flex: "none", background: "#1FA855", display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
+                      <div style={{ width: "20px", height: "16px", borderRadius: "6px", background: "#fff" }} />
+                      <div style={{ position: "absolute", left: "12px", bottom: "10px", width: "7px", height: "7px", background: "#fff", transform: "rotate(45deg)", borderRadius: "1px" }} />
+                    </div>
+                    <div style={{ flex: "1", minWidth: "0" }}>
+                      <div style={{ fontSize: "14.5px", fontWeight: "500", color: "#FFFFFF" }}>Chat on WhatsApp</div>
+                      <div style={{ fontSize: "12.5px", fontWeight: "400", fontVariantNumeric: "tabular-nums", color: "#8A95A2", marginTop: "3px" }}>+964 780 000 1234 · replies in minutes</div>
+                    </div>
+                    <div style={{ width: "8px", height: "8px", flex: "none", borderTop: "2px solid #4B5563", borderRight: "2px solid #4B5563", transform: "rotate(45deg)" }} />
+                  </div>
+                </div>
+                <div onClick={vals.supClose} style={{ marginTop: "18px", textAlign: "center", padding: "15px 0", borderRadius: "14px", background: "#2563EB", color: "#fff", fontSize: "15px", fontWeight: "600", cursor: "pointer" }}>Close</div>
               </div>
             </div>
             <div style={{ position: "absolute", left: "16px", right: "16px", bottom: "96px", zIndex: "96", display: $s(vals.toastDisplay), justifyContent: "center", pointerEvents: "none" }}>

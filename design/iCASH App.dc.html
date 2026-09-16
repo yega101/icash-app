@@ -24,6 +24,7 @@ a{color:#2563EB}a:hover{color:#1b4fc0}
 *{scrollbar-width:none;-ms-overflow-style:none}
 *::-webkit-scrollbar{width:0;height:0;display:none}
 @keyframes icShake{0%,100%{transform:translateX(0)}20%{transform:translateX(-9px)}40%{transform:translateX(9px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}
+@keyframes icSpin{to{transform:rotate(360deg)}}
 @keyframes icFade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 @keyframes icBlobA{0%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(-46px,38px,0) scale(1.14)}100%{transform:translate3d(24px,-28px,0) scale(.94)}}
 @keyframes icBlobB{0%{transform:translate3d(0,0,0) scale(1.04)}50%{transform:translate3d(58px,-46px,0) scale(.9)}100%{transform:translate3d(-30px,52px,0) scale(1.16)}}
@@ -85,11 +86,11 @@ a{color:#2563EB}a:hover{color:#1b4fc0}
       </div>
 
       <div style="position:absolute;inset:0;display:{{ lockDisplay }};background:#0D1B2A;flex-direction:column;align-items:center;padding:92px 30px 34px;box-sizing:border-box">
-        <div style="position:relative;width:186px;margin-top:34px">
+        <div style="position:relative;width:276px;margin-top:24px">
           <img src="brand/icash-word.png" alt="iCASH" style="display:block;width:100%;filter:invert(1) saturate(0) brightness(1.18) contrast(1.05);mix-blend-mode:screen" />
           <div style="position:absolute;left:.48%;top:1.66%;width:5.82%;aspect-ratio:1;border-radius:50%;background:#2563EB"></div>
         </div>
-        <div style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif;font-size:9px;font-weight:600;letter-spacing:.3em;color:#5A6A7C;margin-top:8px">BOLD · SIMPLE · IMPACTFUL</div>
+        <div style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif;font-size:7.5px;font-weight:600;letter-spacing:.34em;color:#5A6A7C;margin-top:6px">BOLD · SIMPLE · IMPACTFUL</div>
 
         <div style="font-size:14px;font-weight:500;color:{{ pinInk }};margin-top:40px">{{ pinPrompt }}</div>
 
@@ -126,16 +127,16 @@ a{color:#2563EB}a:hover{color:#1b4fc0}
             </div>
 
 
-            <div style="display:flex;align-items:center;gap:10px;padding:58px 14px 0">
+            <div style="display:flex;align-items:center;gap:9px;padding:58px 66px 0 14px">
               <div onClick="{{ openProfile }}" style="position:relative;width:46px;height:46px;flex:none;cursor:pointer">
                 <div style="width:46px;height:46px;border-radius:50%;background:#8C7A5E;display:flex;align-items:center;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif;font-size:15px;font-weight:600;color:#fff">AA</div>
                 <div style="position:absolute;right:0;top:0;width:10px;height:10px;border-radius:50%;background:#E8453C;border:2px solid #050A10;box-sizing:border-box"></div>
               </div>
-              <div style="flex:1;display:flex;align-items:center;gap:11px;height:46px;border-radius:9999px;background:#15191E;padding:0 16px;box-sizing:border-box;cursor:pointer" onClick="{{ openSearch }}">
+              <div style="flex:1;min-width:0;display:flex;align-items:center;gap:8px;height:38px;border-radius:9999px;background:#15191E;padding:0 13px;box-sizing:border-box;cursor:pointer" onClick="{{ openSearch }}">
                 <div style="width:15px;height:15px;border-radius:50%;border:2px solid #8A95A2;position:relative">
                   <div style="position:absolute;right:-4px;bottom:-3px;width:6px;height:2px;border-radius:1px;background:#8A95A2;transform:rotate(45deg)"></div>
                 </div>
-                <div style="font-size:14px;font-weight:500;color:#8A95A2">Search</div>
+                <div style="font-size:13px;font-weight:500;color:#8A95A2">Search</div>
               </div>
               <div onClick="{{ openAnalytics }}" style="width:46px;height:46px;flex:none;border-radius:50%;background:#15191E;display:flex;align-items:flex-end;justify-content:center;gap:2.5px;padding-bottom:16px;box-sizing:border-box;cursor:pointer">
                 <div style="width:3px;height:8px;border-radius:1.5px;background:#fff"></div>
@@ -151,7 +152,7 @@ a{color:#2563EB}a:hover{color:#1b4fc0}
 
             <div style="text-align:center;padding:64px 20px 0">
               <div style="font-size:13.5px;font-weight:500;color:#FFFFFF">Personal · IQD</div>
-              <div style="display:flex;align-items:flex-start;justify-content:center;gap:2px;margin-top:8px">
+              <div style="display:flex;direction:ltr;align-items:flex-start;justify-content:center;gap:2px;margin-top:8px">
                 <div style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif;font-variant-numeric:tabular-nums;font-size:42px;font-weight:700;color:#FFFFFF;letter-spacing:-.02em;line-height:1">2.450.000</div>
                 <div style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif;font-size:19px;font-weight:700;color:#FFFFFF;margin-top:4px">,00</div>
               </div>
@@ -255,7 +256,7 @@ a{color:#2563EB}a:hover{color:#1b4fc0}
               </div>
               <div style="display:flex;gap:12px;overflow:auto;padding-bottom:8px">
                 <sc-for list="{{ widgets }}" as="w" hint-placeholder-count="3">
-                  <div style="flex:none;width:190px;height:190px;border-radius:20px;background:#15191E;padding:16px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between">
+                  <div onClick="{{ w.tap }}" style="flex:none;width:190px;height:190px;border-radius:20px;background:#15191E;padding:16px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer">
                     <div style="display:flex;align-items:flex-start;justify-content:space-between">
                       <div style="width:38px;height:38px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:700;color:#fff;background:{{ w.bg }}">{{ w.ini }}</div>
                       <div onClick="{{ w.remove }}" style="width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:13px;color:#8A95A2;cursor:pointer">×</div>
@@ -480,14 +481,14 @@ a{color:#2563EB}a:hover{color:#1b4fc0}
             </div>
 
 
-            <div style="display:flex;align-items:center;gap:10px;padding:58px 14px 0">
+            <div style="display:flex;align-items:center;gap:9px;padding:58px 66px 0 14px">
               <div onClick="{{ openProfile }}" style="position:relative;width:46px;height:46px;flex:none;cursor:pointer">
                 <div style="width:46px;height:46px;border-radius:50%;background:#8C7A5E;display:flex;align-items:center;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif;font-size:15px;font-weight:600;color:#fff">AA</div>
                 <div style="position:absolute;right:0;top:0;width:10px;height:10px;border-radius:50%;background:#E8453C;border:2px solid #050A10;box-sizing:border-box"></div>
               </div>
-              <div style="flex:1;display:flex;align-items:center;gap:11px;height:46px;border-radius:9999px;background:#15191E;padding:0 16px;box-sizing:border-box;cursor:pointer" onClick="{{ openSearch }}">
+              <div style="flex:1;min-width:0;display:flex;align-items:center;gap:8px;height:38px;border-radius:9999px;background:#15191E;padding:0 13px;box-sizing:border-box;cursor:pointer" onClick="{{ openSearch }}">
                 <div style="width:15px;height:15px;border-radius:50%;border:2px solid #8A95A2"></div>
-                <div style="font-size:14px;font-weight:500;color:#8A95A2">Search</div>
+                <div style="font-size:13px;font-weight:500;color:#8A95A2">Search</div>
               </div>
               <div onClick="{{ openAnalytics }}" style="width:46px;height:46px;flex:none;border-radius:50%;background:#15191E;display:flex;align-items:flex-end;justify-content:center;gap:2.5px;padding-bottom:16px;box-sizing:border-box;cursor:pointer">
                 <div style="width:3px;height:8px;border-radius:1.5px;background:#fff"></div>
@@ -498,6 +499,11 @@ a{color:#2563EB}a:hover{color:#1b4fc0}
                 <div style="width:19px;height:19px;border-radius:50%;border:1.6px solid #fff;position:relative">
                   <div style="position:absolute;left:0;right:0;top:7.5px;height:1.6px;background:#fff"></div>
                   <div style="position:absolute;top:0;bottom:0;left:7.5px;width:1.6px;background:#fff"></div>
+                </div>
+              </div>
+              <div onClick="{{ goCards }}" style="width:46px;height:46px;flex:none;border-radius:50%;background:#15191E;display:flex;align-items:center;justify-content:center;cursor:pointer">
+                <div style="width:20px;height:14px;border-radius:3px;border:1.6px solid #fff;position:relative">
+                  <div style="position:absolute;left:0;right:0;top:3px;height:2px;background:#fff"></div>
                 </div>
               </div>
             </div>
@@ -672,14 +678,14 @@ a{color:#2563EB}a:hover{color:#1b4fc0}
             </div>
 
 
-            <div style="display:flex;align-items:center;gap:10px;padding:58px 14px 0">
+            <div style="display:flex;align-items:center;gap:9px;padding:58px 66px 0 14px">
               <div onClick="{{ openProfile }}" style="position:relative;width:46px;height:46px;flex:none;cursor:pointer">
                 <div style="width:46px;height:46px;border-radius:50%;background:#8C7A5E;display:flex;align-items:center;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif;font-size:15px;font-weight:600;color:#fff">AA</div>
                 <div style="position:absolute;right:0;top:0;width:10px;height:10px;border-radius:50%;background:#E8453C;border:2px solid #050A10;box-sizing:border-box"></div>
               </div>
-              <div style="flex:1;display:flex;align-items:center;gap:11px;height:46px;border-radius:9999px;background:#15191E;padding:0 16px;box-sizing:border-box;cursor:pointer" onClick="{{ openSearch }}">
+              <div style="flex:1;min-width:0;display:flex;align-items:center;gap:8px;height:38px;border-radius:9999px;background:#15191E;padding:0 13px;box-sizing:border-box;cursor:pointer" onClick="{{ openSearch }}">
                 <div style="width:15px;height:15px;border-radius:50%;border:2px solid #8A95A2"></div>
-                <div style="font-size:14px;font-weight:500;color:#8A95A2">Search</div>
+                <div style="font-size:13px;font-weight:500;color:#8A95A2">Search</div>
               </div>
               <div onClick="{{ calOpen }}" style="width:46px;height:46px;flex:none;border-radius:50%;background:#15191E;display:flex;align-items:center;justify-content:center;cursor:pointer">
                 <div style="width:18px;height:17px;border-radius:4px;border:1.7px solid #fff;position:relative">
@@ -689,6 +695,11 @@ a{color:#2563EB}a:hover{color:#1b4fc0}
                 </div>
               </div>
               <div onClick="{{ openSend }}" style="width:46px;height:46px;flex:none;border-radius:50%;background:#15191E;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:400;color:#fff;cursor:pointer">+</div>
+              <div onClick="{{ goCards }}" style="width:46px;height:46px;flex:none;border-radius:50%;background:#15191E;display:flex;align-items:center;justify-content:center;cursor:pointer">
+                <div style="width:20px;height:14px;border-radius:3px;border:1.6px solid #fff;position:relative">
+                  <div style="position:absolute;left:0;right:0;top:3px;height:2px;background:#fff"></div>
+                </div>
+              </div>
             </div>
 
             <div style="display:flex;gap:12px;overflow:auto;padding:20px 14px 0;scroll-snap-type:x mandatory">
@@ -705,6 +716,10 @@ a{color:#2563EB}a:hover{color:#1b4fc0}
             </div>
 
             <div style="padding:18px 14px 0">
+              <div style="display:flex;align-items:center;justify-content:space-between;padding-bottom:12px">
+                <div style="font-size:14.5px;font-weight:600;color:#FFFFFF">Latest transactions</div>
+                <div onClick="{{ seeAll }}" style="font-size:13px;font-weight:500;color:#8A95A2;cursor:pointer">See all</div>
+              </div>
               <div style="border-radius:20px;background:#15191E;overflow:hidden">
                 <sc-for list="{{ payHistory }}" as="h" hint-placeholder-count="8">
                   <div onClick="{{ openSend }}" style="display:flex;align-items:center;gap:14px;padding:14px 16px;cursor:pointer">
@@ -718,7 +733,10 @@ a{color:#2563EB}a:hover{color:#1b4fc0}
                       <div style="font-size:15px;font-weight:500;color:#FFFFFF;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ h.name }}</div>
                       <div style="font-size:12.5px;font-weight:400;color:#8A95A2;margin-top:4px">{{ h.sub }}</div>
                     </div>
-                    <div style="font-size:12.5px;font-weight:400;color:#8A95A2;flex:none">{{ h.date }}</div>
+                    <div style="flex:none;text-align:right">
+                      <div style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif;font-variant-numeric:tabular-nums;font-size:15px;font-weight:600;color:{{ h.amtInk }}">{{ h.amt }}</div>
+                      <div style="font-size:12px;font-weight:400;color:#8A95A2;margin-top:4px">{{ h.date }}</div>
+                    </div>
                   </div>
                 </sc-for>
               </div>
@@ -740,14 +758,14 @@ a{color:#2563EB}a:hover{color:#1b4fc0}
             </div>
 
 
-            <div style="display:flex;align-items:center;gap:10px;padding:58px 14px 0">
+            <div style="display:flex;align-items:center;gap:9px;padding:58px 66px 0 14px">
               <div onClick="{{ openProfile }}" style="position:relative;width:46px;height:46px;flex:none;cursor:pointer">
                 <div style="width:46px;height:46px;border-radius:50%;background:#8C7A5E;display:flex;align-items:center;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif;font-size:15px;font-weight:600;color:#fff">AA</div>
                 <div style="position:absolute;right:0;top:0;width:10px;height:10px;border-radius:50%;background:#E8453C;border:2px solid #050A10;box-sizing:border-box"></div>
               </div>
-              <div style="flex:1;display:flex;align-items:center;gap:11px;height:46px;border-radius:9999px;background:#15191E;padding:0 16px;box-sizing:border-box;cursor:pointer" onClick="{{ openSearch }}">
+              <div style="flex:1;min-width:0;display:flex;align-items:center;gap:8px;height:38px;border-radius:9999px;background:#15191E;padding:0 13px;box-sizing:border-box;cursor:pointer" onClick="{{ openSearch }}">
                 <div style="width:15px;height:15px;border-radius:50%;border:2px solid #8A95A2"></div>
-                <div style="font-size:14px;font-weight:500;color:#8A95A2">Search</div>
+                <div style="font-size:13px;font-weight:500;color:#8A95A2">Search</div>
               </div>
               <div onClick="{{ openPlan }}" style="width:46px;height:46px;flex:none;border-radius:50%;background:#15191E;display:flex;align-items:center;justify-content:center;font-size:17px;color:#fff;cursor:pointer">✦</div>
               <div onClick="{{ goCards }}" style="width:46px;height:46px;flex:none;border-radius:50%;background:#15191E;display:flex;align-items:center;justify-content:center;cursor:pointer">
@@ -912,8 +930,8 @@ a{color:#2563EB}a:hover{color:#1b4fc0}
             </div>
           </div>
 
-          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px 10px;padding:24px 4px 0">
-            <sc-for list="{{ sendMethods }}" as="sm" hint-placeholder-count="4">
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px 10px;padding:24px 4px 0">
+            <sc-for list="{{ sendMethods }}" as="sm" hint-placeholder-count="3">
               <div onClick="{{ sm.tap }}" style="display:flex;flex-direction:column;align-items:center;gap:9px;cursor:pointer">
                 <div style="width:62px;height:62px;border-radius:18px;display:flex;align-items:center;justify-content:center;background:{{ sm.bg }};position:relative">
                   <div style="display:{{ sm.iconAcct }};width:26px;height:20px;border-radius:4px;border:1.8px solid #fff;position:relative">
@@ -923,17 +941,7 @@ a{color:#2563EB}a:hover{color:#1b4fc0}
                   <div style="display:{{ sm.iconPhone }};width:17px;height:27px;border-radius:5px;border:1.8px solid #fff;position:relative">
                     <div style="position:absolute;left:50%;bottom:2px;transform:translateX(-50%);width:5px;height:1.6px;border-radius:1px;background:#fff"></div>
                   </div>
-                  <div style="display:{{ sm.iconQr }};width:26px;height:26px;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:3px">
-                    <div style="border:1.8px solid #fff;border-radius:2px"></div>
-                    <div></div>
-                    <div style="border:1.8px solid #fff;border-radius:2px"></div>
-                    <div></div>
-                    <div style="background:#fff;border-radius:1px"></div>
-                    <div></div>
-                    <div style="border:1.8px solid #fff;border-radius:2px"></div>
-                    <div></div>
-                    <div style="background:#fff;border-radius:1px"></div>
-                  </div>
+                  <svg viewBox="0 0 24 24" style="display:{{ sm.iconQr }};width:27px;height:27px;fill:#fff"><path d="{{ qrPath }}"></path></svg>
                   <div style="display:{{ sm.iconScan }};width:28px;height:28px;position:relative">
                     <div style="position:absolute;left:0;top:0;width:9px;height:9px;border-left:2px solid #fff;border-top:2px solid #fff;border-radius:3px 0 0 0"></div>
                     <div style="position:absolute;right:0;top:0;width:9px;height:9px;border-right:2px solid #fff;border-top:2px solid #fff;border-radius:0 3px 0 0"></div>
@@ -1072,6 +1080,18 @@ a{color:#2563EB}a:hover{color:#1b4fc0}
             </sc-for>
           </div>
 
+          <div style="border-radius:18px;background:#15191E;padding:2px 16px;margin-top:14px">
+            <div onClick="{{ lightToggle }}" style="display:flex;align-items:center;gap:14px;padding:15px 0;cursor:pointer">
+              <div style="flex:1;min-width:0">
+                <div style="font-size:14.5px;font-weight:500;color:#FFFFFF">Light appearance</div>
+                <div style="font-size:12.5px;font-weight:400;color:#8A95A2;margin-top:3px;line-height:1.45">White screens with dark text</div>
+              </div>
+              <div style="width:46px;height:28px;border-radius:9999px;flex:none;position:relative;background:{{ lightTrack }}">
+                <div style="position:absolute;top:3px;left:{{ lightKnob }};width:22px;height:22px;border-radius:50%;background:#FFFFFF"></div>
+              </div>
+            </div>
+          </div>
+
           <div style="border-radius:18px;background:#15191E;padding:16px;margin-top:14px">
             <div style="display:flex;align-items:baseline;justify-content:space-between">
               <div style="font-size:13.5px;font-weight:500;color:#8A95A2">Theme</div>
@@ -1207,6 +1227,20 @@ a{color:#2563EB}a:hover{color:#1b4fc0}
             </div>
           </div>
 
+          <div onClick="{{ lkOpen }}" style="border-radius:22px;background:#15191E;overflow:hidden;margin-top:14px;cursor:pointer">
+            <div style="display:flex;align-items:center;gap:14px;padding:18px 16px">
+              <div style="width:46px;height:46px;flex:none;border-radius:14px;background:{{ lkActiveArt }};display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden">
+                <div style="position:absolute;left:8px;top:9px;width:13px;height:9px;border-radius:2px;background:rgba(255,255,255,.75)"></div>
+                <div style="position:absolute;right:7px;bottom:8px;width:16px;height:3px;border-radius:2px;background:rgba(255,255,255,.55)"></div>
+              </div>
+              <div style="flex:1;min-width:0">
+                <div style="font-size:15px;font-weight:600;color:#fff">Linked cards</div>
+                <div style="font-size:12.5px;font-weight:400;color:#8A95A2;margin-top:4px;line-height:1.45">{{ lkEntrySub }}</div>
+              </div>
+              <div style="width:8px;height:8px;border-top:1.8px solid #4B5563;border-right:1.8px solid #4B5563;transform:rotate(45deg);flex:none"></div>
+            </div>
+          </div>
+
           <div onClick="{{ agentOpen }}" style="border-radius:22px;background:linear-gradient(135deg,#10323A 0%,#15191E 68%);overflow:hidden;margin-top:14px;cursor:pointer">
             <div style="display:flex;align-items:center;gap:14px;padding:18px 16px">
               <div style="width:46px;height:46px;flex:none;border-radius:14px;background:rgba(0,194,168,.2);display:flex;align-items:center;justify-content:center">
@@ -1303,7 +1337,10 @@ a{color:#2563EB}a:hover{color:#1b4fc0}
               <div style="border-radius:20px;background:#15191E;overflow:hidden;margin-top:14px">
                 <sc-for list="{{ addMethods }}" as="m" hint-placeholder-count="4">
                   <div onClick="{{ m.pick }}" style="display:flex;align-items:center;gap:14px;padding:16px;cursor:pointer;background:{{ m.rowBg }}">
-                    <div style="width:44px;height:44px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-size:16px;color:#fff;background:rgba(255,255,255,.1)">{{ m.icon }}</div>
+                    <div style="width:44px;height:44px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-size:16px;color:#fff;background:rgba(255,255,255,.1)">
+                      <svg viewBox="0 0 24 24" style="display:{{ m.iconQrDisplay }};width:21px;height:21px;fill:#fff"><path d="{{ qrPath }}"></path></svg>
+                      <div style="display:{{ m.iconCharDisplay }}">{{ m.icon }}</div>
+                    </div>
                     <div style="flex:1;min-width:0">
                       <div style="font-size:14.5px;font-weight:500;color:#fff">{{ m.name }}</div>
                       <div style="font-size:12.5px;font-weight:400;color:#8A95A2;margin-top:3px;line-height:1.45">{{ m.sub }}</div>
@@ -1324,11 +1361,11 @@ a{color:#2563EB}a:hover{color:#1b4fc0}
 
         <div style="display:{{ obWelcomeDisplay }};flex:1;flex-direction:column;padding:0 22px 34px;box-sizing:border-box">
           <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px">
-            <div style="width:104px;height:104px;border-radius:32px;background:#101F33;display:flex;align-items:center;justify-content:center;position:relative">
-              <div style="width:13px;height:13px;border-radius:50%;background:#2563EB;position:absolute;top:26px"></div>
-              <div style="width:10px;height:30px;border-radius:5px;background:#fff;position:absolute;bottom:24px"></div>
+            <div style="position:relative;width:268px">
+              <img src="brand/icash-word.png" alt="iCASH" style="display:block;width:100%;filter:invert(1) saturate(0) brightness(1.18) contrast(1.05);mix-blend-mode:screen" />
+              <div style="position:absolute;left:.48%;top:1.66%;width:5.82%;aspect-ratio:1;border-radius:50%;background:#2563EB"></div>
             </div>
-            <div style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif;font-size:30px;font-weight:800;letter-spacing:-.03em;color:#fff;text-align:center;line-height:1.15">Ready to change<br>the way you money?</div>
+            <div style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif;font-size:22px;font-weight:700;letter-spacing:-.02em;color:#fff;text-align:center;line-height:1.2">Ready to change<br>the way you money?</div>
             <div style="font-size:14px;font-weight:400;color:#8A95A2;text-align:center;max-width:280px;line-height:1.5">One account for spending, saving and investing in Iraq and abroad.</div>
           </div>
           <div onClick="{{ obNext }}" style="text-align:center;padding:17px 0;border-radius:9999px;background:#fff;font-size:14.5px;font-weight:600;color:#0D1B2A;cursor:pointer">Sign up</div>
@@ -1532,7 +1569,7 @@ a{color:#2563EB}a:hover{color:#1b4fc0}
       </div>
 
       <div style="position:absolute;inset:0;z-index:90;display:{{ profileDisplay }};overflow:auto;background:radial-gradient(110% 55% at 80% -4%,rgba(140,122,94,.30) 0%,rgba(5,10,16,0) 58%),radial-gradient(85% 45% at 10% 30%,rgba(124,58,237,.14) 0%,rgba(5,10,16,0) 60%),#050A10">
-        <div style="display:flex;align-items:center;justify-content:space-between;padding:56px 16px 0">
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:56px 66px 0 16px">
           <div onClick="{{ closeProfile }}" style="width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:16px;color:#fff;cursor:pointer">×</div>
           <div onClick="{{ openUpgrade }}" style="display:flex;align-items:center;gap:8px;padding:11px 20px;border-radius:9999px;background:rgba(255,255,255,.1);cursor:pointer">
             <div style="font-size:14px;color:#fff">✦</div>
@@ -1879,9 +1916,9 @@ a{color:#2563EB}a:hover{color:#1b4fc0}
 
       <div style="position:absolute;inset:0;z-index:96;display:{{ mpHomeDisplay }};flex-direction:column;animation:icFade .3s ease-out;background:radial-gradient(115% 50% at 78% -6%,rgba(198,160,88,.26) 0%,rgba(5,10,16,0) 56%),#050A10">
         <div style="flex:1;min-height:0;overflow:auto;padding-bottom:20px">
-          <div style="display:flex;align-items:center;gap:10px;padding:56px 14px 0">
+          <div style="display:flex;align-items:center;gap:9px;padding:56px 66px 0 14px">
             <div style="width:46px;height:46px;flex:none;border-radius:50%;background:linear-gradient(160deg,#C6A058,#8A6B2C);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#2A1F08">KC</div>
-            <div style="flex:1;display:flex;align-items:center;gap:11px;height:46px;border-radius:9999px;background:#15191E;padding:0 16px;box-sizing:border-box;cursor:pointer" onClick="{{ openSearch }}">
+            <div style="flex:1;min-width:0;display:flex;align-items:center;gap:8px;height:38px;border-radius:9999px;background:#15191E;padding:0 13px;box-sizing:border-box;cursor:pointer" onClick="{{ openSearch }}">
               <div style="width:15px;height:15px;border-radius:50%;border:2px solid #8A95A2"></div>
               <div style="font-size:14px;font-weight:500;color:#8A95A2">Search sales</div>
             </div>
@@ -1890,7 +1927,7 @@ a{color:#2563EB}a:hover{color:#1b4fc0}
 
           <div style="text-align:center;padding:52px 22px 0">
             <div style="font-size:13.5px;font-weight:500;color:#E6DCC4">{{ mpBiz }} · IQD</div>
-            <div style="display:flex;align-items:flex-start;justify-content:center;gap:3px;margin-top:10px">
+            <div style="display:flex;direction:ltr;align-items:flex-start;justify-content:center;gap:3px;margin-top:10px">
               <div style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif;font-variant-numeric:tabular-nums;font-size:42px;font-weight:700;color:#FFFFFF;letter-spacing:-.02em;line-height:1">{{ mpCollected }}</div>
               <div style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif;font-size:19px;font-weight:700;color:#FFFFFF;margin-top:4px">,00</div>
             </div>
@@ -2033,7 +2070,11 @@ a{color:#2563EB}a:hover{color:#1b4fc0}
 
           <div style="display:{{ mpQrDisplay }};flex-direction:column;align-items:center;gap:22px">
             <div style="width:214px;height:214px;border-radius:22px;background:#fff;padding:15px;box-sizing:border-box">
-              <div style="width:100%;height:100%;background-image:repeating-conic-gradient(#0D1B2A 0% 25%,#ffffff 0% 50%);background-size:18px 18px"></div>
+              <div style="width:100%;height:100%;display:grid;grid-template-columns:repeat(25,1fr);grid-template-rows:repeat(25,1fr);gap:1px">
+                <sc-for list="{{ qrCells }}" as="q" hint-placeholder-count="625">
+                  <div style="border-radius:1px;background:{{ q.bg }}"></div>
+                </sc-for>
+              </div>
             </div>
             <div style="font-size:19px;font-weight:600;color:#FFFFFF;text-align:center">Customer scans to pay</div>
           </div>
@@ -2206,6 +2247,8 @@ a{color:#2563EB}a:hover{color:#1b4fc0}
           <div style="font-size:13.5px;font-weight:400;color:#8A95A2;margin-top:5px;line-height:1.5">Pick the mini apps you want on your Home screen. Tap to add or remove.</div>
           <div style="margin-top:14px">
             <sc-for list="{{ widgetChoices }}" as="c" hint-placeholder-count="8">
+              <div>
+              <div style="display:{{ c.headDisplay }};font-size:11.5px;font-weight:700;letter-spacing:.12em;color:#6E7986;padding:16px 0 4px">{{ c.group }}</div>
               <div onClick="{{ c.toggle }}" style="display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.07);cursor:pointer">
                 <div style="width:40px;height:40px;border-radius:12px;flex:none;display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:700;color:#fff;background:{{ c.bg }}">{{ c.ini }}</div>
                 <div style="flex:1;min-width:0">
@@ -2213,6 +2256,7 @@ a{color:#2563EB}a:hover{color:#1b4fc0}
                   <div style="font-size:13.5px;font-weight:400;color:#8A95A2;margin-top:2px">{{ c.sub }}</div>
                 </div>
                 <div style="width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;background:{{ c.markBg }};color:{{ c.markInk }};border:1.5px solid {{ c.markBorder }}">{{ c.mark }}</div>
+              </div>
               </div>
             </sc-for>
           </div>
@@ -2678,6 +2722,308 @@ a{color:#2563EB}a:hover{color:#1b4fc0}
         </div>
       </div>
 
+
+
+      <div style="position:absolute;inset:0;z-index:97;display:{{ lkDisplay }};flex-direction:column;animation:icFade .3s ease-out;background:radial-gradient(115% 55% at 78% -6%,rgba(37,99,235,.26) 0%,rgba(5,10,16,0) 58%),#050A10">
+        <div style="flex:none;display:flex;align-items:center;gap:10px;padding:56px 66px 0 16px">
+          <div onClick="{{ lkClose }}" style="width:40px;height:40px;flex:none;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:16px;color:#fff;cursor:pointer">×</div>
+          <div style="flex:1;min-width:0;font-size:14.5px;font-weight:600;color:#fff">Linked cards</div>
+        </div>
+
+        <div style="flex:1;min-height:0;overflow:auto;padding:20px 16px 0">
+          <div style="font-size:11.5px;font-weight:700;letter-spacing:.12em;color:#6E7986">PAYING FROM</div>
+          <div style="margin-top:10px;position:relative;width:100%;aspect-ratio:1.586;border-radius:20px;padding:20px;box-sizing:border-box;background:{{ lkActiveArt }};overflow:hidden;box-shadow:0 18px 38px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.18);display:flex;flex-direction:column">
+            <div style="position:absolute;inset:0;background:linear-gradient(118deg,rgba(255,255,255,.22) 0%,rgba(255,255,255,0) 38%,rgba(0,0,0,.16) 100%);pointer-events:none"></div>
+            <div style="position:absolute;right:-70px;top:-70px;width:230px;height:230px;border-radius:50%;background:rgba(255,255,255,.07);pointer-events:none"></div>
+            <div style="position:absolute;right:-30px;bottom:-96px;width:220px;height:220px;border-radius:50%;background:rgba(0,0,0,.12);pointer-events:none"></div>
+
+            <div style="position:relative;display:flex;align-items:flex-start;justify-content:space-between;gap:12px">
+              <div style="font-size:14.5px;font-weight:700;letter-spacing:.02em;color:#FFFFFF;text-shadow:0 1px 2px rgba(0,0,0,.28)">{{ lkActiveName }}</div>
+              <div style="font-size:9px;font-weight:700;letter-spacing:.14em;color:rgba(255,255,255,.72)">{{ lkActiveKind }}</div>
+            </div>
+
+            <div style="position:relative;display:flex;align-items:center;gap:13px;margin-top:20px">
+              <div style="width:44px;height:33px;flex:none;border-radius:6px;background:linear-gradient(145deg,#F3DFA8,#C9A44B 52%,#8E6E23);display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:1fr 1fr 1fr;gap:1.5px;padding:5px;box-sizing:border-box">
+                <div style="background:rgba(120,88,20,.55);border-radius:1px"></div>
+                <div style="background:rgba(120,88,20,.3);border-radius:1px"></div>
+                <div style="background:rgba(120,88,20,.55);border-radius:1px"></div>
+                <div style="background:rgba(120,88,20,.3);border-radius:1px"></div>
+                <div style="background:rgba(120,88,20,.55);border-radius:1px"></div>
+                <div style="background:rgba(120,88,20,.3);border-radius:1px"></div>
+                <div style="background:rgba(120,88,20,.55);border-radius:1px"></div>
+                <div style="background:rgba(120,88,20,.3);border-radius:1px"></div>
+                <div style="background:rgba(120,88,20,.55);border-radius:1px"></div>
+              </div>
+              <div style="position:relative;width:26px;height:26px;flex:none">
+                <div style="position:absolute;left:2px;top:4px;width:8px;height:18px;border-right:2.2px solid rgba(255,255,255,.55);border-radius:0 12px 12px 0"></div>
+                <div style="position:absolute;left:7px;top:1px;width:11px;height:24px;border-right:2.2px solid rgba(255,255,255,.72);border-radius:0 16px 16px 0"></div>
+                <div style="position:absolute;left:12px;top:-2px;width:14px;height:30px;border-right:2.2px solid rgba(255,255,255,.9);border-radius:0 20px 20px 0"></div>
+              </div>
+            </div>
+
+            <div style="position:relative;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif;font-variant-numeric:tabular-nums;font-size:19px;font-weight:600;letter-spacing:.1em;color:#FFFFFF;text-shadow:0 1px 2px rgba(0,0,0,.35);margin-top:18px;direction:ltr">{{ lkActiveNumber }}</div>
+
+            <div style="position:relative;margin-top:auto;display:flex;align-items:flex-end;justify-content:space-between;gap:14px">
+              <div style="min-width:0">
+                <div style="font-size:8px;font-weight:700;letter-spacing:.14em;color:rgba(255,255,255,.66)">CARDHOLDER</div>
+                <div style="font-size:12.5px;font-weight:600;letter-spacing:.04em;color:#fff;margin-top:4px;text-transform:uppercase">Ahmed Al Janahi</div>
+              </div>
+              <div style="flex:none;text-align:right">
+                <div style="font-size:8px;font-weight:700;letter-spacing:.14em;color:rgba(255,255,255,.66)">{{ lkActiveMetaLabel }}</div>
+                <div style="font-variant-numeric:tabular-nums;font-size:12.5px;font-weight:600;color:#fff;margin-top:4px;direction:ltr">{{ lkActiveMeta }}</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="font-size:12.5px;font-weight:400;color:#8A95A2;margin-top:12px;line-height:1.5">{{ lkActiveNote }}</div>
+
+          <div style="display:flex;gap:8px;margin-top:12px">
+            <div onClick="{{ lkTopUp }}" style="display:{{ lkTopUpDisplay }};flex:1;text-align:center;padding:14px 0;border-radius:14px;background:#2563EB;font-size:14px;font-weight:600;color:#fff;cursor:pointer">Top up wallet</div>
+            <div onClick="{{ lkAddOpen }}" style="flex:1;text-align:center;padding:14px 0;border-radius:14px;background:rgba(255,255,255,.1);font-size:14px;font-weight:600;color:#fff;cursor:pointer">Add a card</div>
+          </div>
+
+          <div style="font-size:11.5px;font-weight:700;letter-spacing:.12em;color:#6E7986;margin:22px 2px 10px">SOURCES</div>
+          <div style="border-radius:20px;background:#15191E;overflow:hidden">
+            <sc-for list="{{ lkSources }}" as="src" hint-placeholder-count="2">
+              <div onClick="{{ src.pick }}" style="display:flex;align-items:center;gap:14px;padding:15px 16px;border-bottom:1px solid rgba(255,255,255,.07);cursor:pointer">
+                <div style="width:44px;height:30px;flex:none;border-radius:8px;background:{{ src.art }};position:relative;overflow:hidden">
+                  <div style="position:absolute;left:7px;top:8px;width:12px;height:8px;border-radius:2px;background:rgba(255,255,255,.72)"></div>
+                  <div style="position:absolute;right:6px;bottom:7px;width:14px;height:3px;border-radius:2px;background:rgba(255,255,255,.5)"></div>
+                </div>
+                <div style="flex:1;min-width:0">
+                  <div style="font-size:14.5px;font-weight:500;color:#FFFFFF">{{ src.name }}</div>
+                  <div style="font-size:12.5px;font-weight:400;font-variant-numeric:tabular-nums;color:#8A95A2;margin-top:3px">{{ src.sub }}</div>
+                </div>
+                <div style="width:22px;height:22px;flex:none;border-radius:50%;border:1.5px solid {{ src.ringBorder }};background:{{ src.ringBg }};display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff">{{ src.mark }}</div>
+              </div>
+            </sc-for>
+          </div>
+
+          <div style="display:{{ lkRemoveDisplay }};margin-top:12px;border-radius:20px;background:#15191E;overflow:hidden">
+            <div onClick="{{ lkRemove }}" style="padding:15px 16px;font-size:14px;font-weight:500;color:#E8453C;cursor:pointer">{{ lkRemoveLabel }}</div>
+          </div>
+
+          <div style="font-size:12.5px;font-weight:400;color:#6E7986;margin:18px 2px 0;line-height:1.5">Linked cards stay with their own provider. iCASH only moves money when you top up or pay with your iCASH card.</div>
+          <div style="height:120px"></div>
+        </div>
+      </div>
+
+      <div style="position:absolute;inset:0;z-index:99;display:{{ lkAddDisplay }};flex-direction:column;animation:icFade .3s ease-out;background:radial-gradient(115% 55% at 78% -6%,rgba(37,99,235,.3) 0%,rgba(5,10,16,0) 58%),#050A10">
+        <div style="flex:none;display:flex;align-items:center;gap:10px;padding:56px 66px 0 16px">
+          <div onClick="{{ lkAddBack }}" style="width:40px;height:40px;flex:none;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;cursor:pointer">
+            <div style="width:11px;height:11px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(45deg);margin-left:4px"></div>
+          </div>
+          <div style="flex:1;min-width:0;font-size:14.5px;font-weight:600;color:#fff">{{ lkStepTitle }}</div>
+          <div style="font-size:12.5px;font-weight:500;color:#8A95A2;flex:none">{{ lkStepCount }}</div>
+        </div>
+
+        <div style="flex:1;min-height:0;overflow:auto;padding:22px 16px 0">
+
+          <div style="display:{{ lkS0Display }}">
+            <div style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif;font-size:23px;font-weight:700;letter-spacing:-.02em;color:#fff;line-height:1.2">Which card do you want to link?</div>
+            <div style="font-size:13.5px;font-weight:400;color:#8A95A2;margin-top:8px;line-height:1.5">Top-up fees are set by the provider and shown before every top-up.</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px">
+              <sc-for list="{{ lkProviders }}" as="p" hint-placeholder-count="6">
+                <div onClick="{{ p.pick }}" style="border-radius:18px;background:#15191E;padding:14px;box-sizing:border-box;cursor:pointer">
+                  <div style="height:38px;border-radius:10px;background:{{ p.art }};position:relative;overflow:hidden">
+                    <div style="position:absolute;left:9px;top:11px;width:14px;height:9px;border-radius:2px;background:rgba(255,255,255,.72)"></div>
+                    <div style="position:absolute;right:8px;bottom:9px;width:16px;height:3px;border-radius:2px;background:rgba(255,255,255,.5)"></div>
+                  </div>
+                  <div style="font-size:14px;font-weight:600;color:#fff;margin-top:12px">{{ p.name }}</div>
+                  <div style="font-size:12px;font-weight:400;color:#8A95A2;margin-top:4px">{{ p.fee }}</div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+
+          <div style="display:{{ lkS1Display }}">
+            <div style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif;font-size:23px;font-weight:700;letter-spacing:-.02em;color:#fff">{{ lkProviderName }}</div>
+            <div style="font-size:13.5px;font-weight:400;color:#8A95A2;margin-top:8px;line-height:1.5">Enter the 16 digits on the front, then the expiry date.</div>
+            <div style="margin-top:20px;border-radius:22px;padding:20px;box-sizing:border-box;background:{{ lkProviderArt }}">
+              <div style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif;font-variant-numeric:tabular-nums;font-size:20px;font-weight:600;letter-spacing:.06em;color:#fff">{{ lkNumDisplay }}</div>
+              <div style="display:flex;align-items:baseline;gap:22px;margin-top:22px">
+                <div>
+                  <div style="font-size:9.5px;font-weight:700;letter-spacing:.12em;color:rgba(255,255,255,.7)">EXPIRES</div>
+                  <div style="font-variant-numeric:tabular-nums;font-size:15px;font-weight:600;color:#fff;margin-top:5px">{{ lkExpDisplay }}</div>
+                </div>
+                <div>
+                  <div style="font-size:9.5px;font-weight:700;letter-spacing:.12em;color:rgba(255,255,255,.7)">CARDHOLDER</div>
+                  <div style="font-size:15px;font-weight:600;color:#fff;margin-top:5px">Ahmed Al Janahi</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:{{ lkS2Display }}">
+            <div style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif;font-size:23px;font-weight:700;letter-spacing:-.02em;color:#fff">Enter the code</div>
+            <div style="font-size:13.5px;font-weight:400;color:#8A95A2;margin-top:8px;line-height:1.5">{{ lkCodeNote }}</div>
+            <div style="display:flex;gap:10px;margin-top:24px">
+              <sc-for list="{{ lkCodeBoxes }}" as="b" hint-placeholder-count="4">
+                <div style="flex:1;height:58px;border-radius:14px;background:#15191E;border:1.5px solid {{ b.border }};box-sizing:border-box;display:flex;align-items:center;justify-content:center;font-variant-numeric:tabular-nums;font-size:22px;font-weight:600;color:#fff">{{ b.ch }}</div>
+              </sc-for>
+            </div>
+            <div onClick="{{ lkResend }}" style="font-size:13px;font-weight:500;color:#8A95A2;margin-top:16px;cursor:pointer">Resend the code</div>
+          </div>
+
+          <div style="display:{{ lkS3Display }};flex-direction:column;align-items:center;text-align:center;padding-top:40px">
+            <div style="width:74px;height:74px;border-radius:50%;border:3px solid rgba(255,255,255,.14);border-top-color:#2563EB;animation:icSpin 1s linear infinite"></div>
+            <div style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif;font-size:21px;font-weight:700;color:#fff;margin-top:28px">Verifying your card</div>
+            <div style="font-size:13.5px;font-weight:400;color:#8A95A2;margin-top:10px;line-height:1.55;max-width:280px">We placed a 250 IQD hold with {{ lkProviderName }} and released it. Nothing is charged.</div>
+          </div>
+
+          <div style="display:{{ lkS4Display }};flex-direction:column;align-items:center;text-align:center;padding-top:34px">
+            <div style="width:76px;height:76px;border-radius:50%;background:#00A78F;display:flex;align-items:center;justify-content:center;font-size:34px;color:#fff">✓</div>
+            <div style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif;font-size:22px;font-weight:700;color:#fff;margin-top:24px">{{ lkDoneTitle }}</div>
+            <div style="font-size:13.5px;font-weight:400;color:#8A95A2;margin-top:10px;line-height:1.55;max-width:290px">You can top up your wallet from it, or make it the source your iCASH card pays from.</div>
+            <div style="align-self:stretch;margin-top:26px;border-radius:20px;background:#15191E;overflow:hidden;text-align:left">
+              <div style="display:flex;align-items:center;justify-content:space-between;padding:15px 16px;border-bottom:1px solid rgba(255,255,255,.07)">
+                <div style="font-size:13.5px;font-weight:400;color:#8A95A2">Top-up fee</div>
+                <div style="font-size:13.5px;font-weight:600;color:#fff">{{ lkDoneFee }}</div>
+              </div>
+              <div style="display:flex;align-items:center;justify-content:space-between;padding:15px 16px">
+                <div style="font-size:13.5px;font-weight:400;color:#8A95A2">Top-up limit</div>
+                <div style="font-size:13.5px;font-weight:600;font-variant-numeric:tabular-nums;color:#fff">{{ lkDoneLimit }}</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="height:30px"></div>
+        </div>
+
+        <div style="flex:none;display:{{ lkPadDisplay }};padding:0 16px">
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px 6px;width:100%">
+            <sc-for list="{{ lkKeys }}" as="k" hint-placeholder-count="12">
+              <div onClick="{{ k.tap }}" style="height:56px;border-radius:14px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;font-variant-numeric:tabular-nums;font-size:21px;font-weight:600;color:#fff;cursor:pointer">{{ k.label }}</div>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="flex:none;padding:16px 16px 26px">
+          <div onClick="{{ lkPrimary }}" style="display:{{ lkPrimaryDisplay }};text-align:center;padding:16px 0;border-radius:14px;background:{{ lkPrimaryBg }};font-size:15px;font-weight:600;color:{{ lkPrimaryInk }};cursor:pointer">{{ lkPrimaryLabel }}</div>
+          <div onClick="{{ lkSecondary }}" style="display:{{ lkSecondaryDisplay }};text-align:center;padding:14px 0;margin-top:8px;font-size:14px;font-weight:600;color:#8A95A2;cursor:pointer">{{ lkSecondaryLabel }}</div>
+        </div>
+      </div>
+
+      <div style="position:absolute;inset:0;z-index:105;display:{{ langPickDisplay }}">
+        <div onClick="{{ langClose }}" style="position:absolute;inset:0;background:rgba(9,16,26,.55)"></div>
+        <div style="position:absolute;left:0;right:0;bottom:0;background:#111F31;border-radius:24px 24px 0 0;padding:16px 16px 28px;box-sizing:border-box">
+          <div style="width:40px;height:4px;border-radius:2px;background:rgba(255,255,255,.25);margin:0 auto 14px"></div>
+          <div style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif;font-size:19px;font-weight:700;color:#FFFFFF">Language</div>
+          <div style="font-size:13.5px;font-weight:400;color:#8A95A2;margin-top:5px;line-height:1.5">The whole app changes, including the layout direction.</div>
+          <div style="border-radius:18px;background:#15191E;overflow:hidden;margin-top:16px">
+            <sc-for list="{{ langOptions }}" as="l" hint-placeholder-count="2">
+              <div onClick="{{ l.pick }}" style="display:flex;align-items:center;gap:14px;padding:16px;border-bottom:1px solid rgba(255,255,255,.07);cursor:pointer">
+                <div style="flex:1;min-width:0">
+                  <div style="font-size:15px;font-weight:500;color:#FFFFFF">{{ l.name }}</div>
+                  <div style="font-size:12.5px;font-weight:400;color:#8A95A2;margin-top:3px">{{ l.note }}</div>
+                </div>
+                <div style="width:22px;height:22px;flex:none;border-radius:50%;border:1.5px solid {{ l.ringBorder }};background:{{ l.ringBg }};display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff">{{ l.mark }}</div>
+              </div>
+            </sc-for>
+          </div>
+          <div onClick="{{ langApply }}" style="margin-top:18px;text-align:center;padding:16px 0;border-radius:14px;background:#2563EB;color:#fff;font-size:15px;font-weight:600;cursor:pointer">{{ langApplyLabel }}</div>
+        </div>
+      </div>
+
+      <div onClick="{{ openSupport }}" style="position:absolute;right:14px;top:58px;z-index:102;width:46px;height:46px;border-radius:50%;background:rgba(21,25,30,.92);border:1px solid rgba(255,255,255,.14);box-sizing:border-box;display:{{ helpFabDisplay }};align-items:center;justify-content:center;font-size:17px;font-weight:600;color:#fff;cursor:pointer;box-shadow:0 8px 22px rgba(0,0,0,.35)">?</div>
+
+      <div style="position:absolute;inset:0;z-index:103;display:{{ bgtDisplay }}">
+        <div onClick="{{ bgtClose }}" style="position:absolute;inset:0;background:rgba(9,16,26,.55)"></div>
+        <div style="position:absolute;left:0;right:0;bottom:0;background:#111F31;border-radius:24px 24px 0 0;padding:16px 16px 28px;max-height:88%;overflow:auto;box-sizing:border-box">
+          <div style="width:40px;height:4px;border-radius:2px;background:rgba(255,255,255,.25);margin:0 auto 14px"></div>
+          <div style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif;font-size:19px;font-weight:700;color:#FFFFFF">Monthly budget</div>
+          <div style="font-size:13.5px;font-weight:400;color:#8A95A2;margin-top:5px;line-height:1.5">Set a target for card and wallet spending. iCASH warns you before you reach it.</div>
+
+          <div style="margin-top:16px;border-radius:18px;background:#15191E;padding:18px 16px">
+            <div style="font-size:12.5px;font-weight:500;color:#8A95A2">Target</div>
+            <div style="display:flex;align-items:center;gap:12px;margin-top:10px">
+              <div onClick="{{ bgtDec }}" style="width:44px;height:44px;flex:none;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:22px;color:#fff;cursor:pointer">−</div>
+              <div style="flex:1;min-width:0;text-align:center">
+                <div style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif;font-variant-numeric:tabular-nums;font-size:30px;font-weight:700;letter-spacing:-.02em;color:#FFFFFF;line-height:1.1">{{ bgtAmount }}</div>
+                <div style="font-size:12.5px;font-weight:500;color:#8A95A2;margin-top:4px">IQD a month</div>
+              </div>
+              <div onClick="{{ bgtInc }}" style="width:44px;height:44px;flex:none;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:22px;color:#fff;cursor:pointer">+</div>
+            </div>
+            <div style="display:flex;gap:8px;margin-top:16px">
+              <sc-for list="{{ bgtPresets }}" as="p" hint-placeholder-count="4">
+                <div onClick="{{ p.pick }}" style="flex:1;text-align:center;padding:10px 0;border-radius:9999px;font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums;cursor:pointer;background:{{ p.bg }};color:{{ p.ink }}">{{ p.label }}</div>
+              </sc-for>
+            </div>
+          </div>
+
+          <div style="margin-top:12px;border-radius:18px;background:#15191E;padding:18px 16px">
+            <div style="display:flex;align-items:baseline;justify-content:space-between">
+              <div style="font-size:13px;font-weight:500;color:#8A95A2">{{ bgtSpentLabel }}</div>
+              <div style="font-size:13px;font-weight:600;color:{{ bgtPctInk }}">{{ bgtPctLabel }}</div>
+            </div>
+            <div style="height:8px;border-radius:6px;background:rgba(255,255,255,.12);overflow:hidden;margin-top:12px">
+              <div style="height:100%;border-radius:6px;background:{{ bgtPctInk }};width:{{ bgtBarW }}"></div>
+            </div>
+            <div style="font-size:12.5px;font-weight:400;color:#8A95A2;margin-top:12px;line-height:1.5">{{ bgtLeftLabel }}</div>
+          </div>
+
+          <div style="margin-top:12px;border-radius:18px;background:#15191E;padding:18px 16px">
+            <div style="font-size:13.5px;font-weight:500;color:#FFFFFF">Warn me at</div>
+            <div style="font-size:12.5px;font-weight:400;color:#8A95A2;margin-top:4px;line-height:1.5">{{ bgtAlertNote }}</div>
+            <div style="display:flex;gap:8px;margin-top:14px">
+              <sc-for list="{{ bgtAlerts }}" as="a" hint-placeholder-count="3">
+                <div onClick="{{ a.pick }}" style="flex:1;text-align:center;padding:11px 0;border-radius:12px;font-size:13px;font-weight:600;cursor:pointer;background:{{ a.bg }};color:{{ a.ink }}">{{ a.label }}</div>
+              </sc-for>
+            </div>
+          </div>
+
+          <div onClick="{{ bgtSave }}" style="margin-top:18px;text-align:center;padding:16px 0;border-radius:14px;background:#2563EB;color:#fff;font-size:15px;font-weight:600;cursor:pointer">{{ bgtSaveLabel }}</div>
+          <div onClick="{{ bgtRemove }}" style="display:{{ bgtRemoveDisplay }};margin-top:10px;text-align:center;padding:14px 0;font-size:14px;font-weight:600;color:#E8453C;cursor:pointer">Remove budget</div>
+        </div>
+      </div>
+
+      <div style="position:absolute;inset:0;z-index:104;display:{{ supDisplay }}">
+        <div onClick="{{ supClose }}" style="position:absolute;inset:0;background:rgba(9,16,26,.55)"></div>
+        <div style="position:absolute;left:0;right:0;bottom:0;background:#111F31;border-radius:24px 24px 0 0;padding:16px 16px 28px;max-height:86%;overflow:auto;box-sizing:border-box">
+          <div style="width:40px;height:4px;border-radius:2px;background:rgba(255,255,255,.25);margin:0 auto 14px"></div>
+          <div style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,sans-serif;font-size:19px;font-weight:700;color:#FFFFFF">Help and support</div>
+          <div style="font-size:13.5px;font-weight:400;color:#8A95A2;margin-top:5px;line-height:1.5">Common questions first. If you still need us, we answer 24 hours a day.</div>
+
+          <div style="font-size:11.5px;font-weight:700;letter-spacing:.12em;color:#6E7986;margin:20px 2px 8px">FAQ</div>
+          <div style="border-radius:18px;background:#15191E;overflow:hidden">
+            <sc-for list="{{ supFaq }}" as="q" hint-placeholder-count="5">
+              <div style="border-bottom:1px solid rgba(255,255,255,.07)">
+                <div onClick="{{ q.tap }}" style="display:flex;align-items:center;gap:12px;padding:15px 16px;cursor:pointer">
+                  <div style="flex:1;min-width:0;font-size:14.5px;font-weight:500;color:#FFFFFF;line-height:1.35">{{ q.q }}</div>
+                  <div style="width:9px;height:9px;flex:none;border-top:2px solid #8A95A2;border-right:2px solid #8A95A2;transform:{{ q.rotate }}"></div>
+                </div>
+                <div style="display:{{ q.answerDisplay }};padding:0 16px 16px;font-size:13.5px;font-weight:400;color:#8A95A2;line-height:1.55">{{ q.a }}</div>
+              </div>
+            </sc-for>
+          </div>
+
+          <div style="font-size:11.5px;font-weight:700;letter-spacing:.12em;color:#6E7986;margin:20px 2px 8px">CONTACT US</div>
+          <div style="border-radius:18px;background:#15191E;overflow:hidden">
+            <div onClick="{{ supCall }}" style="display:flex;align-items:center;gap:14px;padding:15px 16px;border-bottom:1px solid rgba(255,255,255,.07);cursor:pointer">
+              <div style="width:42px;height:42px;border-radius:50%;flex:none;background:#2563EB;display:flex;align-items:center;justify-content:center;font-size:17px;color:#fff">✆</div>
+              <div style="flex:1;min-width:0">
+                <div style="font-size:14.5px;font-weight:500;color:#FFFFFF">Call us</div>
+                <div style="font-size:12.5px;font-weight:400;font-variant-numeric:tabular-nums;color:#8A95A2;margin-top:3px">+964 780 000 1234 · free from Iraq</div>
+              </div>
+              <div style="width:8px;height:8px;flex:none;border-top:2px solid #4B5563;border-right:2px solid #4B5563;transform:rotate(45deg)"></div>
+            </div>
+            <div onClick="{{ supWhats }}" style="display:flex;align-items:center;gap:14px;padding:15px 16px;cursor:pointer">
+              <div style="width:42px;height:42px;border-radius:50%;flex:none;background:#1FA855;display:flex;align-items:center;justify-content:center;position:relative">
+                <div style="width:20px;height:16px;border-radius:6px;background:#fff"></div>
+                <div style="position:absolute;left:12px;bottom:10px;width:7px;height:7px;background:#fff;transform:rotate(45deg);border-radius:1px"></div>
+              </div>
+              <div style="flex:1;min-width:0">
+                <div style="font-size:14.5px;font-weight:500;color:#FFFFFF">Chat on WhatsApp</div>
+                <div style="font-size:12.5px;font-weight:400;font-variant-numeric:tabular-nums;color:#8A95A2;margin-top:3px">+964 780 000 1234 · replies in minutes</div>
+              </div>
+              <div style="width:8px;height:8px;flex:none;border-top:2px solid #4B5563;border-right:2px solid #4B5563;transform:rotate(45deg)"></div>
+            </div>
+          </div>
+
+          <div onClick="{{ supClose }}" style="margin-top:18px;text-align:center;padding:15px 0;border-radius:14px;background:#2563EB;color:#fff;font-size:15px;font-weight:600;cursor:pointer">Close</div>
+        </div>
+      </div>
+
       <div style="position:absolute;left:16px;right:16px;bottom:96px;z-index:96;display:{{ toastDisplay }};justify-content:center;pointer-events:none">
         <div style="padding:12px 18px;border-radius:9999px;background:rgba(255,255,255,.96);color:#0D1B2A;font-size:13.5px;font-weight:600;box-shadow:0 12px 34px rgba(0,0,0,.45)">{{ toastMsg }}</div>
       </div>
@@ -2707,6 +3053,56 @@ a{color:#2563EB}a:hover{color:#1b4fc0}
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:900,&quot;height&quot;:1000},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#2563EB&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#2563EB&quot;,&quot;#0D1B2A&quot;,&quot;#00C2A8&quot;,&quot;#7C3AED&quot;],&quot;section&quot;:&quot;Brand&quot;},&quot;startLocked&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Prototype&quot;}}">
 
 const AR = {
+  'Linked cards': 'البطاقات المرتبطة', 'PAYING FROM': 'الدفع من', 'SOURCES': 'المصادر',
+  'Top up wallet': 'تعبئة المحفظة', 'Add a card': 'إضافة بطاقة', 'iCASH balance': 'رصيد آي كاش',
+  'Which card do you want to link?': 'أي بطاقة تريد ربطها؟',
+  'Top-up fees are set by the provider and shown before every top-up.': 'رسوم التعبئة يحددها المزوّد وتظهر قبل كل عملية.',
+  'Enter the 16 digits on the front, then the expiry date.': 'أدخل الأرقام الـ16 على الوجه، ثم تاريخ الانتهاء.',
+  'Enter the code': 'أدخل الرمز', 'Resend the code': 'إعادة إرسال الرمز', 'Verifying your card': 'جارٍ التحقق من بطاقتك',
+  'Card details': 'تفاصيل البطاقة', 'Confirm it is you': 'أكّد هويتك', 'Verifying': 'جارٍ التحقق',
+  'Card linked': 'تم ربط البطاقة', 'Continue': 'متابعة', 'Confirm': 'تأكيد',
+  'Make it my paying card': 'اجعلها بطاقة الدفع', 'Keep paying from my wallet': 'الاستمرار بالدفع من محفظتي',
+  'Top-up fee': 'رسوم التعبئة', 'Top-up limit': 'حد التعبئة', 'EXPIRES': 'تنتهي', 'CARDHOLDER': 'حامل البطاقة',
+  'A new code is on its way': 'تم إرسال رمز جديد',
+  'You can top up your wallet from it, or make it the source your iCASH card pays from.': 'يمكنك تعبئة محفظتك منها، أو جعلها المصدر الذي تدفع منه بطاقة آي كاش.',
+  'Linked cards stay with their own provider. iCASH only moves money when you top up or pay with your iCASH card.': 'تبقى البطاقات المرتبطة عند مزوّديها. لا ينقل آي كاش الأموال إلا عند التعبئة أو الدفع ببطاقة آي كاش.',
+  'Qi Card': 'كي كارد', 'Zain Cash': 'زين كاش', 'Asiacell Pay': 'آسياسيل باي', 'FastPay': 'فاست باي',
+  'Bank Visa': 'فيزا مصرفية', 'Nass Wallet': 'محفظة ناس', 'No top-up fee': 'بدون رسوم تعبئة',
+  'Link Qi Card, Zain Cash and more': 'اربط كي كارد وزين كاش وغيرها',
+  'The whole app changes, including the layout direction.': 'يتغيّر التطبيق بالكامل، بما في ذلك اتجاه التخطيط.',
+  'Left to right': 'من اليسار إلى اليمين', 'From another iCASH wallet': 'من محفظة آي كاش أخرى',
+  'Ask anyone to send to your phone number or @tag': 'اطلب من أي شخص الإرسال إلى رقم هاتفك أو معرّفك',
+  'To a wallet number': 'إلى رقم محفظة', 'iCASH account number · instant': 'رقم حساب آي كاش · فوري',
+  'Debit or credit card, cash at any iCASH agent, or a transfer from another iCASH wallet. All of them arrive instantly.': 'بطاقة خصم أو ائتمان، أو نقداً عند أي وكيل آي كاش، أو تحويل من محفظة آي كاش أخرى. جميعها تصل فوراً.',
+  'Instantly to any iCASH wallet, day or night, whether you send to a phone number or a wallet number.': 'فوراً إلى أي محفظة آي كاش في أي وقت، سواء أرسلت إلى رقم هاتف أو رقم محفظة.',
+  'Iraq Mall': 'عراق مول', 'From Saad Kareem': 'من سعد كريم', 'From Hayder': 'من حيدر',
+  'Latest transactions': 'أحدث الحركات', 'Pending': 'قيد المعالجة', 'Completed': 'مكتملة',
+  'Daylight': 'النهار', 'Help and support': 'المساعدة والدعم',
+  'Set a target for card and wallet spending. iCASH warns you before you reach it.': 'حدّد هدفاً لإنفاق البطاقة والمحفظة. ينبّهك آي كاش قبل الوصول إليه.',
+  'Target': 'الهدف', 'IQD a month': 'دينار شهرياً', 'Warn me at': 'نبّهني عند', 'Save budget': 'حفظ الميزانية',
+  'Set this budget': 'تعيين هذه الميزانية', 'Remove budget': 'إزالة الميزانية', 'Your budget': 'ميزانيتك',
+  'Target, alerts and pace': 'الهدف والتنبيهات ووتيرة الإنفاق', 'YOUR MONEY': 'أموالك', 'BUDGET': 'الميزانية',
+  'FROM 360': 'من 360', 'No budget yet · tap to set one': 'لا توجد ميزانية · اضغط لتعيينها',
+  'No budget is active. Save to switch it on.': 'لا توجد ميزانية مفعّلة. اضغط حفظ لتشغيلها.',
+  'Off': 'معطّلة', 'Tap to set a target': 'اضغط لتحديد هدف', 'No budget set': 'لا توجد ميزانية',
+  'Global data in minutes': 'بيانات عالمية في دقائق', 'included this month': 'مشمولة هذا الشهر',
+  'cashback on stays': 'استرداد على الإقامات', 'of 4 this month': 'من 4 هذا الشهر',
+  'Stays in Iraq and abroad': 'إقامات في العراق وخارجه', 'Ready to use': 'جاهزة للاستخدام',
+  'Help and support': 'المساعدة والدعم', 'FAQ': 'الأسئلة الشائعة', 'CONTACT US': 'اتصل بنا',
+  'Common questions first. If you still need us, we answer 24 hours a day.': 'الأسئلة الشائعة أولاً. وإن احتجت إلينا، نجيب على مدار 24 ساعة.',
+  'Call us': 'اتصل بنا', 'Chat on WhatsApp': 'محادثة على واتساب',
+  '+964 780 000 1234 · free from Iraq': '+964 780 000 1234 · مجاناً من داخل العراق',
+  '+964 780 000 1234 · replies in minutes': '+964 780 000 1234 · نرد خلال دقائق',
+  'How do I add money?': 'كيف أضيف رصيداً؟',
+  'Bank transfer, debit card, or cash at any iCASH agent. Card and agent top-ups arrive instantly; bank transfers land the same day.': 'حوالة مصرفية أو بطاقة خصم أو نقداً عند أي وكيل آي كاش. تصل تعبئة البطاقة والوكيل فوراً، والحوالات المصرفية في نفس اليوم.',
+  'How long does a transfer take?': 'كم يستغرق التحويل؟',
+  'Instantly to another iCASH user, day or night. A local bank transfer arrives the same working day.': 'فوراً إلى مستخدم آي كاش آخر في أي وقت. والحوالة المصرفية المحلية تصل في نفس يوم العمل.',
+  'What does a stock order cost?': 'كم تكلفة أمر الأسهم؟',
+  'A 0,85% service fee with a 2.500 IQD minimum, plus the 0,15% ISX levy. The full total is shown before you confirm.': 'رسوم خدمة 0,85% بحد أدنى 2.500 دينار، مع رسم سوق العراق 0,15%. يظهر المبلغ الإجمالي قبل التأكيد.',
+  'I lost my phone. Is my card safe?': 'فقدت هاتفي، هل بطاقتي آمنة؟',
+  'Freeze the card from Cards straight away, then order a replacement. Your balance stays in your account.': 'جمّد البطاقة من صفحة البطاقات فوراً، ثم اطلب بديلة. يبقى رصيدك في حسابك.',
+  'How do I switch the app to Arabic?': 'كيف أحوّل التطبيق إلى العربية؟',
+  'Profile, then Language. The whole app changes, including the right-to-left layout.': 'الملف الشخصي ثم اللغة. يتغيّر التطبيق بالكامل، بما في ذلك التخطيط من اليمين إلى اليسار.',
   'Recent': 'الأخيرة', 'Arriving': 'الوصول', 'Ultra': 'ألترا', '✦ Get more from': '✦ احصل على المزيد من',
   '0 / 2.000.000 IQD withdrawn': '0 / 2.000.000 دينار مسحوبة', 'Careem Plus': 'كريم بلس', 'TCL Care': 'TCL كير',
   'Ticket discounts, upgrades and lounge access with iCASH points': 'خصومات تذاكر وترقيات ودخول صالات بنقاط آي كاش',
@@ -2893,7 +3289,7 @@ const AR = {
   'Pass added to your wallet': 'أُضيفت التذكرة إلى محفظتك', 'Asiacell, Zain, Korek': 'آسياسيل، زين، كورك',
   '·· 9169 · IQD · arrives instantly': '·· 9169 · دينار · يصل فوراً',
   'Prices are delayed by 15 minutes; your capital is at risk.': 'الأسعار متأخرة 15 دقيقة، ورأس المال معرض للمخاطرة.',
-  'Home': 'الرئيسية', 'Cards': 'البطاقات', 'Invest': 'الاستثمار', 'Transfers': 'التحويلات', 'Lifestyle': 'المزايا',
+  'Home': 'الرئيسية', 'Cards': 'البطاقات', 'Invest': 'الاستثمار', 'Transfers': 'التحويلات',
   'Rewards': 'المكافآت', 'Search': 'بحث', 'Search airlines': 'بحث عن الطيران', 'Search sales': 'بحث في المبيعات',
   'Personal · IQD': 'شخصي · دينار عراقي', 'Accounts': 'الحسابات', 'Add money': 'إضافة رصيد', 'Move': 'تحويل',
   'Details': 'التفاصيل', 'More': 'المزيد', 'See all': 'عرض الكل', 'See all benefits': 'عرض كل المزايا',
@@ -3038,7 +3434,141 @@ const AR_RX = [
   [/^ISX levy · ([\d,]+)%$/, (m, p) => 'رسم سوق العراق · ' + p + '%'],
 ];
 
+
+const L_BG = {
+  '#050a10': '#FFFFFF', '#0a1420': '#FFFFFF', '#0b1119': '#FFFFFF', '#050b12': '#FFFFFF',
+  '#15191e': '#FFFFFF', '#111f31': '#FFFFFF', '#161b22': '#FFFFFF', '#0f1620': '#FFFFFF',
+  '#0e1218': '#FFFFFF', '#1d242c': '#F2F5F9', '#171d25': '#FAFBFD', '#12181f': '#F6F8FB',
+};
+// cards lose their contrast once everything is white, so they get a hairline instead
+const L_CARD = { '#15191e': 1, '#111f31': 1, '#161b22': 1, '#0f1620': 1, '#0e1218': 1 };
+const L_INK = {
+  '#ffffff': '#0B1119', '#8a95a2': '#5C6673', '#6e7986': '#697280',
+  '#c9cfd6': '#48515C', '#4b5563': '#98A2B0', '#d8dce2': '#B9C1CB',
+};
+
+// inline styles come back from the DOM as rgb()/rgba(), so every lookup goes through here
+function parseColor(v) {
+  const s = (v || '').trim().toLowerCase();
+  let m = s.match(/^#([0-9a-f]{6})$/);
+  if (m) return { hex: '#' + m[1], a: 1 };
+  m = s.match(/^#([0-9a-f]{3})$/);
+  if (m) return { hex: '#' + m[1].split('').map(c => c + c).join(''), a: 1 };
+  m = s.match(/^rgba?\(\s*(\d+)[,\s]+(\d+)[,\s]+(\d+)(?:[,\s\/]+([\d.]+))?\s*\)$/);
+  if (!m) return null;
+  const hex = '#' + [1, 2, 3].map(i => ('0' + parseInt(m[i], 10).toString(16)).slice(-2)).join('');
+  return { hex: hex, a: m[4] === undefined ? 1 : parseFloat(m[4]) };
+}
+
+// a wash gradient sits on the app's dark base; card art is its own opaque surface
+function gradientSurface(v) {
+  const stops = v.match(/#[0-9a-f]{3,8}|rgba?\([^)]*\)/gi) || [];
+  if (stops.some(c => { const p = parseColor(c); return p && p.a >= 0.9 && L_BG[p.hex]; })) return 'inv';
+  return stops.some(c => { const p = parseColor(c); return p && p.a >= 0.9; }) ? 'keep' : null;
+}
+
+// keep the wash as a hint of colour over white
+function lightGradient(v) {
+  return v
+    .replace(/#([0-9a-f]{6})\b/gi, (m) => L_BG[m.toLowerCase()] || m)
+    .replace(/rgba?\(\s*(\d+)[,\s]+(\d+)[,\s]+(\d+)[,\s\/]+([\d.]+)\s*\)/gi,
+      (m, r, g, b, a) => 'rgba(' + r + ',' + g + ',' + b + ',' + Math.min(0.2, parseFloat(a) * 0.38).toFixed(3) + ')');
+}
+
+function lightCss(el, css) {
+  const parent = el.parentElement && el.parentElement.dataset ? (el.parentElement.dataset.surf || '') : '';
+  const masked = css.indexOf('mask-image') >= 0;
+  const decls = css.split(';').map(d => {
+    const i = d.indexOf(':');
+    return i < 0 ? [null, d] : [d.slice(0, i).trim().toLowerCase(), d.slice(i + 1)];
+  });
+
+  let surf = parent;
+  decls.forEach(([p, v]) => {
+    if (p !== 'background' && p !== 'background-color' && p !== 'background-image') return;
+    const val = (v || '').trim();
+    if (masked || !val || val === 'none' || val === 'transparent') return;
+    if (/gradient/i.test(val)) { const g = gradientSurface(val); if (g) surf = g; return; }
+    const c = parseColor(val);
+    if (!c) { surf = 'keep'; return; }
+    if (c.a <= 0.3) return;                       // translucent tint: sits on whatever is behind
+    if (L_BG[c.hex]) { surf = 'inv'; return; }
+    surf = 'keep';
+  });
+  el.dataset.surf = surf;
+
+  const ink = (val) => {
+    if (surf !== 'inv') return null;
+    const c = parseColor(val);
+    if (!c) return null;
+    if (c.a >= 0.9) return L_INK[c.hex] || null;
+    return c.hex === '#ffffff' ? 'rgba(11,17,25,' + Math.max(0.62, Math.min(0.92, c.a)).toFixed(2) + ')' : null;
+  };
+
+  let hair = false;
+  const outDecls = decls.map(([p, v]) => {
+    if (!p) return v;
+    const head = p + ':';
+    const val = (v || '').trim();
+    if (p === 'background' || p === 'background-color' || p === 'background-image') {
+      if (/gradient/i.test(val)) return surf === 'inv' ? head + lightGradient(val) : p + ':' + v;
+      const c = parseColor(val);
+      if (!c) return p + ':' + v;
+      if (masked) { const k = c.a >= 0.9 ? L_INK[c.hex] : null; return k ? head + k : p + ':' + v; }
+      if (c.a >= 0.9 && L_BG[c.hex]) {
+        if (L_CARD[c.hex] && css.indexOf('border-radius') >= 0 && !/(^|;)\s*border/.test(css)) hair = true;
+        return head + L_BG[c.hex];
+      }
+      if (c.a <= 0.3 && c.hex === '#ffffff' && (surf === 'inv' || parent === 'inv')) {
+        return head + 'rgba(11,17,25,' + Math.min(0.09, c.a * 0.7 + 0.02).toFixed(3) + ')';
+      }
+      return p + ':' + v;
+    }
+    if (p === 'color' || p === 'fill' || p === 'stroke' || p === 'caret-color') {
+      const k = ink(val);
+      return k ? head + k : p + ':' + v;
+    }
+    if (p.indexOf('border') === 0 || p === 'outline') {
+      if (surf !== 'inv' && parent !== 'inv') return p + ':' + v;
+      return head + val.replace(/rgba?\(\s*255[,\s]+255[,\s]+255(?:[,\s\/]+([\d.]+))?\s*\)/gi,
+        (m, a) => a === undefined ? '#0B1119' : 'rgba(11,17,25,' + Math.min(0.16, parseFloat(a) + 0.03).toFixed(2) + ')');
+    }
+    if (p === 'box-shadow') {
+      return head + val.replace(/rgba\(\s*0[,\s]+0[,\s]+0[,\s]+[\d.]+\s*\)/gi, 'rgba(15,23,42,.12)');
+    }
+    return p + ':' + v;
+  });
+  return outDecls.join(';') + (hair ? ';border:1px solid #E8ECF2' : '');
+}
+
+// physical CSS (left/right paddings, offsets, chevrons) has to be mirrored by hand
+function mirrorCss(css) {
+  let s = css
+    .replace(/\b(padding|margin)\s*:\s*([^;]+)/g, (m, p, v) => {
+      const parts = v.trim().split(/\s+/);
+      return parts.length === 4 ? p + ':' + [parts[0], parts[3], parts[2], parts[1]].join(' ') : m;
+    })
+    .replace(/\b(padding|margin|border)-(left|right)\b/g, (m, p, d) => p + '-' + (d === 'left' ? 'right' : 'left'))
+    .replace(/(^|;)(\s*)left:/g, '$1$2__SWAP:')
+    .replace(/(^|;)(\s*)right:/g, '$1$2left:')
+    .replace(/__SWAP:/g, 'right:')
+    .replace(/text-align:\s*left/g, 'text-align:__SWAP')
+    .replace(/text-align:\s*right/g, 'text-align:left')
+    .replace(/text-align:__SWAP/g, 'text-align:right');
+  if (/rotate\(45deg\)/.test(s)) s = s.replace(/transform:\s*/g, 'transform:scaleX(-1) ');
+  return s;
+}
+const LK_PROVIDERS = [
+  { key: 'qi', name: 'Qi Card', art: 'linear-gradient(135deg,#E8453C,#7A1712)', fee: 'No top-up fee', limit: '5.000.000 IQD a day' },
+  { key: 'zain', name: 'Zain Cash', art: 'linear-gradient(135deg,#7C3AED,#2A1160)', fee: '0,5% top-up fee', limit: '2.000.000 IQD a day' },
+  { key: 'asia', name: 'Asiacell Pay', art: 'linear-gradient(135deg,#EC7E00,#7A3E00)', fee: '0,5% top-up fee', limit: '2.000.000 IQD a day' },
+  { key: 'fast', name: 'FastPay', art: 'linear-gradient(135deg,#2563EB,#10225C)', fee: 'No top-up fee', limit: '3.000.000 IQD a day' },
+  { key: 'visa', name: 'Bank Visa', art: 'linear-gradient(135deg,#1A1F71,#080B33)', fee: '1% top-up fee', limit: '4.000.000 IQD a day' },
+  { key: 'nass', name: 'Nass Wallet', art: 'linear-gradient(135deg,#00A78F,#0A3F38)', fee: '0,75% top-up fee', limit: '1.500.000 IQD a day' },
+];
 const PIN = '1234';
+const SPENT = 486200;
+const iqd = (n) => n.toLocaleString('de-DE');
 const DESIGNS = [
   { name: 'Midnight', title: 'Midnight, 2026', tag: 'STANDARD', sub: 'The everyday iCASH card, in deep navy.', art: 'linear-gradient(150deg,#1B2B3F,#070E18)' },
   { name: 'Signal', title: 'Signal blue, 2026', tag: 'PREMIUM', sub: 'Brand blue, front and centre.', art: 'linear-gradient(150deg,#2563EB,#10225C)' },
@@ -3125,23 +3655,27 @@ const CARDS = [
     ] },
 ];
 const WIDGETS = [
-  { id: 'spend', ini: 'SP', name: 'Spend this month', sub: 'Card and wallet spending', value: '486.200', meta: '+8% vs August', metaInk: '#D6455D', bg: '#2563EB' },
-  { id: 'wealth', ini: 'TW', name: 'Total wealth', sub: 'Accounts, invest and vaults', value: '3.632.400', meta: '+2,4% this month', metaInk: '#00A78F', bg: '#0D1B2A' },
-  { id: 'topups', ini: 'TU', name: 'Top-ups', sub: 'Zain Cash, Asiacell, Korek', value: '25.000', meta: 'Asiacell due in 4 days', metaInk: '#8A95A2', bg: '#00C2A8' },
-  { id: 'week', ini: 'WK', name: 'Spent this week', sub: 'Card spending by day', value: '248.000', meta: '−12% vs last week', metaInk: '#00A78F', bg: '#2563EB',
+  { id: 'spend', group: 'YOUR MONEY', ini: 'SP', name: 'Spend this month', sub: 'Card and wallet spending', value: '486.200', meta: '+8% vs August', metaInk: '#D6455D', bg: '#2563EB' },
+  { id: 'wealth', group: 'YOUR MONEY', ini: 'TW', name: 'Total wealth', sub: 'Accounts, invest and vaults', value: '3.632.400', meta: '+2,4% this month', metaInk: '#00A78F', bg: '#0D1B2A' },
+  { id: 'week', group: 'YOUR MONEY', ini: 'WK', name: 'Spent this week', sub: 'Card spending by day', value: '248.000', meta: '−12% vs last week', metaInk: '#00A78F', bg: '#2563EB',
     bars: [38, 62, 30, 84, 46, 70, 96] },
-  { id: 'left', ini: 'LF', name: 'Left to spend', sub: 'Against your monthly budget', value: '1.276.000', meta: '9 days left', metaInk: '#8A95A2', bg: '#0D1B2A', progress: '68%' },
-  { id: 'miles', ini: 'MI', name: 'iCASH Miles', sub: 'Earned on every payment', value: '18.420', meta: '1.240 added this month', metaInk: '#00A78F', bg: '#7C3AED' },
-  { id: 'bnpl', ini: 'BN', name: 'Pay later', sub: 'Instalments in progress', value: '360.500', meta: '3 payments left', metaInk: '#8A95A2', bg: '#EC7E00' },
-  { id: 'vault', ini: 'SV', name: 'Savings vault', sub: '4,2% a year', value: '85.000', meta: 'Round-ups on', metaInk: '#00A78F', bg: '#6B7280' },
-  { id: 'card', ini: 'CD', name: 'Card', sub: 'Standard · 9169', value: '9169', meta: 'Active', metaInk: '#00A78F', bg: '#1B3FA8' },
-  { id: 'gaming', ini: 'GM', name: 'Gaming credit', sub: 'PS, Xbox, Steam', value: '2 codes', meta: 'Ready to use', metaInk: '#8A95A2', bg: '#FFFFFF' },
+  { id: 'vault', group: 'YOUR MONEY', ini: 'SV', name: 'Savings vault', sub: '4,2% a year', value: '85.000', meta: 'Round-ups on', metaInk: '#00A78F', bg: '#6B7280' },
+  { id: 'card', group: 'YOUR MONEY', ini: 'CD', name: 'Card', sub: 'Standard · 9169', value: '9169', meta: 'Active', metaInk: '#00A78F', bg: '#1B3FA8' },
+  { id: 'budget', group: 'BUDGET', ini: 'BG', name: 'Your budget', sub: 'Target, alerts and pace', value: '1.800.000', meta: '27% used', metaInk: '#8A95A2', bg: '#00A78F', progress: '27%', opens: 'budget' },
+  { id: 'left', group: 'BUDGET', ini: 'LF', name: 'Left to spend', sub: 'Against your monthly budget', value: '1.313.800', meta: '9 days left', metaInk: '#8A95A2', bg: '#0D1B2A', progress: '27%', opens: 'budget' },
+  { id: 'miles', group: 'FROM 360', ini: 'MI', name: 'iCASH Miles', sub: 'Earned on every payment', value: '18.420', meta: '1.240 added this month', metaInk: '#00A78F', bg: '#7C3AED', go: 'Miles' },
+  { id: 'topups', group: 'FROM 360', ini: 'TU', name: 'Top-ups', sub: 'Zain Cash, Asiacell, Korek', value: '25.000', meta: 'Asiacell due in 4 days', metaInk: '#8A95A2', bg: '#00C2A8', go: 'Top-ups' },
+  { id: 'bnpl', group: 'FROM 360', ini: 'BN', name: 'Pay later', sub: 'Instalments in progress', value: '360.500', meta: '3 payments left', metaInk: '#8A95A2', bg: '#EC7E00', go: 'BNPL' },
+  { id: 'gaming', group: 'FROM 360', ini: 'GM', name: 'Gaming credit', sub: 'PS, Xbox, Steam', value: '2 codes', meta: 'Ready to use', metaInk: '#8A95A2', bg: '#1B3FA8', go: 'Gaming' },
+  { id: 'hotels', group: 'FROM 360', ini: 'HT', name: 'Hotels', sub: 'Stays in Iraq and abroad', value: '10%', meta: 'cashback on stays', metaInk: '#00A78F', bg: '#7C3AED', go: 'Hotels' },
+  { id: 'esim', group: 'FROM 360', ini: 'ES', name: 'eSIM', sub: 'Global data in minutes', value: '3 GB', meta: 'included this month', metaInk: '#8A95A2', bg: '#2563EB', go: 'Discover' },
+  { id: 'lounges', group: 'FROM 360', ini: 'LO', name: 'Lounges', sub: 'Airport lounge passes', value: '2 left', meta: 'of 4 this month', metaInk: '#8A95A2', bg: '#00C2A8', go: 'Discover' },
 ];
 const NAV = [
   ['home', 'Home'],
   ['invest', 'Invest'],
   ['transfers', 'Transfers'],
-  ['lifestyle', 'Lifestyle'],
+  ['lifestyle', '360'],
 ];
 const ICON = {
   // iCASH mark: dot over stem
@@ -3149,9 +3683,9 @@ const ICON = {
   cards: "M 0 2.5 C 0 1.119 1.119 0 2.5 0 L 17.5 0 C 18.881 0 20 1.119 20 2.5 L 20 3 L 0 3 L 0 2.5 Z M 0 5 L 20 5 L 20 11.5 C 20 12.881 18.881 14 17.5 14 L 2.5 14 C 1.119 14 0 12.881 0 11.5 L 0 5 Z M 3 10 C 2.448 10 2 10.448 2 11 C 2 11.552 2.448 12 3 12 L 11 12 C 11.552 12 12 11.552 12 11 C 12 10.448 11.552 10 11 10 L 3 10 Z",
   invest: "M2.4 2.4a1.2 1.2 0 0 0-2.4 0v11.6a3 3 0 0 0 3 3h15.3a1.2 1.2 0 0 0 0-2.4H3a.6.6 0 0 1-.6-.6zM17.6 5.3a1.2 1.2 0 1 1 1.7 1.7l-4.5 4.5a1.2 1.2 0 0 1-1.7 0l-2.4-2.4-3.3 3.3a1.2 1.2 0 1 1-1.7-1.7l4.2-4.1a1.2 1.2 0 0 1 1.7 0l2.4 2.4z",
   transfers: "M7.5 2.8h6.4V1.5c0-1.4 1-1.9 2.1-1L19.5 3.2c.7.6.7 1.6 0 2.2L16 8c-1 .8-2.1.4-2.1-1V5.8H7.5a1.2 1.2 0 0 1 0-3zM12.9 13.5H6.2v-1.3c0-1.4-.9-1.9-1.9-1L.5 14c-.7.5-.7 1.5 0 2.1l3.8 2.7c1 .8 1.9.3 1.9-1v-1.3h6.7a1.2 1.2 0 0 0 0-3z",
-  lifestyle: "M11.2 1.8c.9-.9 1.4-1.4 1.9-1.6a2.6 2.6 0 0 1 1.8 0c.5.2 1 .7 1.9 1.6.9.9 1.4 1.4 1.6 1.9a2.6 2.6 0 0 1 0 1.8c-.2.5-.7 1-1.6 1.9-.9.9-1.4 1.4-1.9 1.6a2.6 2.6 0 0 1-1.8 0c-.5-.2-1-.7-1.9-1.6-.9-.9-1.4-1.4-1.6-1.9a2.6 2.6 0 0 1 0-1.8c.2-.5.7-1 1.6-1.9zM1.8 11.2c.9-.9 1.4-1.4 1.9-1.6a2.6 2.6 0 0 1 1.8 0c.5.2 1 .7 1.9 1.6.9.9 1.4 1.4 1.6 1.9a2.6 2.6 0 0 1 0 1.8c-.2.5-.7 1-1.6 1.9-.9.9-1.4 1.4-1.9 1.6a2.6 2.6 0 0 1-1.8 0c-.5-.2-1-.7-1.9-1.6C.9 15.9.4 15.4.2 14.9a2.6 2.6 0 0 1 0-1.8c.2-.5.7-1 1.6-1.9zM1.8 1.8C2.7.9 3.2.4 3.7.2a2.6 2.6 0 0 1 1.8 0c.5.2 1 .7 1.9 1.6.9.9 1.4 1.4 1.6 1.9a2.6 2.6 0 0 1 0 1.8c-.2.5-.7 1-1.6 1.9-.9.9-1.4 1.4-1.9 1.6a2.6 2.6 0 0 1-1.8 0c-.5-.2-1-.7-1.9-1.6C.9 6.5.4 6 .2 5.5a2.6 2.6 0 0 1 0-1.8C.4 3.2.9 2.7 1.8 1.8zM11.2 11.2c.9-.9 1.4-1.4 1.9-1.6a2.6 2.6 0 0 1 1.8 0c.5.2 1 .7 1.9 1.6.9.9 1.4 1.4 1.6 1.9a2.6 2.6 0 0 1 0 1.8c-.2.5-.7 1-1.6 1.9-.9.9-1.4 1.4-1.9 1.6a2.6 2.6 0 0 1-1.8 0c-.5-.2-1-.7-1.9-1.6-.9-.9-1.4-1.4-1.6-1.9a2.6 2.6 0 0 1 0-1.8c.2-.5.7-1 1.6-1.9z",
+  lifestyle: "M22.34,12.09 A11,5.6 0 1 0 22.34,15.91 L19.52,15.03 A8,3 0 1 1 19.52,12.97 Z M19.0,12.4 L23.6,12.4 L21.0,8.0 Z",
 };
-const VB = { home: '0 0 24 24', cards: '0 0 20 14', invest: '0 0 19.5 17.1', transfers: '0 0 20 19.4', lifestyle: '0 0 18.6 18.6' };
+const VB = { home: '0 0 24 24', cards: '0 0 20 14', invest: '0 0 19.5 17.1', transfers: '0 0 20 19.4', lifestyle: '0 0 24 24' };
 
 const STK_META = {
   BBOB: ['Bank of Baghdad', 'Commercial bank', '0,650'],
@@ -3203,11 +3737,200 @@ class Component extends DCLogic {
   state = { splash: true, locked: true, pin: '', wrong: false, tab: 'home', life: 'Discover', scroll: 0, frozen: false,
     editor: false, picks: ['spend', 'wealth', 'topups'], cardView: 'list', card: 0, toggles: {}, design: 0, promo: false,
     profile: false, plan: false, upgrade: false, tier: 'Gold', pick: 'Gold',
-    onboard: true, step: 0, entry: '', uses: ['Transfers', 'Cards'] };
+    onboard: true, step: 0, entry: '', uses: ['Transfers', 'Cards'],
+    support: false, supOpen: null, budget: 1800000, budgetOn: true, budgetAlert: 80, budgetSheet: false, light: false,
+    linked: false, lkAdd: false, lkStep: 0, lkProv: null, lkDigits: '', lkCode: '', payFrom: 'wallet',
+    lkCards: [{ key: 'qi', last4: '4417' }] };
 
   // how far the tab's coloured header reaches; below it the status bar sits on light chrome
   openStock(p) {
     this.setState({ stock: { ticker: p.ticker, mark: p.mark, bg: p.bg, chg: p.chg, chgInk: p.chgInk }, stkRange: '1D', stkTab: 'Overview' });
+  }
+
+  linkedVals() {
+    const s = this.state;
+    const cards = s.lkCards || [];
+    const prov = (k) => LK_PROVIDERS.filter(p => p.key === k)[0] || LK_PROVIDERS[0];
+    const active = s.payFrom === 'wallet' ? null : cards.filter(c => c.key + c.last4 === s.payFrom)[0];
+    const walletArt = 'linear-gradient(135deg,#2563EB,#0B1430)';
+    const digits = s.lkDigits || '';
+    const card16 = digits.slice(0, 16);
+    const exp = digits.slice(16, 20);
+    const step = s.lkStep || 0;
+    const p = s.lkProv ? prov(s.lkProv) : LK_PROVIDERS[0];
+    const last4 = card16.length === 16 ? card16.slice(12) : '••••';
+
+    const grouped = (() => {
+      const out = [];
+      for (let i = 0; i < 16; i++) out.push(i < card16.length ? card16.charAt(i) : '•');
+      return out.slice(0, 4).join('') + ' ' + out.slice(4, 8).join('') + ' ' + out.slice(8, 12).join('') + ' ' + out.slice(12).join('');
+    })();
+
+    const goStep = (n) => this.setState({ lkStep: n });
+    const finish = () => {
+      const entry = { key: p.key, last4: last4 };
+      this.setState({ lkCards: cards.concat([entry]), lkStep: 4 });
+    };
+
+    return {
+      lkDisplay: s.linked ? 'flex' : 'none',
+      lkOpen: () => this.setState({ accounts: false, linked: true }),
+      lkClose: () => this.setState({ linked: false }),
+      lkEntrySub: cards.length
+        ? cards.length + (cards.length === 1 ? ' card · paying from ' : ' cards · paying from ') + (active ? prov(active.key).name : 'iCASH balance')
+        : 'Link Qi Card, Zain Cash and more',
+
+      lkActiveArt: active ? prov(active.key).art : walletArt,
+      lkActiveName: active ? prov(active.key).name : 'iCASH balance',
+      lkActiveNumber: active ? '•••• •••• •••• ' + active.last4 : '•••• •••• •••• 9169',
+      lkActiveKind: active ? 'LINKED' : 'ICASH WALLET',
+      lkActiveMetaLabel: active ? 'EXPIRES' : 'BALANCE',
+      lkActiveMeta: active ? '09/29' : '2.450.000',
+      lkActiveNote: active
+        ? 'Your iCASH card charges this source at the till. ' + prov(active.key).fee + '.'
+        : 'Your iCASH card spends your wallet balance. Pick a linked card to route payments to it instead.',
+      lkTopUpDisplay: active ? 'block' : 'none',
+      lkTopUp: () => this.setState({
+        linked: false, add: true,
+        addMethod: prov(active.key).name + ' ·· ' + active.last4 + ' · IQD',
+        addMethodArt: prov(active.key).art,
+      }),
+
+      lkSources: [{ name: 'iCASH balance', sub: 'Wallet · 2.450.000 IQD', art: walletArt, id: 'wallet' }]
+        .concat(cards.map(c => ({
+          name: prov(c.key).name, sub: '·· ' + c.last4 + ' · ' + prov(c.key).fee, art: prov(c.key).art, id: c.key + c.last4,
+        })))
+        .map(src => {
+          const on = (s.payFrom || 'wallet') === src.id;
+          return Object.assign({}, src, {
+            mark: on ? '✓' : '',
+            ringBg: on ? this.accent : 'transparent',
+            ringBorder: on ? this.accent : 'rgba(255,255,255,.28)',
+            pick: () => { this.setState({ payFrom: src.id }); this.toast('Paying from ' + src.name); },
+          });
+        }),
+
+      lkRemoveDisplay: active ? 'block' : 'none',
+      lkRemoveLabel: active ? 'Unlink ' + prov(active.key).name + ' ·· ' + active.last4 : '',
+      lkRemove: () => {
+        this.setState({ lkCards: cards.filter(c => c.key + c.last4 !== s.payFrom), payFrom: 'wallet' });
+        this.toast(prov(active.key).name + ' unlinked');
+      },
+
+      lkAddDisplay: s.lkAdd ? 'flex' : 'none',
+      lkAddOpen: () => this.setState({ lkAdd: true, lkStep: 0, lkProv: null, lkDigits: '', lkCode: '' }),
+      lkAddBack: () => step === 0 || step === 4
+        ? this.setState({ lkAdd: false })
+        : this.setState({ lkStep: step === 3 ? 2 : step - 1 }),
+      lkStepTitle: ['Add a card', 'Card details', 'Confirm it is you', 'Verifying', 'Card linked'][step],
+      lkStepCount: step >= 3 ? '' : 'Step ' + (step + 1) + ' of 3',
+      lkS0Display: step === 0 ? 'block' : 'none',
+      lkS1Display: step === 1 ? 'block' : 'none',
+      lkS2Display: step === 2 ? 'block' : 'none',
+      lkS3Display: step === 3 ? 'flex' : 'none',
+      lkS4Display: step === 4 ? 'flex' : 'none',
+
+      lkProviders: LK_PROVIDERS.map(x => Object.assign({}, x, {
+        pick: () => this.setState({ lkProv: x.key, lkStep: 1, lkDigits: '' }),
+      })),
+      lkProviderName: p.name,
+      lkProviderArt: p.art,
+      lkNumDisplay: grouped,
+      lkExpDisplay: exp.length ? exp.slice(0, 2) + (exp.length > 2 ? '/' + exp.slice(2) : '') : 'MM/YY',
+
+      lkCodeNote: 'We sent a four-digit code to +964 770 ··· 4567, registered with ' + p.name + '.',
+      lkCodeBoxes: [0, 1, 2, 3].map(i => ({
+        ch: (s.lkCode || '').charAt(i) || '',
+        border: (s.lkCode || '').length === i ? this.accent : 'rgba(255,255,255,.1)',
+      })),
+      lkResend: () => this.toast('A new code is on its way'),
+
+      lkPadDisplay: (step === 1 || step === 2) ? 'block' : 'none',
+      lkKeys: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '', '0', '⌫'].map(k => ({
+        label: k,
+        tap: () => {
+          if (!k) return;
+          if (step === 1) {
+            const d = k === '⌫' ? digits.slice(0, -1) : (digits.length < 20 ? digits + k : digits);
+            this.setState({ lkDigits: d });
+          } else {
+            const c = k === '⌫' ? (s.lkCode || '').slice(0, -1) : ((s.lkCode || '').length < 4 ? (s.lkCode || '') + k : s.lkCode);
+            this.setState({ lkCode: c });
+            if (c.length === 4) { goStep(3); setTimeout(finish, 1800); }
+          }
+        },
+      })),
+
+      lkPrimaryDisplay: (step === 1 || step === 2 || step === 4) ? 'block' : 'none',
+      lkPrimaryLabel: step === 4 ? 'Make it my paying card' : (step === 2 ? 'Confirm' : 'Continue'),
+      lkPrimaryBg: step === 1 && digits.length < 20 ? 'rgba(255,255,255,.1)' : (step === 2 && (s.lkCode || '').length < 4 ? 'rgba(255,255,255,.1)' : '#2563EB'),
+      lkPrimaryInk: step === 1 && digits.length < 20 ? '#6E7986' : (step === 2 && (s.lkCode || '').length < 4 ? '#6E7986' : '#FFFFFF'),
+      lkPrimary: () => {
+        if (step === 1) { if (digits.length >= 20) goStep(2); return; }
+        if (step === 2) { if ((s.lkCode || '').length === 4) { goStep(3); setTimeout(finish, 1800); } return; }
+        const fresh = (this.state.lkCards || []).slice(-1)[0];
+        if (fresh) this.setState({ payFrom: fresh.key + fresh.last4 });
+        this.setState({ lkAdd: false });
+        this.toast('Your iCASH card now pays from ' + p.name);
+      },
+      lkSecondaryDisplay: step === 4 ? 'block' : 'none',
+      lkSecondaryLabel: 'Keep paying from my wallet',
+      lkSecondary: () => this.setState({ lkAdd: false }),
+
+      lkDoneTitle: p.name + ' ·· ' + ((this.state.lkCards || []).slice(-1)[0] || { last4: last4 }).last4 + ' linked',
+      lkDoneFee: p.fee,
+      lkDoneLimit: p.limit,
+    };
+  }
+
+  budgetWidget(w) {
+    const s = this.state;
+    if (w.id !== 'budget' && w.id !== 'left') return {};
+    if (!s.budgetOn) return w.id === 'budget'
+      ? { value: 'Off', meta: 'Tap to set a target', progress: '0%' }
+      : { value: '—', meta: 'No budget set', progress: '0%' };
+    const pct = Math.min(100, Math.round((SPENT / s.budget) * 100));
+    return w.id === 'budget'
+      ? { value: iqd(s.budget), meta: pct + '% used', progress: pct + '%' }
+      : { value: iqd(Math.max(0, s.budget - SPENT)), meta: '9 days left', progress: pct + '%' };
+  }
+
+  budgetVals() {
+    const s = this.state;
+    const pct = Math.min(100, Math.round((SPENT / s.budget) * 100));
+    const over = pct >= s.budgetAlert;
+    const step = (d) => () => this.setState(p => ({ budget: Math.min(12000000, Math.max(200000, p.budget + d)) }));
+    return {
+      bgtDisplay: s.budgetSheet ? 'block' : 'none',
+      bgtClose: () => this.setState({ budgetSheet: false }),
+      bgtAmount: iqd(s.budget),
+      bgtDec: step(-100000),
+      bgtInc: step(100000),
+      bgtPresets: [1200000, 1500000, 1800000, 2400000].map(v => ({
+        label: iqd(v),
+        bg: s.budget === v ? '#FFFFFF' : 'rgba(255,255,255,.1)',
+        ink: s.budget === v ? '#0D1B2A' : '#FFFFFF',
+        pick: () => this.setState({ budget: v }),
+      })),
+      bgtSpentLabel: 'Spent ' + iqd(SPENT) + ' of ' + iqd(s.budget),
+      bgtPctLabel: pct + '% used',
+      bgtPctInk: over ? '#E8453C' : '#00A78F',
+      bgtBarW: pct + '%',
+      bgtLeftLabel: s.budgetOn
+        ? iqd(Math.max(0, s.budget - SPENT)) + ' IQD left for the next 9 days · about ' + iqd(Math.round(Math.max(0, s.budget - SPENT) / 9 / 1000) * 1000) + ' a day'
+        : 'No budget is active. Save to switch it on.',
+      bgtAlertNote: 'A notification at ' + s.budgetAlert + '% of ' + iqd(s.budget) + ' IQD, and again when you pass the target.',
+      bgtAlerts: [70, 80, 90].map(v => ({
+        label: v + '%',
+        bg: s.budgetAlert === v ? '#FFFFFF' : 'rgba(255,255,255,.1)',
+        ink: s.budgetAlert === v ? '#0D1B2A' : '#FFFFFF',
+        pick: () => this.setState({ budgetAlert: v }),
+      })),
+      bgtSaveLabel: s.budgetOn ? 'Save budget' : 'Set this budget',
+      bgtSave: () => { this.setState({ budgetSheet: false, budgetOn: true }); this.toast('Budget set to ' + iqd(this.state.budget) + ' IQD a month'); },
+      bgtRemoveDisplay: s.budgetOn ? 'block' : 'none',
+      bgtRemove: () => { this.setState({ budgetSheet: false, budgetOn: false }); this.toast('Monthly budget removed'); },
+    };
   }
 
   headerDepth() { return { home: 500, invest: 300, cards: 230, transfers: 0, lifestyle: 0 }[this.state.tab] || 0; }
@@ -3331,23 +4054,54 @@ class Component extends DCLogic {
     this.setState({ lang: l });
     this.toast(l === 'ar' ? 'تم تغيير اللغة إلى العربية' : 'Language set to English');
     clearInterval(this._langT);
-    if (l === 'ar') this._langT = setInterval(() => this.syncLang(), 400);
+    if (l === 'ar' || this.state.light) this._langT = setInterval(() => this.syncSkin(), 400);
+    else setTimeout(() => this.syncSkin(), 30);
   }
 
-  syncLang() {
+  syncLang() { this.syncSkin(); }
+
+  setTheme(key) { this.setState({ theme: key }); }
+
+  setLight(on) {
+    this.setState({ light: on });
+    this.toast(on ? 'Light appearance on' : 'Dark appearance on');
+    clearInterval(this._langT);
+    if (on || this.state.lang === 'ar') this._langT = setInterval(() => this.syncSkin(), 400);
+    else setTimeout(() => this.syncSkin(), 30);
+  }
+
+  // language and theme both rewrite authored inline styles, so they run as one pass
+  syncSkin() {
     const root = document.querySelector('[data-icash-phone]');
     if (!root) return;
     const ar = this.state.lang === 'ar';
-    if (ar) {
-      root.setAttribute('dir', 'rtl');
-      this.mirror(root, true);
-      this.translate(root);
-    } else if (this._arOn) {
-      root.removeAttribute('dir');
-      this.untranslate();
-      this.mirror(root, false);
+    const lt = !!this.state.light;
+    if (ar) root.setAttribute('dir', 'rtl'); else root.removeAttribute('dir');
+    const els = [root].concat([].slice.call(root.querySelectorAll('*')));
+    if (!ar && !lt) {
+      if (this._skinOn) els.forEach(el => {
+        if (el.dataset && el.dataset.skinCss !== undefined) { el.setAttribute('style', el.dataset.skinCss); delete el.dataset.skinCss; delete el.dataset.skinOut; delete el.dataset.surf; }
+      });
+      if (this._arOn) this.untranslate();
+      this._skinOn = false; this._arOn = false;
+      return;
     }
-    this._arOn = ar;
+    els.forEach(el => {
+      if (!el.dataset) return;
+      const live = el.getAttribute('style') || '';
+      if (live !== el.dataset.skinOut) el.dataset.skinCss = live;     // a re-render wrote new authored CSS
+      let s = el.dataset.skinCss || '';
+      if (s) {
+        if (lt) s = lightCss(el, s);
+        if (ar) s = mirrorCss(s);
+        if (s !== live) el.setAttribute('style', s);
+        el.dataset.skinOut = s;
+      } else if (lt) {
+        el.dataset.surf = el.parentElement && el.parentElement.dataset ? (el.parentElement.dataset.surf || '') : '';
+      }
+    });
+    if (ar) this.translate(root); else if (this._arOn) this.untranslate();
+    this._skinOn = true; this._arOn = ar;
   }
 
   translate(root) {
@@ -3388,33 +4142,9 @@ class Component extends DCLogic {
     }
   }
 
-  // physical CSS (left/right paddings, offsets, chevrons) has to be mirrored by hand
-  mirror(root, on) {
-    [root, ...root.querySelectorAll('*')].forEach(el => {
-      if (!el.getAttribute) return;
-      if (on) {
-        if (el.dataset.ltrCss !== undefined) return;
-        const css = el.getAttribute('style') || '';
-        if (!css) return;
-        el.dataset.ltrCss = css;
-        let s = css
-          .replace(/\b(padding|margin|border)-(left|right)\b/g, (m, p, d) => p + '-' + (d === 'left' ? 'right' : 'left'))
-          .replace(/(^|;)(\s*)left:/g, '$1$2__SWAP:')
-          .replace(/(^|;)(\s*)right:/g, '$1$2left:')
-          .replace(/__SWAP:/g, 'right:')
-          .replace(/text-align:\s*left/g, 'text-align:__SWAP')
-          .replace(/text-align:\s*right/g, 'text-align:left')
-          .replace(/text-align:__SWAP/g, 'text-align:right');
-        if (/rotate\(45deg\)/.test(s)) s = s.replace(/transform:\s*/g, 'transform:scaleX(-1) ');
-        el.setAttribute('style', s);
-      } else if (el.dataset.ltrCss !== undefined) {
-        el.setAttribute('style', el.dataset.ltrCss);
-        delete el.dataset.ltrCss;
-      }
-    });
-  }
+  spaceBalanceNoop() {}
 
-  componentDidUpdate() { if (this.state.lang === 'ar' || this._arOn) this.syncLang(); }
+  componentDidUpdate() { if (this.state.lang === 'ar' || this.state.light || this._skinOn) this.syncSkin(); }
 
   spaceBalance() {
     const root = document.querySelector('[data-icash-home]');
@@ -3488,8 +4218,9 @@ class Component extends DCLogic {
       souk: [[236, 126, 0, .44], [244, 63, 94, .18], [251, 146, 60, .38], [236, 126, 0, .22], [217, 119, 6, .38], [245, 158, 11, .22], [236, 126, 0, .34], [190, 24, 93, .18]],
       dusk: [[124, 58, 237, .48], [236, 72, 153, .20], [139, 92, 246, .40], [124, 58, 237, .24], [167, 139, 250, .34], [236, 72, 153, .22], [124, 58, 237, .36], [59, 130, 246, .20]],
       grove: [[16, 122, 87, .46], [132, 204, 22, .18], [5, 150, 105, .40], [16, 122, 87, .22], [52, 211, 153, .30], [161, 98, 7, .20], [16, 122, 87, .34], [132, 204, 22, .16]],
+      light: [[37, 99, 235, .14], [0, 194, 168, .07], [0, 194, 168, .12], [37, 99, 235, .07], [124, 58, 237, .11], [37, 99, 235, .07], [236, 126, 0, .10], [124, 58, 237, .08]],
     };
-    const pal = THEMES[s.theme || 'midnight'];
+    const pal = THEMES[s.light ? 'light' : (s.theme || 'midnight')];
     const rgba = (c) => 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',' + c[3] + ')';
     const wash = (i) => 'radial-gradient(115% 62% at 80% -6%,' + rgba(pal[i * 2]) + ' 0%,rgba(5,10,16,0) 58%),'
       + 'radial-gradient(88% 46% at 11% 2%,' + rgba(pal[i * 2 + 1]) + ' 0%,rgba(5,10,16,0) 62%),#050A10';
@@ -3603,15 +4334,19 @@ class Component extends DCLogic {
       transfersDisplay: show(s.tab === 'transfers'),
       lifestyleDisplay: show(s.tab === 'lifestyle'),
 
-      widgets: s.picks.map(id => WIDGETS.find(w => w.id === id)).filter(Boolean).map(w => Object.assign({}, w, {
+      widgets: s.picks.map(id => WIDGETS.find(w => w.id === id)).filter(Boolean).map(w => Object.assign({}, w, this.budgetWidget(w), {
         barsDisplay: w.bars ? 'flex' : 'none',
         progressDisplay: w.progress ? 'block' : 'none',
         bars: (w.bars || []).map((h, i) => ({ h: h + '%', bg: i === (w.bars || []).length - 1 ? '#2563EB' : '#D6DDE8' })),
-        remove: () => this.setState(p => ({ picks: p.picks.filter(x => x !== w.id) })),
+        remove: (ev) => { if (ev && ev.stopPropagation) ev.stopPropagation(); this.setState(p => ({ picks: p.picks.filter(x => x !== w.id) })); },
+        tap: w.opens === 'budget' ? () => this.setState({ budgetSheet: true })
+          : w.go ? () => this.setState({ tab: 'lifestyle', life: w.go, scroll: 0 })
+          : () => this.toast(w.name + ' · ' + w.value),
       })),
-      widgetChoices: WIDGETS.map(w => {
+      widgetChoices: WIDGETS.map((w, i) => {
         const on = s.picks.indexOf(w.id) >= 0;
         return Object.assign({}, w, {
+          headDisplay: (i === 0 || WIDGETS[i - 1].group !== w.group) ? 'block' : 'none',
           mark: on ? '✓' : '+',
           markBg: on ? this.accent : '#FFFFFF',
           markInk: on ? '#FFFFFF' : '#8A95A2',
@@ -3710,6 +4445,7 @@ class Component extends DCLogic {
         this._qr = on;
         return on;
       })(),
+      qrPath: QR_D,
       qrDisplay: s.qr ? 'block' : 'none',
       qrClose: () => this.setState({ qr: false }),
       moreDisplay: s.more ? 'block' : 'none',
@@ -3740,7 +4476,7 @@ class Component extends DCLogic {
         bg: (s.theme || 'midnight') === t.key ? 'rgba(255,255,255,.08)' : 'transparent',
         border: (s.theme || 'midnight') === t.key ? '#FFFFFF' : 'rgba(255,255,255,.12)',
         ink: '#FFFFFF',
-        pick: () => this.setState({ theme: t.key }),
+        pick: () => this.setTheme(t.key),
       })),
       cdDisplay: s.cardDetails ? 'flex' : 'none',
       cdClose: () => this.setState({ cardDetails: false }),
@@ -3828,13 +4564,14 @@ class Component extends DCLogic {
       }),
       addMethods: [
         { icon: '▤', name: 'Debit or credit card', sub: 'Usually arrives instantly', art: 'linear-gradient(135deg,#4A4A4A,#1E1E1E)' },
-        { icon: '🏛', name: 'Easy bank transfer', sub: 'Transfer from your bank without entering your details', art: 'linear-gradient(135deg,#2563EB,#10225C)' },
-        { icon: '→', name: 'Regular bank transfer', sub: 'Send from any Iraqi bank using your iCASH account details', art: 'linear-gradient(135deg,#00A78F,#0A3F38)' },
+        { icon: '→', name: 'From another iCASH wallet', sub: 'Ask anyone to send to your phone number or @tag', art: 'linear-gradient(135deg,#2563EB,#10225C)' },
         { icon: '◈', name: 'Cash at an iCASH agent', sub: 'Deposit cash at any partner agent across Iraq', art: 'linear-gradient(135deg,#EC7E00,#7A3E00)' },
         { icon: '▦', name: 'QR top-up', sub: 'Show your QR at an agent, kiosk or exchange office', art: 'linear-gradient(135deg,#7C3AED,#2A1160)' },
       ].map(m => {
         const label = m.name + ' · ' + (s.addCurrency || 'IQD');
         return Object.assign({}, m, {
+          iconQrDisplay: m.name === 'QR top-up' ? 'block' : 'none',
+          iconCharDisplay: m.name === 'QR top-up' ? 'none' : 'block',
           rowBg: (s.addMethod || '') === label ? 'rgba(37,99,235,.14)' : 'transparent',
           pick: () => this.setState(m.name === 'QR top-up'
             ? { addSheet: false, qr: true }
@@ -3962,7 +4699,7 @@ class Component extends DCLogic {
       openProfile: () => this.setState({ profile: true }),
       closeProfile: () => this.setState({ profile: false }),
       profileMenu: [
-        { icon: '⇄', name: 'Language', sub: (s.lang === 'ar' ? 'العربية' : 'English'), badge: '', lang: 1 },
+        { icon: '⇄', name: 'Language', sub: (s.lang === 'ar' ? 'العربية' : 'English'), badge: '', lang: 1, chev: 1 },
         { icon: '✦', name: 'Invite friends', sub: 'Earn 50.000 IQD or more', badge: '' },
         { icon: '◗', name: 'Chats', sub: '', badge: '20' },
         { icon: '◍', name: 'Personal info', sub: '', badge: '' },
@@ -3974,7 +4711,8 @@ class Component extends DCLogic {
       ].map(m => Object.assign({}, m, {
         subDisplay: m.sub ? 'block' : 'none',
         badgeDisplay: m.badge ? 'flex' : 'none',
-        tap: m.lang ? () => this.setLang(s.lang === 'ar' ? 'en' : 'ar') : () => this.toast(m.name),
+        chevDisplay: m.chev ? 'block' : 'none',
+        tap: m.lang ? () => this.setState({ langPick: true }) : () => this.toast(m.name),
       })),
       pointActions: [
         { icon: '+', label: 'Earn', tap: () => this.toast('Earn points on every payment') },
@@ -4027,16 +4765,19 @@ class Component extends DCLogic {
         { name: 'Split a bill in seconds', sub: 'Send a request to anyone in your contacts', art: 'radial-gradient(circle at 35% 45%,#1F6F6A,#06231F 70%)', dot: 'rgba(255,255,255,.3)', tap: () => {} },
       ],
       payHistory: [
-        { ini: 'HA', bg: '#6E8BF5', ink: '#FFFFFF', badge: 'i', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Hayder Aboshanna', sub: 'You sent 600.000 IQD', date: '30 Aug' },
-        { ini: 'MM', bg: '#F45D9B', ink: '#FFFFFF', badge: '▪', badgeBg: '#FFFFFF', badgeInk: '#E8453C', name: 'Mohammed Mahmood', sub: 'You sent 198.000 IQD', date: '27 Aug' },
-        { ini: 'MA', bg: '#39C46E', ink: '#FFFFFF', badge: 'i', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Mustafa Albofaisal', sub: 'Sent you 1.000 IQD', date: '19 Aug' },
-        { ini: 'ZA', bg: '#2CC7C7', ink: '#FFFFFF', badge: '▪', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Zainab Al Saadi', sub: 'You sent 75.000 IQD', date: '11 Aug' },
-        { ini: 'SK', bg: '#F59E42', ink: '#FFFFFF', badge: '▪', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Saad Kareem', sub: 'Sent you 240.000 IQD', date: '2 Aug' },
-        { ini: 'AH', bg: '#2CBFB0', ink: '#FFFFFF', badge: 'i', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Ahmed Al Janahi', sub: 'You sent 27.190 IQD', date: '4 Jul' },
-        { ini: 'NK', bg: '#3BA5F0', ink: '#FFFFFF', badge: '▪', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Noor Kadhim', sub: 'You sent 36.720 IQD', date: '23 Jun' },
-        { ini: 'YH', bg: '#3B9BF0', ink: '#FFFFFF', badge: 'i', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Yousif Hassan', sub: 'You sent 8.280 IQD', date: '6 Jun' },
-        { ini: 'RA', bg: '#8B87F5', ink: '#FFFFFF', badge: '▪', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Rania Abbas', sub: 'Sent you 120.000 IQD', date: '28 May' },
-      ],
+        { ini: 'HA', bg: '#6E8BF5', ink: '#FFFFFF', badge: 'i', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Hayder Aboshanna', dir: 'You sent', amt: '−600.000', date: '30 Aug', status: 'done' },
+        { ini: 'MM', bg: '#F45D9B', ink: '#FFFFFF', badge: '▪', badgeBg: '#FFFFFF', badgeInk: '#E8453C', name: 'Mohammed Mahmood', dir: 'You sent', amt: '−198.000', date: '27 Aug', status: 'pending' },
+        { ini: 'MA', bg: '#39C46E', ink: '#FFFFFF', badge: 'i', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Mustafa Albofaisal', dir: 'Sent you', amt: '+1.000', date: '19 Aug', status: 'done' },
+        { ini: 'ZA', bg: '#2CC7C7', ink: '#FFFFFF', badge: '▪', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Zainab Al Saadi', dir: 'You sent', amt: '−75.000', date: '11 Aug', status: 'done' },
+        { ini: 'SK', bg: '#F59E42', ink: '#FFFFFF', badge: '▪', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Saad Kareem', dir: 'Sent you', amt: '+240.000', date: '2 Aug', status: 'pending' },
+        { ini: 'AH', bg: '#2CBFB0', ink: '#FFFFFF', badge: 'i', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Ahmed Al Janahi', dir: 'You sent', amt: '−27.190', date: '4 Jul', status: 'done' },
+        { ini: 'NK', bg: '#3BA5F0', ink: '#FFFFFF', badge: '▪', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Noor Kadhim', dir: 'You sent', amt: '−36.720', date: '23 Jun', status: 'done' },
+        { ini: 'YH', bg: '#3B9BF0', ink: '#FFFFFF', badge: 'i', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Yousif Hassan', dir: 'You sent', amt: '−8.280', date: '6 Jun', status: 'done' },
+        { ini: 'RA', bg: '#8B87F5', ink: '#FFFFFF', badge: '▪', badgeBg: '#FFFFFF', badgeInk: '#0D1B2A', name: 'Rania Abbas', dir: 'Sent you', amt: '+120.000', date: '28 May', status: 'done' },
+      ].map(h => Object.assign({}, h, {
+        sub: h.status === 'pending' ? h.dir + ' · Pending' : h.dir + ' · Completed',
+        amtInk: h.status === 'pending' ? '#FFCE7A' : (h.amt.charAt(0) === '+' ? '#3FD39F' : '#FFFFFF'),
+      })),
       investBenefits: [
         { icon: 'ISX', name: 'Own a piece of Iraqi business', sub: 'Banks, telecoms and industry listed on the Iraq Stock Exchange' },
         { icon: '%', name: 'Save on trading fees', sub: '0% commission within your plan limits. Other fees, e.g. FX, may apply' },
@@ -4468,6 +5209,41 @@ class Component extends DCLogic {
       staysDates: () => this.toast('Change dates'),
       staysGuestsTap: () => this.toast('Change guests and rooms'),
       openSearch: () => this.toast('Search across payments, people and services'),
+      lightToggle: () => this.setLight(!s.light),
+      lightTrack: s.light ? this.accent : 'rgba(255,255,255,.18)',
+      lightKnob: s.light ? '21px' : '3px',
+      langPickDisplay: s.langPick ? 'block' : 'none',
+      langClose: () => this.setState({ langPick: false, langDraft: null }),
+      langOptions: [['English', 'Left to right', 'en'], ['العربية', 'من اليمين إلى اليسار', 'ar']].map(([name, note, key]) => {
+        const on = (s.langDraft || s.lang || 'en') === key;
+        return {
+          name: name, note: note, mark: on ? '✓' : '',
+          ringBg: on ? this.accent : 'transparent',
+          ringBorder: on ? this.accent : 'rgba(255,255,255,.28)',
+          pick: () => this.setState({ langDraft: key }),
+        };
+      }),
+      langApplyLabel: (s.langDraft || s.lang || 'en') === 'ar' ? 'تغيير اللغة' : 'Change language',
+      langApply: () => { const k = s.langDraft || s.lang || 'en'; this.setState({ langPick: false, langDraft: null }); this.setLang(k); },
+      ...this.linkedVals(),
+      openSupport: () => this.setState({ support: true }),
+      helpFabDisplay: (s.splash || s.locked || s.onboard) ? 'none' : 'flex',
+      supClose: () => this.setState({ support: false }),
+      supDisplay: s.support ? 'block' : 'none',
+      supFaq: [
+        ['How do I add money?', 'Debit or credit card, cash at any iCASH agent, or a transfer from another iCASH wallet. All of them arrive instantly.'],
+        ['How long does a transfer take?', 'Instantly to any iCASH wallet, day or night, whether you send to a phone number or a wallet number.'],
+        ['What does a stock order cost?', 'A 0,85% service fee with a 2.500 IQD minimum, plus the 0,15% ISX levy. The full total is shown before you confirm.'],
+        ['I lost my phone. Is my card safe?', 'Freeze the card from Cards straight away, then order a replacement. Your balance stays in your account.'],
+        ['How do I switch the app to Arabic?', 'Profile, then Language. The whole app changes, including the right-to-left layout.'],
+      ].map(([q, a], i) => ({
+        q: q, a: a,
+        answerDisplay: s.supOpen === i ? 'block' : 'none',
+        rotate: s.supOpen === i ? 'rotate(-45deg)' : 'rotate(135deg)',
+        tap: () => this.setState(p => ({ supOpen: p.supOpen === i ? null : i })),
+      })),
+      supCall: () => this.toast('Calling +964 780 000 1234'),
+      supWhats: () => this.toast('Opening WhatsApp chat with iCASH'),
       seeAll: () => this.toast('Showing the full list'),
       forgotPin: () => this.toast('PIN reset link sent to your phone'),
       reactivateCard: () => this.toast('Contact support to reactivate a card'),
@@ -4487,7 +5263,8 @@ class Component extends DCLogic {
         ink: (s.anRange || 'Month') === l ? '#FFFFFF' : '#8A95A2',
         pick: () => this.setState({ anRange: l }),
       })),
-      anBudget: () => this.toast('Budget is set to 1.800.000 IQD a month'),
+      anBudget: () => this.setState({ budgetSheet: true }),
+      ...this.budgetVals(),
       ...(() => {
         const AN = {
           Day: { period: 'today', total: '86.500', delta: '+12% vs yesterday', deltaInk: '#FF8A8A',
@@ -4542,7 +5319,7 @@ class Component extends DCLogic {
             ini: m[0], name: m[1], sub: m[2], amt: m[3], bg: m[4],
             tap: () => this.toast(m[1] + ' · ' + m[3] + ' IQD'),
           })),
-          anBudgetNote: 'Spent ' + a.total + ' of 1.800.000 IQD',
+          anBudgetNote: s.budgetOn ? 'Spent ' + a.total + ' of ' + iqd(s.budget) + ' IQD' : 'No budget yet · tap to set one',
         };
       })(),
       ...(() => {
@@ -4814,8 +5591,10 @@ class Component extends DCLogic {
       goInvest: () => this.setState({ tab: 'invest', scroll: 0 }),
       homeTx: [
         { ini: 'CF', name: 'Ciao Cafe', sub: 'Today, 16:30 · Standard', amt: '−12.000', ink: '#FFFFFF', meta: 'Card', bg: '#2563EB' },
+        { ini: 'IM', name: 'Iraq Mall', sub: 'Today, 15:48 · Pending', amt: '−64.000', ink: '#FFCE7A', meta: 'Card', bg: '#1B3FA8' },
         { ini: 'AS', name: 'Asiacell', sub: 'Today, 11:10 · Top-up', amt: '−25.000', ink: '#FFFFFF', meta: 'Mobile', bg: '#EC7E00' },
-        { ini: 'HY', name: 'From Hayder', sub: 'Yesterday, 21:04', amt: '+145.000', ink: '#6FE3D2', meta: 'Transfer', bg: '#7C3AED' },
+        { ini: 'SK', name: 'From Saad Kareem', sub: 'Today, 09:12 · Pending', amt: '+240.000', ink: '#FFCE7A', meta: 'Transfer', bg: '#F59E42' },
+        { ini: 'HY', name: 'From Hayder', sub: 'Yesterday, 21:04', amt: '+145.000', ink: '#3FD39F', meta: 'Transfer', bg: '#7C3AED' },
         { ini: 'MK', name: 'Al Rashid Market', sub: 'Yesterday, 18:22 · Work', amt: '−38.500', ink: '#FFFFFF', meta: 'Card', bg: '#00A78F' },
       ],
       homeUpcoming: [
@@ -4906,7 +5685,7 @@ class Component extends DCLogic {
       ],
       transferTypes: [
         { ini: 'iC', name: 'To an iCASH user', sub: 'Instant, free · phone or @tag', bg: '#2563EB' },
-        { ini: 'IB', name: 'Local bank transfer', sub: 'IBAN · arrives same day', bg: '#0D1B2A' },
+        { ini: 'WA', name: 'To a wallet number', sub: 'iCASH account number · instant', bg: '#0D1B2A' },
         { ini: 'IN', name: 'International', sub: '38 currencies · from 0,4%', bg: '#7C3AED' },
         { ini: 'RQ', name: 'Request money', sub: 'Send a payment link', bg: '#00C2A8' },
         { ini: 'FX', name: 'Between my accounts', sub: 'IQD ↔ USD at live rate', bg: '#6B7280' },
@@ -4922,11 +5701,10 @@ class Component extends DCLogic {
         { kind: 'acct', name: 'Account number', bg: 'linear-gradient(160deg,#2563EB,#10225C)', tap: () => this.setState({ entry: 'acct', entryVal: '' }) },
         { kind: 'phone', name: 'Phone number', bg: 'linear-gradient(160deg,#00C2A8,#0A3F38)', tap: () => this.setState({ entry: 'phone', entryVal: '' }) },
         { kind: 'qr', name: 'Show my QR', bg: 'linear-gradient(160deg,#7C3AED,#2A1160)', tap: () => this.setState({ send: false, qr: true }) },
-        { kind: 'scan', name: 'Scan a QR', bg: 'linear-gradient(160deg,#EC7E00,#7A3E00)', tap: () => this.setState({ sendScan: true }) },
       ].map(m => Object.assign({}, m, {
         iconAcct: m.kind === 'acct' ? 'block' : 'none',
         iconPhone: m.kind === 'phone' ? 'block' : 'none',
-        iconQr: m.kind === 'qr' ? 'grid' : 'none',
+        iconQr: m.kind === 'qr' ? 'block' : 'none',
         iconScan: m.kind === 'scan' ? 'block' : 'none',
       })),
       entryDisplay: s.entry === 'acct' || s.entry === 'phone' ? 'block' : 'none',
