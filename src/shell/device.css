@@ -48,3 +48,18 @@
     touch-action: manipulation;
   }
 }
+
+/* Wider screens: keep the whole presentation page inside the window so it never
+   page-scrolls — the help button stays pinned where the design draws it. */
+@media (min-width: 561px) {
+  html,
+  body {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  #dc-root > .sc-host > div {
+    transform: scale(var(--fit-desk, 1));
+    transform-origin: top center;
+  }
+}
